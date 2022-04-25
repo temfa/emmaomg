@@ -1,0 +1,25 @@
+.band-container {
+	background-color: rgba(0, 0, 0, 1);
+	padding: 38px 100px;
+}
+
+.band-header {
+	padding: 100px;
+}
+
+.band-header h2 {
+	color: white;
+	font-weight: 600;
+	font-size: 64px;
+	line-height: 100%;
+	letter-spacing: -0.05em;
+	width: 640px;
+}
+.band-header p {
+	color: white;
+	line-height: 213.4%;
+	text-align: justify;
+	font-size: 18px;
+	font-weight: 400;
+	width: 620px;
+}
