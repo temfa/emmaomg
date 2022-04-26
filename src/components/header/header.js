@@ -2,7 +2,7 @@ import React from "react";
 import "./header.css";
 import Logo from "../../assets/logo.png";
 import { NavLink } from "react-router-dom";
-// import Dropdown from "../dropdown/dropdown";
+import Dropdown from "../dropdown/dropdown";
 
 const Header = () => {
 	// const [dropdown, showDropdown] = useState(false);
@@ -22,7 +22,7 @@ const Header = () => {
 					<NavLink to='/music' activeClassName='is-active'>
 						Music
 					</NavLink>
-					<NavLink to='/shoutout' activeClassName='is-active'>
+					<NavLink to='/birthday' activeClassName='is-active'>
 						Shoutout
 					</NavLink>
 					<NavLink to='/more' activeClassName='is-active'>
