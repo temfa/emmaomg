@@ -2,7 +2,7 @@ import React from "react";
 import "./header.css";
 import Logo from "../../assets/logo.png";
 import { NavLink } from "react-router-dom";
-import Dropdown from "../dropdown/dropdown";
+// import Dropdown from "../dropdown/dropdown";
 
 const Header = () => {
 	// const [dropdown, showDropdown] = useState(false);

@@ -1,11 +1,11 @@
 import React from "react";
 import "./footer.css";
 import Logo from "../../assets/logo.png";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import Image1 from "../../assets/image 1.png";
 import Image2 from "../../assets/image 2.png";
 import Image3 from "../../assets/image 3.png";
-import Rectangle from "../../assets/Rectangle 20.png";
+// import Rectangle from "../../assets/Rectangle 20.png";
 
 const Footer = () => {
 	return (
