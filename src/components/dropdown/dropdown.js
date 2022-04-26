@@ -5,8 +5,10 @@ import { NavLink } from "react-router-dom";
 const Dropdown = () => {
 	const [dropdown, setDropdown] = useState(false);
 	return (
-		<div className={dropdown? 'dropdown-menu clicked' : 'dropdown-menu '} onClick={() => setDropdown(!dropdown)}>
-			<NavLink to=''  activeClassName='is-active'>
+		<div
+			className={dropdown ? "dropdown-menu clicked" : "dropdown-menu "}
+			onClick={() => setDropdown(!dropdown)}>
+			<NavLink to='/band' activeClassName='is-active'>
 				My Band
 			</NavLink>
 			<NavLink to='/brand' activeClassName='is-active'>

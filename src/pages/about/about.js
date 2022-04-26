@@ -38,7 +38,7 @@ const About = () => {
 							In 2019, he formed “The Ohemgee Band”, a band comprising seasoned
 							instrumentalists and singers. Their musical expression is mainly
 							praise and worship in a well seasoned traditional contemporary
-							style. They have have performed at exclusive and private events in
+							style. They  have performed at exclusive and private events in
 							Lagos.
 						</p>
 						<p>

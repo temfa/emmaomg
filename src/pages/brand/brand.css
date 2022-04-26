@@ -1,13 +1,14 @@
-.band-container {
+.brand-container {
 	background-color: rgba(0, 0, 0, 1);
 	padding: 38px 100px;
 }
 
-.band-header {
-	padding: 100px;
+.brand-header {
+	padding: 50px;
+	display: flex;
 }
 
-.band-header h2 {
+.brand-header h2 {
 	color: white;
 	font-weight: 600;
 	font-size: 64px;
@@ -15,7 +16,7 @@
 	letter-spacing: -0.05em;
 	width: 640px;
 }
-.band-header p {
+.brand-header p {
 	color: white;
 	line-height: 213.4%;
 	text-align: justify;
@@ -24,7 +25,16 @@
 	width: 620px;
 }
 
-.band-header button {
+.brand-design {
+	display: flex;
+	width: 100%;
+}
+
+.brand-design img {
+	width: 100%;
+}
+
+.brand-header button {
 	border: none;
 	background-color: rgba(32, 120, 145, 1);
 	color: white;
@@ -33,9 +43,10 @@
 	border-radius: 10px;
 	cursor: pointer;
 	transition: 0.5s all ease-out;
+	margin-top: 50px;
 }
 
-.band-header button:hover {
+.brand-header button:hover {
 	color: rgba(32, 120, 145, 1);
 	background-color: white;
 }

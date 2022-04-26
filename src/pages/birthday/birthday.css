@@ -1,0 +1,22 @@
+.birthday-container {
+	background-color: rgba(0, 0, 0, 1);
+	padding: 38px 100px;
+}
+
+.birthday-header {
+	padding: 100px;
+}
+
+.birthday-header h2 {
+	color: white;
+	font-weight: 600;
+	font-size: 64px;
+	line-height: 100%;
+	letter-spacing: -0.05em;
+	width: 640px;
+}
+
+.shoutout-body {
+	display: flex;
+	/* justify-content: space-between; */
+}

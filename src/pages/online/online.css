@@ -1,0 +1,39 @@
+.online-container {
+	background-color: rgba(0, 0, 0, 1);
+	padding: 38px 100px;
+}
+
+.online-header {
+	padding: 100px;
+}
+
+.online-header h2 {
+	color: white;
+	font-weight: 600;
+	font-size: 64px;
+	line-height: 100%;
+	letter-spacing: -0.05em;
+	width: 640px;
+}
+.online-header p {
+	color: white;
+	line-height: 213.4%;
+	text-align: justify;
+	font-size: 18px;
+	font-weight: 400;
+	width: 347px;
+	margin-bottom: 70px;
+}
+
+.online-img-container {
+	margin-top: 30px;
+}
+
+.online-img-container img {
+	border-radius: 10px;
+	margin-left: 30px;
+}
+
+.online-img-container img:first-child {
+	margin-left: 0px;
+}

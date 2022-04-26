@@ -1,0 +1,28 @@
+.shoutout-container {
+	padding: 55px 57px 20px 57px;
+	background: rgba(0, 0, 0, 0.1);
+	box-shadow: inset 79.1333px -79.1333px 79.1333px rgba(0, 0, 0, 0.1),
+		inset -79.1333px 79.1333px 79.1333px rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(158.267px);
+	border-radius: 30px;
+	width: 266px;
+	margin-top: 40px;
+}
+
+.shoutout-container h3 {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 22px;
+	text-align: center;
+	color: #207891;
+}
+
+.shoutout-container p {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 200%;
+	text-align: center;
+	color: #fff;
+	width: 180px;
+	margin: auto;
+}

@@ -1,13 +1,13 @@
-.band-container {
+.mc-container {
 	background-color: rgba(0, 0, 0, 1);
 	padding: 38px 100px;
 }
 
-.band-header {
+.mc-header {
 	padding: 100px;
 }
 
-.band-header h2 {
+.mc-header h2 {
 	color: white;
 	font-weight: 600;
 	font-size: 64px;
@@ -15,27 +15,25 @@
 	letter-spacing: -0.05em;
 	width: 640px;
 }
-.band-header p {
+.mc-header p {
 	color: white;
 	line-height: 213.4%;
 	text-align: justify;
 	font-size: 18px;
 	font-weight: 400;
 	width: 620px;
+	margin-bottom: 70px;
 }
 
-.band-header button {
-	border: none;
-	background-color: rgba(32, 120, 145, 1);
-	color: white;
-	font-size: 16px;
-	padding: 15px 40px;
+.mc-img-container {
+	margin-top: 30px;
+}
+
+.mc-img-container img {
 	border-radius: 10px;
-	cursor: pointer;
-	transition: 0.5s all ease-out;
+	margin-left: 30px;
 }
 
-.band-header button:hover {
-	color: rgba(32, 120, 145, 1);
-	background-color: white;
+.mc-img-container img:first-child {
+	margin-left: 0px;
 }
