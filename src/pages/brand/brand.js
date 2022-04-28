@@ -1,18 +1,19 @@
 import React from "react";
 import Footer from "../../components/footer/footer";
-import Header from "../../components/header/header";
+// import Header from "../../components/header/header";
 import "./brand.css";
 import Brand1 from "../../assets/image 4.png";
 import Brand2 from "../../assets/image 5.png";
-import Emma from "../../assets/emma1.png";
+import Emma from "../../assets/emma.png";
+import Headertest from "../../components/header/headertest";
 
 const Brand = () => {
 	return (
 		<>
 			<div className='brand-container'>
-				<Header />
+				<Headertest />
 				<div className='brand-header'>
-					<div>
+					<div className='brand-text'>
 						<h2>Brand Influencing</h2>
 						<p>
 							I create contents and also help to influence for brands. Request
@@ -25,7 +26,7 @@ const Brand = () => {
 						</div>
 						<button>Recent Projects</button>
 					</div>
-					<div>
+					<div className='emma-img'>
 						<img src={Emma} alt='Emma' />
 					</div>
 				</div>

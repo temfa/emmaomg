@@ -1,42 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
-.header-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.nav-links {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.nav-links a {
-	text-decoration: none;
-	margin-left: 20px;
-	font-family: "Montserrat", sans-serif;
-	color: rgba(255, 255, 255, 1);
-	line-height: 22px;
-	font-size: 18px;
-	font-weight: 400;
-	padding: 15px 10px;
-	border-radius: 10px;
-}
-
-.nav-links a:hover {
-	background-color: rgba(32, 120, 145, 1);
-}
-
-.nav-links .is-active {
-	font-weight: 700;
-}
-
-.nav-links a:first-child {
-	margin-left: 0px;
-}
 
 .header-button {
-	margin-left: 100px;
+	margin-left: 70px;
 }
 
 .header-button button {
@@ -53,4 +18,173 @@
 .header-button button:hover {
 	color: rgba(32, 120, 145, 1);
 	background-color: white;
+}
+
+.header-buttons button {
+	border: none;
+	background-color: rgba(32, 120, 145, 1);
+	color: white;
+	font-size: 16px;
+	padding: 15px 40px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 0.5s all ease-out;
+}
+
+.header-buttons button:hover {
+	color: rgba(32, 120, 145, 1);
+	background-color: white;
+}
+
+.nav-items {
+	position: relative;
+}
+
+.navbar {
+	width: 100%;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	font-size: 1.2rem;
+}
+
+.navbar-logo {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.nav-menu {
+	display: flex;
+	list-style: none;
+	text-align: center;
+	margin-left: 100px;
+}
+
+.nav-item {
+	display: flex;
+	align-items: center;
+	height: 80px;
+}
+
+.nav-links {
+	color: white;
+	text-decoration: none;
+	text-decoration: none;
+	margin-left: 20px;
+	font-family: "Montserrat", sans-serif;
+	color: rgba(255, 255, 255, 1);
+	line-height: 22px;
+	font-size: 18px;
+	font-weight: 400;
+	padding: 15px 10px;
+	border-radius: 10px;
+}
+
+.nav-links:hover {
+	background-color: rgba(32, 120, 145, 1);
+	border-radius: 4px;
+	transition: all 0.2s ease-out;
+}
+
+.fa-bars {
+	color: #fff;
+}
+
+.header-buttons {
+	display: none;
+}
+
+.nav-links-mobile {
+	display: none;
+}
+
+.menu-icon {
+	display: none;
+}
+
+@media screen and (max-width: 1024px) {
+	.NavbarItems {
+		position: relative;
+	}
+
+	.nav-menu {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 55vh;
+		position: absolute;
+		top: 130px;
+		left: -150%;
+		opacity: 1;
+		transition: all 0.5s ease;
+		padding: 0px;
+	}
+
+	.nav-menu.active {
+		background: rgb(36, 34, 34);
+		left: 0;
+		opacity: 1;
+		transition: all 0.5s ease;
+		z-index: 1111111111;
+		margin-left: 0px;
+		width: 100%;
+	}
+
+	.nav-links {
+		text-align: center;
+		padding: 2rem;
+		width: 100%;
+		display: table;
+		margin-left: 0px;
+	}
+
+	.nav-links:hover {
+		background-color: #1888ff;
+		border-radius: 0;
+	}
+
+	.navbar-logo {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translate(25%, 50%);
+	}
+
+	.menu-icon {
+		display: block;
+		position: absolute;
+		right: 0;
+		transform: translate(-100%, 60%);
+		font-size: 1.8rem;
+		cursor: pointer;
+	}
+
+	.fa-times {
+		color: #fff;
+		font-size: 2rem;
+	}
+
+	.header-button {
+		display: none;
+	}
+
+	.header-buttons {
+		display: block;
+	}
+
+	.nav-links-mobile {
+		display: block;
+		text-align: center;
+		padding: 1.5rem;
+		margin: 2rem auto;
+		border-radius: 4px;
+		width: 50%;
+		text-decoration: none;
+		color: #fff;
+		font-size: 1.5rem;
+	}
+
+	.header-button {
+		margin-left: 0px;
+	}
 }

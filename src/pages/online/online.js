@@ -1,17 +1,18 @@
 import React from "react";
 import Footer from "../../components/footer/footer";
-import Header from "../../components/header/header";
+// import Header from "../../components/header/header";
 import "./online.css";
 import Image1 from "../../assets/unsplash_9vDdkxSCAD4.png";
 import Image2 from "../../assets/unsplash_iTc58VLTtEw.png";
 import Image3 from "../../assets/unsplash_nLUb9GThIcg.png";
 import Image4 from "../../assets/unsplash_wN3q1ANmXJQ.png";
+import Headertest from "../../components/header/headertest";
 
 const Online = () => {
 	return (
 		<>
 			<div className='online-container'>
-				<Header />
+				<Headertest />
 				<div className='online-header'>
 					<h2>Online Contents</h2>
 					<p>Sit back, relax and enjoy content from my comedy channel</p>

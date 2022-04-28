@@ -1,18 +1,22 @@
 import React from "react";
 import "./music.css";
-import Header from "../../components/header/header";
+// import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import Apple from "../../assets/apple.png";
 import Audiomack from "../../assets/audiomack.png";
 import Boomplay from "../../assets/boomplay.png";
 import Itunes from "../../assets/itunes.png";
+import Emma4 from "../../assets/emma4.png";
+import Headertest from "../../components/header/headertest";
 
 const Music = () => {
 	return (
 		<>
 			<div className='music-container'>
-				<Header />
-				<div className='music-header'>
+				<Headertest />
+			</div>
+			<div className='music-header'>
+				<div className='music-header-text'>
 					<h2>My Music</h2>
 					<p>
 						I have a number of singles and albums available on all online music
@@ -32,6 +36,9 @@ const Music = () => {
 							<img src={Itunes} alt='Music' />
 						</div>
 					</div>
+				</div>
+				<div className='music-emma'>
+					<img src={Emma4} alt='Emma' />
 				</div>
 			</div>
 			<Footer />

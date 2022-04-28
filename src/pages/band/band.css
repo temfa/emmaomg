@@ -4,7 +4,17 @@
 }
 
 .band-header {
-	padding: 100px;
+	padding: 100px 0px 0px 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.band-header-text {
+	width: 50%;
+}
+
+.band-emma {
+	width: 45%;
 }
 
 .band-header h2 {
@@ -13,7 +23,6 @@
 	font-size: 64px;
 	line-height: 100%;
 	letter-spacing: -0.05em;
-	width: 640px;
 }
 .band-header p {
 	color: white;
@@ -21,7 +30,28 @@
 	text-align: justify;
 	font-size: 18px;
 	font-weight: 400;
-	width: 620px;
+}
+
+.band-emma .first-emma {
+	width: 100%;
+	border-radius: 20px;
+}
+
+.band-emma > div {
+	display: flex;
+	margin-top: 20px;
+}
+
+.band-emma > div div {
+	margin-left: 30px;
+}
+
+.band-emma .band-img {
+	width: 100%;
+}
+
+.band-emma > div div:first-child {
+	margin-left: 0px;
 }
 
 .band-header button {
@@ -38,4 +68,30 @@
 .band-header button:hover {
 	color: rgba(32, 120, 145, 1);
 	background-color: white;
+}
+
+@media screen and (max-width: 1024px) {
+	.band-header {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.band-header-text {
+		width: 100%;
+	}
+
+	.band-emma {
+		margin-top: 20px;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.band-container {
+		padding: 38px 50px;
+	}
+
+	.band-header {
+		padding: 100px 0px 0px 0px;
+	}
 }

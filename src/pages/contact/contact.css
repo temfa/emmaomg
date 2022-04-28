@@ -4,7 +4,10 @@
 }
 
 .contact-header {
-	padding: 100px;
+	padding: 100px 20px;
+	display: flex;
+	justify-content: space-between;
+	/* width: 100%; */
 }
 
 .contact-header h2 {
@@ -13,7 +16,8 @@
 	font-size: 64px;
 	line-height: 100%;
 	letter-spacing: -0.05em;
-	width: 640px;
+	margin: 0px;
+	margin-bottom: 30px;
 }
 
 .mail-div p {
@@ -45,6 +49,217 @@
 	margin-top: 0px;
 }
 
+.event {
+	margin-bottom: 40px;
+	display: flex;
+}
+
+.event-test {
+	width: 200px;
+	position: relative;
+	overflow: hidden;
+	height: 50px;
+}
+.form-container {
+	width: 500px;
+	position: relative;
+	overflow: hidden;
+	height: 50px;
+	margin-bottom: 40px;
+}
+
+.form-containers {
+	width: 500px;
+	position: relative;
+	overflow: hidden;
+	height: 150px;
+	margin-bottom: 40px;
+}
+.form-containers input {
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+	color: #ffffff;
+	outline: none;
+	font-size: 20px;
+}
+
+.form-containers label {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	color: white;
+	height: 100%;
+	pointer-events: none;
+	font-weight: 300;
+	font-size: 18px;
+	border-bottom: 1px solid #ffffff;
+}
+
+.form-containers label::after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0px;
+	bottom: -1px;
+	border-bottom: 3px solid #ffffff;
+	transform: translateX(-100%);
+}
+
+.content-names {
+	position: absolute;
+	bottom: 110px;
+	left: 0px;
+	transition: all 0.3s ease;
+}
+
+.form-containers input:focus + .label-name .content-names,
+.form-containers input:valid + .label-name .content-names {
+	transform: translateY(-100%);
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.form-containers input:focus + .label-name::after,
+.form-containers input:valid + .label-name::after {
+	transform: translateX(0%);
+}
+
+.form-container input {
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+	color: #ffffff;
+	outline: none;
+	font-size: 20px;
+	padding-top: 12px;
+}
+
+.form-container label {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	color: white;
+	height: 100%;
+	pointer-events: none;
+	font-weight: 300;
+	font-size: 18px;
+	border-bottom: 1px solid #ffffff;
+}
+
+.form-container label::after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0px;
+	bottom: -1px;
+	border-bottom: 3px solid #ffffff;
+	transform: translateX(-100%);
+}
+
+.content-name {
+	position: absolute;
+	bottom: 5px;
+	left: 0px;
+	transition: all 0.3s ease;
+}
+
+.form-container input:focus + .label-name .content-name,
+.form-container input:valid + .label-name .content-name {
+	transform: translateY(-100%);
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.form-container input:focus + .label-name::after,
+.form-container input:valid + .label-name::after {
+	transform: translateX(0%);
+}
+
+.event-test input {
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: rgba(0, 0, 0, 1);
+	padding-top: 10px;
+	color: #ffffff;
+	outline: none;
+	font-size: 20px;
+}
+
+.event-test label {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	color: white;
+	height: 100%;
+	pointer-events: none;
+	font-weight: 300;
+	font-size: 18px;
+	border-bottom: 1px solid #ffffff;
+}
+
+.event-test label::after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0px;
+	bottom: -1px;
+	border-bottom: 3px solid #ffffff;
+	transform: translateX(-100%);
+}
+
+.content-name {
+	position: absolute;
+	bottom: 15px;
+	left: 0px;
+	transition: all 0.3s ease;
+}
+
+.event-test input:focus + .label-name .content-name,
+.event-test input:valid + .label-name .content-name {
+	transform: translateY(-100%);
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.event-test input:focus + .label-name::after,
+.event-test input:valid + .label-name::after {
+	transform: translateX(0%);
+}
+
+.event select {
+	appearance: none;
+	width: 290px;
+	margin-left: 20px;
+	border: none;
+	border-bottom: 1px solid #ffffff;
+	background-color: transparent;
+	color: white;
+	font-weight: 300;
+	line-height: 26.58px;
+	font-size: 18px;
+}
+
+.contact-header button {
+	background-color: rgba(32, 120, 145, 1);
+	color: white;
+	padding: 20px 60px;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 22px;
+	border: none;
+}
+
 @keyframes animate {
 	from {
 		margin-top: 10px;
@@ -58,4 +273,41 @@
 .social-contact img:hover {
 	animation-name: animate;
 	animation-duration: 2s;
+}
+
+@media screen and (max-width: 1024px) {
+	.contact-header {
+		flex-direction: column;
+	}
+
+	.contact-form {
+		margin-top: 50px;
+	}
+
+	.form-container {
+		width: 100%;
+	}
+	.form-containers {
+		width: 100%;
+	}
+
+	.event-test {
+		width: 40%;
+	}
+
+	.event select {
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 580px) {
+	.contact-container {
+		padding: 38px 30px;
+	}
+}
+
+@media screen and (max-width: 393px) {
+	.contact-header h2 {
+		font-size: 50px;
+	}
 }

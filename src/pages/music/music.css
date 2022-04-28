@@ -4,7 +4,26 @@
 }
 
 .music-header {
-	padding: 100px;
+	padding: 100px 0px 0px 150px;
+	background-color: rgba(0, 0, 0, 1);
+	display: flex;
+	position: relative;
+}
+
+.music-header-text {
+	width: 50%;
+	/* position: relative;
+	z-index: 999; */
+}
+
+.music-emma {
+	position: absolute;
+	top: 270px;
+	left: 70%;
+}
+
+.music-emma img {
+	width: 100%;
 }
 
 .music-header h2 {
@@ -21,7 +40,6 @@
 	text-align: justify;
 	font-size: 18px;
 	font-weight: 400;
-	width: 620px;
 }
 
 .music {

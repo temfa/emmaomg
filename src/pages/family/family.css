@@ -1,0 +1,42 @@
+.family-container {
+	background-color: rgba(0, 0, 0, 1);
+	padding: 38px 100px;
+}
+
+.family-header {
+	padding: 100px 0px 0px 150px;
+	background-color: rgba(0, 0, 0, 1);
+	display: flex;
+}
+
+.family-header h2 {
+	color: white;
+	font-weight: 600;
+	font-size: 64px;
+	line-height: 100%;
+	letter-spacing: -0.05em;
+	width: 640px;
+}
+.family-header p {
+	color: white;
+	line-height: 213.4%;
+	text-align: justify;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.family-image img {
+	width: 100%;
+}
+
+.family-image {
+	margin-top: 100px;
+}
+
+.family-img-container img {
+	margin-left: 35px;
+}
+
+.family-img-container img:first-child {
+	margin-left: 0px;
+}

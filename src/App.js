@@ -8,6 +8,7 @@ import Mc from "./pages/mc/mc";
 import Birthday from "./pages/birthday/birthday";
 import Online from "./pages/online/online";
 import Contact from "./pages/contact/contact";
+import Family from "./pages/family/family";
 
 function App() {
 	return (
@@ -22,6 +23,7 @@ function App() {
 				<Route path='birthday' element={<Birthday />} />
 				<Route path='online' element={<Online />} />
 				<Route path='contact' element={<Contact />} />
+				<Route path='family' element={<Family />} />
 			</Routes>
 		</div>
 	);

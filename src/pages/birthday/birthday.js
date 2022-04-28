@@ -1,14 +1,15 @@
 import React from "react";
 import "./birthday.css";
 import Footer from "../../components/footer/footer";
-import Header from "../../components/header/header";
+// import Header from "../../components/header/header";
 import Shoutout from "../../components/shoutout/shoutout";
+import Headertest from "../../components/header/headertest";
 
 const Birthday = () => {
 	return (
 		<>
 			<div className='birthday-container'>
-				<Header />
+				<Headertest />
 				<div className='birthday-header'>
 					<h2>Birthday Shoutouts</h2>
 					<div className='shoutout-body'>

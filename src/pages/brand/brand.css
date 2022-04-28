@@ -4,8 +4,16 @@
 }
 
 .brand-header {
-	padding: 50px;
+	padding: 100px 20px;
 	display: flex;
+}
+
+.brand-text {
+	width: 50%;
+}
+
+.emma-img img {
+	width: 100%;
 }
 
 .brand-header h2 {
@@ -14,7 +22,7 @@
 	font-size: 64px;
 	line-height: 100%;
 	letter-spacing: -0.05em;
-	width: 640px;
+	/* width: 640px; */
 }
 .brand-header p {
 	color: white;
@@ -22,7 +30,7 @@
 	text-align: justify;
 	font-size: 18px;
 	font-weight: 400;
-	width: 620px;
+	/* width: 620px; */
 }
 
 .brand-design {

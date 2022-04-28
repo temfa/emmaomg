@@ -5,13 +5,13 @@ import Logo from "../../assets/logo.png";
 import Image1 from "../../assets/image 1.png";
 import Image2 from "../../assets/image 2.png";
 import Image3 from "../../assets/image 3.png";
-// import Rectangle from "../../assets/Rectangle 20.png";
+import Rectangle from "../../assets/Rectangle 20.png";
 
 const Footer = () => {
 	return (
 		<div>
 			<div className='footer-header'>
-				{/* <img src={Rectangle} alt='Rectangle' className='rectangle' /> */}
+				<img src={Rectangle} alt='Rectangle' className='rectangle' />
 				<img src={Logo} alt='Logo' />
 
 				<div className='about-footer'>
@@ -27,13 +27,13 @@ const Footer = () => {
 						<p>Online Contents</p>
 					</div>
 				</div>
-				<div>
+				<div className='subscribe'>
 					<h2>Book your Birthday Shoutouts</h2>
 					<input type='text' />
 					<button>Subscribe</button>
 				</div>
 			</div>
-			<div className='landing-design'>
+			<div className='landing-designs'>
 				<img src={Image1} alt='image1' />
 				<img src={Image2} alt='image1' />
 				<img src={Image3} alt='image1' />

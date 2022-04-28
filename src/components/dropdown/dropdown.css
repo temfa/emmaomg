@@ -3,6 +3,9 @@
 	background-color: white;
 	border-radius: 10px;
 	position: absolute;
+	top: 60px;
+	left: 0px;
+	z-index: 999;
 }
 .dropdown-menu a {
 	display: block;
@@ -15,6 +18,19 @@
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.dropdown-menu.clicked{
-	display:none;
+.dropdown-menu a:hover {
+	background-color: rgba(32, 120, 145, 1);
+	border-radius: 4px;
+	transition: all 0.2s ease-out;
+	color: white;
+}
+
+.dropdown-menu.clicked {
+	display: none;
+}
+
+@media screen and (max-width: 1024px) {
+	.dropdown-menu {
+		width: 100%;
+	}
 }

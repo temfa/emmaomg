@@ -1,18 +1,21 @@
 import React from "react";
-import Header from "../../components/header/header";
 import "./about.css";
 import Twitter from "../../assets/twitter.png";
 import Whatsapp from "../../assets/whatsapp.png";
 import Facebook from "../../assets/facebook.png";
 import Instagram from "../../assets/instagram.png";
 import Footer from "../../components/footer/footer";
+import Emma3 from "../../assets/emma3.png";
+import Headertest from "../../components/header/headertest";
 
 const About = () => {
 	return (
 		<>
 			<div className='about-container'>
-				<Header />
-				<div className='about-header'>
+				<Headertest />
+			</div>
+			<div className='about-header'>
+				<div className='about-header-text'>
 					<h2>
 						Emmanuel Edunjobi <span>aka</span> EmmaOMG
 					</h2>
@@ -38,7 +41,7 @@ const About = () => {
 							In 2019, he formed “The Ohemgee Band”, a band comprising seasoned
 							instrumentalists and singers. Their musical expression is mainly
 							praise and worship in a well seasoned traditional contemporary
-							style. They  have performed at exclusive and private events in
+							style. They have performed at exclusive and private events in
 							Lagos.
 						</p>
 						<p>
@@ -60,6 +63,9 @@ const About = () => {
 							<img src={Twitter} alt='Social Icons' />
 						</div>
 					</div>
+				</div>
+				<div className='about-img'>
+					<img src={Emma3} alt='Emma' />
 				</div>
 			</div>
 			<Footer />

@@ -4,12 +4,20 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 48px 100px;
-	background-color: rgba(0, 0, 0, 1);
+	background: #000000;
 	position: relative;
 }
 
 .rectangle {
 	position: absolute;
+	left: 0;
+	width: 100%;
+	bottom: -15px;
+}
+
+.subscribe {
+	position: relative;
+	z-index: 1;
 }
 
 .about-footer {
@@ -78,4 +86,47 @@
 	line-height: 22px;
 	margin: 0px;
 	padding: 39px 0px 54px;
+}
+
+.landing-designs {
+	display: flex;
+	width: 100%;
+	position: relative;
+}
+
+.landing-designs div {
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.landing-designs img {
+	width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+	.footer-header {
+		padding: 48px 50px;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.footer-header {
+		padding: 48px 0px;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.about-footer {
+		width: 100%;
+		text-align: center;
+		flex-direction: column;
+		margin: 0px auto;
+	}
+
+	.rectangle {
+		display: none;
+	}
 }

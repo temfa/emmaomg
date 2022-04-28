@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../../components/header/header";
+// import Header from "../../components/header/header";
 import "./landing.css";
 import Arrow from "../../assets/Vector(1).png";
 import Image1 from "../../assets/image 1.png";
@@ -8,46 +8,82 @@ import Image3 from "../../assets/image 3.png";
 import Brand1 from "../../assets/image 4.png";
 import Brand2 from "../../assets/image 5.png";
 import Footer from "../../components/footer/footer";
+import { NavLink } from "react-router-dom";
+import Emma from "../../assets/emma1.png";
+import Emma2 from "../../assets/emma2.png";
+import Headertest from "../../components/header/headertest";
 
 const Landing = () => {
 	return (
 		<div>
 			<div className='landing-container'>
-				<Header />
+				<Headertest />
 				<div className='landing-body'>
-					<h2>
-						<span className='span1'>
-							Welcome <br />
-						</span>{" "}
-						<span className='span2'>
-							to my page,
-							<br />{" "}
-						</span>{" "}
-						click here to start the journey
-					</h2>
-					<div className='landing-arrow'>
-						<img src={Arrow} alt='Arrow' />
+					<div className='landing-body-text'>
+						<h2>
+							<span className='span1'>
+								Welcome <br />
+							</span>{" "}
+							<span className='span2'>
+								to my page,
+								<br />{" "}
+							</span>{" "}
+							click here to start the journey
+						</h2>
+						<div className='landing-arrow'>
+							<a href='#about'>
+								<img src={Arrow} alt='Arrow' />
+							</a>
+						</div>
+					</div>
+					<div className='emma-body'>
+						<img src={Emma} alt='emma' />
+						<div className='introduction'>
+							<p className='introduction-quote'>“</p>
+							<p className='introduction-text'>
+								Hi, I am Emmanuel Edunjobi aka EmmaOMG
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div className='landing-design'>
+			<div className='landing-design1'>
 				<img src={Image1} alt='image1' />
 				<img src={Image2} alt='image1' />
 				<img src={Image3} alt='image1' />
 				<div></div>
 			</div>
-			<div className='landing-about'>
-				<div>
-					<div></div>
-					<div>
-						<h2 className='landing-heading'>About Me</h2>
-						<h2>My Music</h2>
-						<h2>My Band</h2>
-						<h2>Brand Infuencing</h2>
-						<h2>MC/Comedian</h2>
-						<h2>Birthday Shoutouts</h2>
-						<h2>Online Contents</h2>
-						<h2>My Family</h2>
+			<div className='landing-about' id='about'>
+				<div className='landing-about-body'>
+					<div className='landing-about-img'>
+						<img src={Emma2} alt='emma' />
+					</div>
+					<div className='landing-about-links'>
+						<h2 className='landing-heading'>
+							{" "}
+							<NavLink to='/about'> About Me</NavLink>
+						</h2>
+						<h2>
+							<NavLink to='/music'>My Music </NavLink>
+						</h2>
+						<h2>
+							<NavLink to='/band'>My Band</NavLink>
+						</h2>
+						<h2>
+							<NavLink to='/brand'>Brand Infuencing</NavLink>
+						</h2>
+						<h2>
+							<NavLink to='/mc'>MC/Comedian</NavLink>
+						</h2>
+						<h2>
+							<NavLink to='/birthday'>Birthday Shoutouts</NavLink>
+						</h2>
+						<h2>
+							<NavLink to='/online'>Online Contents</NavLink>
+						</h2>
+						<h2>
+							<NavLink to='/family'>My Family</NavLink>
+						</h2>
 						<div className='landing-about-arrow'>
 							<img src={Arrow} alt='Arrow' />
 						</div>
