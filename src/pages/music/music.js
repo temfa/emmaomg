@@ -1,20 +1,15 @@
 import React from "react";
 import "./music.css";
-// import Header from "../../components/header/header";
-import Footer from "../../components/footer/footer";
 import Apple from "../../assets/apple.png";
 import Audiomack from "../../assets/audiomack.png";
 import Boomplay from "../../assets/boomplay.png";
 import Itunes from "../../assets/itunes.png";
 import Emma4 from "../../assets/emma4.png";
-import Headertest from "../../components/header/headertest";
+import Layout from "../../utils/layout";
 
 const Music = () => {
 	return (
-		<>
-			<div className='music-container'>
-				<Headertest />
-			</div>
+		<Layout>
 			<div className='music-header'>
 				<div className='music-header-text'>
 					<h2>My Music</h2>
@@ -41,8 +36,7 @@ const Music = () => {
 					<img src={Emma4} alt='Emma' />
 				</div>
 			</div>
-			<Footer />
-		</>
+		</Layout>
 	);
 };
 

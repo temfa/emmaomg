@@ -36,54 +36,55 @@ const Headertest = () => {
 				<div className='menu-icon' onClick={handleClick}>
 					<i className={click ? "fas fa-times" : "fas fa-bars"} />
 				</div>
-				<ul className={click ? "nav-menu active" : "nav-menu"}>
-					<li className='nav-item'>
-						<NavLink to='/' className='nav-links' onClick={closeMobileMenu}>
-							Home
-						</NavLink>
-					</li>
-					<li className='nav-item'>
-						<NavLink
-							to='/about'
-							className='nav-links'
-							onClick={closeMobileMenu}>
-							About
-						</NavLink>
-					</li>
-					<li className='nav-item'>
-						<NavLink
-							to='/music'
-							className='nav-links'
-							onClick={closeMobileMenu}>
-							Music
-						</NavLink>
-					</li>
-					<li className='nav-item'>
-						<NavLink
-							to='/birthday'
-							className='nav-links'
-							onClick={closeMobileMenu}>
-							Shoutout
-						</NavLink>
-					</li>
-					<li
-						className='nav-item nav-items'
-						onMouseEnter={onMouseEnter}
-						onMouseLeave={onMouseLeave}>
-						<NavLink to='#' className='nav-links'>
-							More <i className='fas fa-caret-down' />
-						</NavLink>
-						{dropdown && <Dropdown />}
-					</li>
-					<li className='nav-item'>
-						<NavLink
-							to='/contact'
-							className='nav-links'
-							onClick={closeMobileMenu}>
-							Contact
-						</NavLink>
-					</li>
-					{/* <li>
+				<div className='header-container'>
+					<ul className={click ? "nav-menu active" : "nav-menu"}>
+						<li className='nav-item'>
+							<NavLink to='/' className='nav-links' onClick={closeMobileMenu}>
+								Home
+							</NavLink>
+						</li>
+						<li className='nav-item'>
+							<NavLink
+								to='/about'
+								className='nav-links'
+								onClick={closeMobileMenu}>
+								About
+							</NavLink>
+						</li>
+						<li className='nav-item'>
+							<NavLink
+								to='/music'
+								className='nav-links'
+								onClick={closeMobileMenu}>
+								Music
+							</NavLink>
+						</li>
+						<li className='nav-item'>
+							<NavLink
+								to='/birthday'
+								className='nav-links'
+								onClick={closeMobileMenu}>
+								Shoutout
+							</NavLink>
+						</li>
+						<li
+							className='nav-item nav-items'
+							onMouseEnter={onMouseEnter}
+							onMouseLeave={onMouseLeave}>
+							<NavLink to='#' className='nav-links'>
+								More <i className='fas fa-caret-down' />
+							</NavLink>
+							{dropdown && <Dropdown />}
+						</li>
+						<li className='nav-item'>
+							<NavLink
+								to='/contact'
+								className='nav-links'
+								onClick={closeMobileMenu}>
+								Contact
+							</NavLink>
+						</li>
+						{/* <li>
 						<NavLink
 							to='/sign-up'
 							className='nav-links-mobile'
@@ -91,12 +92,21 @@ const Headertest = () => {
 							Sign Up
 						</NavLink>
 					</li> */}
-					<div className='header-buttons '>
-						<button className='nav-links-mobile'>Make a Booking</button>
+						<div className='header-buttons '>
+							<button className='nav-links-mobile'>
+								<NavLink to='/contact' onClick={closeMobileMenu}>
+									Make a Booking
+								</NavLink>
+							</button>
+						</div>
+					</ul>
+					<div className='header-button '>
+						<button className='nav-links'>
+							<NavLink to='/contact' onClick={closeMobileMenu}>
+								Make a Booking
+							</NavLink>
+						</button>
 					</div>
-				</ul>
-				<div className='header-button '>
-					<button className='nav-links'>Make a Booking</button>
 				</div>
 			</nav>
 		</>

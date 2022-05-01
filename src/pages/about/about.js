@@ -4,16 +4,15 @@ import Twitter from "../../assets/twitter.png";
 import Whatsapp from "../../assets/whatsapp.png";
 import Facebook from "../../assets/facebook.png";
 import Instagram from "../../assets/instagram.png";
-import Footer from "../../components/footer/footer";
 import Emma3 from "../../assets/emma3.png";
-import Headertest from "../../components/header/headertest";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Layout from "../../utils/layout";
+AOS.init();
 
 const About = () => {
 	return (
-		<>
-			<div className='about-container'>
-				<Headertest />
-			</div>
+		<Layout>
 			<div className='about-header'>
 				<div className='about-header-text'>
 					<h2>
@@ -25,31 +24,31 @@ const About = () => {
 							a multi-talented entertainer whose repertoire includes comedy,
 							acting, music (vocals and instrumentals) and content creation.
 						</p>
-						<p>
+						<p data-aos='fade-right' data-aos-duration='2000'>
 							Emmanuel’s romance with entertainment started at the age of 8 when
 							he joined his church choir as an instrumentalist. His dexterity
 							with the guitar, piano and drums was borne out of interest as he
 							is largely self taught.
 						</p>
-						<p>
+						<p data-aos='fade-left' data-aos-duration='2000'>
 							Despite his skills in the other forms of entertainment he often
 							refers to music as his first love as evidenced by his weekly
 							Yoruba gospel praise medleys on Instagram and YouTube and his
 							parodies of hit songs.
 						</p>
-						<p>
+						<p data-aos='fade-right' data-aos-duration='2000'>
 							In 2019, he formed “The Ohemgee Band”, a band comprising seasoned
 							instrumentalists and singers. Their musical expression is mainly
 							praise and worship in a well seasoned traditional contemporary
 							style. They have performed at exclusive and private events in
 							Lagos.
 						</p>
-						<p>
+						<p data-aos='fade-left' data-aos-duration='2000'>
 							Also since 2019, Emmanuel has hosted an annual show with his band
 							titled “Faaji Friday” – a rapidly growing variety and music show
 							that showcases every December.
 						</p>
-						<p>
+						<p data-aos='fade-right' data-aos-duration='2000'>
 							He is also a well sought after influencer and content creator for
 							brands. He particularly specializes in creating viral signature
 							tunes for brands and he has worked with some top brands EmmaOMG is
@@ -68,8 +67,7 @@ const About = () => {
 					<img src={Emma3} alt='Emma' />
 				</div>
 			</div>
-			<Footer />
-		</>
+		</Layout>
 	);
 };
 

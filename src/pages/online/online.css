@@ -1,10 +1,5 @@
-.online-container {
-	background-color: rgba(0, 0, 0, 1);
-	padding: 38px 100px;
-}
-
 .online-header {
-	padding: 100px;
+	padding: 100px 0px 0px 0px;
 }
 
 .online-header h2 {

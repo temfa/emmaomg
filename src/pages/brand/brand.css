@@ -1,15 +1,6 @@
-.brand-container {
-	background-color: rgba(0, 0, 0, 1);
-	padding: 38px 100px;
-}
-
 .brand-header {
-	padding: 100px 20px;
+	padding: 100px 0px;
 	display: flex;
-}
-
-.brand-text {
-	width: 50%;
 }
 
 .emma-img img {

@@ -1,0 +1,19 @@
+.container {
+	width: 100%;
+	max-width: 1640px;
+	background-color: rgba(0, 0, 0, 1);
+	padding: 60px 0px;
+}
+
+.head-container {
+	width: 83%;
+	margin: 0px auto;
+}
+
+.pages-container {
+	width: 100%;
+}
+
+.body-container {
+	padding-left: 15%;
+}

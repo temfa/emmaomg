@@ -1,10 +1,5 @@
-.birthday-container {
-	background-color: rgba(0, 0, 0, 1);
-	padding: 38px 100px;
-}
-
 .birthday-header {
-	padding: 100px;
+	padding: 100px 0px 0px 0px;
 }
 
 .birthday-header h2 {
@@ -13,10 +8,23 @@
 	font-size: 64px;
 	line-height: 100%;
 	letter-spacing: -0.05em;
-	width: 640px;
+	margin-bottom: 30px;
 }
 
 .shoutout-body {
 	display: flex;
 	/* justify-content: space-between; */
+	margin-top: 40px;
+}
+
+.shoutout-body:first-child {
+	margin-top: 0px;
+}
+
+.shoutout-body .shoutout-container {
+	margin-left: 40px;
+}
+
+.shoutout-body .shoutout-container:first-child {
+	margin-left: 0px;
 }

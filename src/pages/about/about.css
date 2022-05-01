@@ -1,17 +1,15 @@
-.about-container {
-	background-color: rgba(0, 0, 0, 1);
-	padding: 38px 100px;
+html {
+	scroll-behavior: smooth;
 }
 
 .about-header {
-	padding: 100px 0px 0px 150px;
+	padding: 100px 0px 0px 0px;
 	display: flex;
-	background-color: rgba(0, 0, 0, 1);
 }
 
-/* .about-header-text {
+.about-header-text {
 	width: 40%;
-} */
+}
 
 .about-img img {
 	width: 100%;

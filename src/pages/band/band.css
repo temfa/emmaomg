@@ -1,20 +1,15 @@
-.band-container {
-	background-color: rgba(0, 0, 0, 1);
-	padding: 38px 100px;
-}
-
 .band-header {
-	padding: 100px 0px 0px 20px;
+	padding: 100px 0px 342px 8%;
 	display: flex;
 	justify-content: space-between;
 }
 
 .band-header-text {
-	width: 50%;
+	width: 55%;
 }
 
 .band-emma {
-	width: 45%;
+	width: 40%;
 }
 
 .band-header h2 {

@@ -1,7 +1,7 @@
 import React from "react";
 import "./footer.css";
 import Logo from "../../assets/logo.png";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Image1 from "../../assets/image 1.png";
 import Image2 from "../../assets/image 2.png";
 import Image3 from "../../assets/image 3.png";
@@ -16,15 +16,29 @@ const Footer = () => {
 
 				<div className='about-footer'>
 					<div>
-						<p className='footer-heading'>About Me</p>
-						<p>My Music</p>
-						<p>My Band</p>
-						<p>Brand Infuencing</p>
+						<p className='footer-heading'>
+							<NavLink to='/about'> About Me</NavLink>
+						</p>
+						<p>
+							<NavLink to='/music'>My Music </NavLink>
+						</p>
+						<p>
+							<NavLink to='/band'>My Band</NavLink>
+						</p>
+						<p>
+							<NavLink to='/brand'>Brand Infuencing</NavLink>
+						</p>
 					</div>
 					<div>
-						<p>MC/Comedian</p>
-						<p>Birthday Shoutouts</p>
-						<p>Online Contents</p>
+						<p>
+							<NavLink to='/mc'>MC/Comedian</NavLink>
+						</p>
+						<p>
+							<NavLink to='/birthday'>Birthday Shoutouts</NavLink>
+						</p>
+						<p>
+							<NavLink to='/online'>Online Contents</NavLink>
+						</p>
 					</div>
 				</div>
 				<div className='subscribe'>

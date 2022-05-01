@@ -1,5 +1,4 @@
 import React from "react";
-// import Header from "../../components/header/header";
 import "./landing.css";
 import Arrow from "../../assets/Vector(1).png";
 import Image1 from "../../assets/image 1.png";
@@ -7,43 +6,42 @@ import Image2 from "../../assets/image 2.png";
 import Image3 from "../../assets/image 3.png";
 import Brand1 from "../../assets/image 4.png";
 import Brand2 from "../../assets/image 5.png";
-import Footer from "../../components/footer/footer";
 import { NavLink } from "react-router-dom";
 import Emma from "../../assets/emma1.png";
 import Emma2 from "../../assets/emma2.png";
-import Headertest from "../../components/header/headertest";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import LayoutHome from "../../utils/layoutHome";
+AOS.init();
 
 const Landing = () => {
 	return (
-		<div>
-			<div className='landing-container'>
-				<Headertest />
-				<div className='landing-body'>
-					<div className='landing-body-text'>
-						<h2>
-							<span className='span1'>
-								Welcome <br />
-							</span>{" "}
-							<span className='span2'>
-								to my page,
-								<br />{" "}
-							</span>{" "}
-							click here to start the journey
-						</h2>
-						<div className='landing-arrow'>
-							<a href='#about'>
-								<img src={Arrow} alt='Arrow' />
-							</a>
-						</div>
+		<LayoutHome>
+			<div className='landing-body'>
+				<div className='landing-body-text'>
+					<h2>
+						<span className='span1'>
+							Welcome <br />
+						</span>{" "}
+						<span className='span2'>
+							to my page,
+							<br />{" "}
+						</span>{" "}
+						click here to start the journey
+					</h2>
+					<div className='landing-arrow'>
+						<a href='#about'>
+							<img src={Arrow} alt='Arrow' />
+						</a>
 					</div>
-					<div className='emma-body'>
-						<img src={Emma} alt='emma' />
-						<div className='introduction'>
-							<p className='introduction-quote'>“</p>
-							<p className='introduction-text'>
-								Hi, I am Emmanuel Edunjobi aka EmmaOMG
-							</p>
-						</div>
+				</div>
+				<div className='emma-body'>
+					<img src={Emma} alt='emma' />
+					<div className='introduction'>
+						<p className='introduction-quote'>“</p>
+						<p className='introduction-text'>
+							Hi, I am Emmanuel Edunjobi aka EmmaOMG
+						</p>
 					</div>
 				</div>
 			</div>
@@ -59,29 +57,32 @@ const Landing = () => {
 						<img src={Emma2} alt='emma' />
 					</div>
 					<div className='landing-about-links'>
-						<h2 className='landing-heading'>
+						<h2
+							className='landing-heading'
+							data-aos='fade-right'
+							data-aos-duration='2000'>
 							{" "}
 							<NavLink to='/about'> About Me</NavLink>
 						</h2>
-						<h2>
+						<h2 data-aos='fade-left' data-aos-duration='2000'>
 							<NavLink to='/music'>My Music </NavLink>
 						</h2>
-						<h2>
+						<h2 data-aos='fade-right' data-aos-duration='2000'>
 							<NavLink to='/band'>My Band</NavLink>
 						</h2>
-						<h2>
+						<h2 data-aos='fade-left' data-aos-duration='2000'>
 							<NavLink to='/brand'>Brand Infuencing</NavLink>
 						</h2>
-						<h2>
+						<h2 data-aos='fade-right' data-aos-duration='2000'>
 							<NavLink to='/mc'>MC/Comedian</NavLink>
 						</h2>
-						<h2>
+						<h2 data-aos='fade-left' data-aos-duration='2000'>
 							<NavLink to='/birthday'>Birthday Shoutouts</NavLink>
 						</h2>
-						<h2>
+						<h2 data-aos='fade-right' data-aos-duration='2000'>
 							<NavLink to='/online'>Online Contents</NavLink>
 						</h2>
-						<h2>
+						<h2 data-aos='fade-left' data-aos-duration='2000'>
 							<NavLink to='/family'>My Family</NavLink>
 						</h2>
 						<div className='landing-about-arrow'>
@@ -96,13 +97,14 @@ const Landing = () => {
 				</div>
 				<div className='video-week'>
 					<div>
-						<h2>Video of the Week</h2>
+						<h2 data-aos='fade-right' data-aos-duration='2000'>
+							Video of the Week
+						</h2>
 						<button>Play</button>
 					</div>
 				</div>
 			</div>
-			<Footer />
-		</div>
+		</LayoutHome>
 	);
 };
 
