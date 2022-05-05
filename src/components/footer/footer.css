@@ -1,11 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
+.footer-container {
+	position: relative;
+}
+
 .footer-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 48px 100px;
-	background: #000000;
-	position: relative;
+	box-sizing: border-box;
+	/* background: #000000;
+	background: #2c90ac; */
+	position: absolute;
+	width: 100%;
+	top: -290px;
 }
 
 .rectangle {
@@ -97,6 +105,7 @@
 	display: flex;
 	width: 100%;
 	position: relative;
+	overflow: hidden;
 }
 
 .landing-designs div {

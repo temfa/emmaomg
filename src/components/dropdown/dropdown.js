@@ -8,19 +8,19 @@ const Dropdown = () => {
 		<div
 			className={dropdown ? "dropdown-menu clicked" : "dropdown-menu "}
 			onClick={() => setDropdown(!dropdown)}>
-			<NavLink to='/band' activeClassName='is-active'>
+			<NavLink to='/band' activeclassname='is-active'>
 				My Band
 			</NavLink>
-			<NavLink to='/brand' activeClassName='is-active'>
+			<NavLink to='/brand' activeclassname='is-active'>
 				Brand Infuencing
 			</NavLink>
-			<NavLink to='/mc' activeClassName='is-active'>
+			<NavLink to='/mc' activeclassname='is-active'>
 				Mc/Comedian
 			</NavLink>
-			<NavLink to='/online' activeClassName='is-active'>
+			<NavLink to='/online' activeclassname='is-active'>
 				Online Content
 			</NavLink>
-			<NavLink to='/family' activeClassName='is-active'>
+			<NavLink to='/family' activeclassname='is-active'>
 				My Family
 			</NavLink>
 		</div>
