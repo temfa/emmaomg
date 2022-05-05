@@ -13,22 +13,22 @@ const Header = () => {
 			</div>
 			<div className='nav-links'>
 				<div>
-					<NavLink to='/' activeClassName='is-active'>
+					<NavLink to='/' activeclassname='is-active'>
 						Home
 					</NavLink>
-					<NavLink to='/about' activeClassName='is-active'>
+					<NavLink to='/about' activeclassname='is-active'>
 						About
 					</NavLink>
-					<NavLink to='/music' activeClassName='is-active'>
+					<NavLink to='/music' activeclassname='is-active'>
 						Music
 					</NavLink>
-					<NavLink to='/birthday' activeClassName='is-active'>
+					<NavLink to='/birthday' activeclassname='is-active'>
 						Shoutout
 					</NavLink>
-					<NavLink to='/more' activeClassName='is-active'>
+					<NavLink to='/more' activeclassname='is-active'>
 						More
 					</NavLink>
-					<NavLink to='/contact' activeClassName='is-active'>
+					<NavLink to='/contact' activeclassname='is-active'>
 						Contact
 					</NavLink>
 				</div>

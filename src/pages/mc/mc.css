@@ -1,6 +1,7 @@
 .mc-header {
 	padding: 100px 0px 0px 8%;
 	display: flex;
+	margin-bottom: 400px;
 }
 
 .mc-img {
@@ -45,13 +46,23 @@
 	.mc-img {
 		display: none;
 	}
+}
 
-	.mc-header {
-		padding: 100px 0px 0px 0px;
+@media screen and (max-width: 800px) {
+	.mc-container {
+		padding: 38px 50px;
 	}
+}
 
-	.mc-header-text {
-		width: 100%;
+@media screen and (max-width: 700px) {
+	.mc-container {
+		padding: 38px 30px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.mc-container {
+		padding: 38px 15px;
 	}
 }
 
@@ -87,6 +98,6 @@
 @media screen and (max-width: 440px) {
 	.mc-header h2 {
 		width: 100%;
-		font-size: 40px;
+		font-size: 50px;
 	}
 }

@@ -3,15 +3,15 @@ import "./footer.css";
 import Logo from "../../assets/logo.png";
 import { NavLink } from "react-router-dom";
 import Image1 from "../../assets/image 1.png";
-import Image2 from "../../assets/image 2.png";
-import Image3 from "../../assets/image 3.png";
-import Rectangle from "../../assets/Rectangle 20.png";
+import BlackTransparecy from "../../assets/black-transparency.png";
+import GrayTransparecy from "../../assets/gray-transparency.png";
 
 const Footer = () => {
 	return (
-		<div>
+		<div className='footer-container'>
 			<div className='footer-header'>
-				<img src={Rectangle} alt='Rectangle' className='rectangle' />
+				<img src={BlackTransparecy} alt='Rectangle' className='rectangle' />
+				<img src={GrayTransparecy} alt='Rectangle' className='rectangle' />
 				<img src={Logo} alt='Logo' />
 
 				<div className='about-footer'>
@@ -49,8 +49,9 @@ const Footer = () => {
 			</div>
 			<div className='landing-designs'>
 				<img src={Image1} alt='image1' />
-				<img src={Image2} alt='image1' />
-				<img src={Image3} alt='image1' />
+				<img src={Image1} alt='image2' />
+				<img src={Image1} alt='image3' />
+				<img src={Image1} alt='image4' />
 				<div></div>
 			</div>
 			<div className='footer-copyright'>

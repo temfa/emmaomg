@@ -1,12 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
+.footer-container {
+	position: relative;
+}
+
 .footer-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 48px 100px;
-	/* background: #000000; */
-	background: transparent;
-	position: relative;
+	box-sizing: border-box;
+	/* background: #000000;
+	background: #2c90ac; */
+	position: absolute;
+	width: 100%;
+	top: -290px;
 }
 
 .rectangle {
@@ -98,14 +105,7 @@
 	display: flex;
 	width: 100%;
 	position: relative;
-	justify-content: center;
-	align-items: center;
-	box-sizing: border-box;
 	overflow: hidden;
-}
-
-.landing-designs img {
-	width: 100%;
 }
 
 .landing-designs div {
@@ -114,6 +114,10 @@
 	height: 100%;
 	position: absolute;
 	top: 0;
+}
+
+.landing-designs img {
+	width: 100%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -126,8 +130,7 @@
 	.footer-header {
 		padding: 48px 0px;
 		flex-direction: column;
-		width: 90%;
-		margin: 0px auto;
+		width: 100%;
 	}
 
 	.about-footer {

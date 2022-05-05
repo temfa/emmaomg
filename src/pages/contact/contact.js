@@ -40,31 +40,31 @@ const Contact = () => {
 					<form>
 						<div className='form-container'>
 							<input type='text' autoComplete='off' required />
-							<label for='name' className='label-name'>
+							<label htmlFor='name' className='label-name'>
 								<span className='content-name'>Name</span>
 							</label>
 						</div>
 						<div className='form-container'>
 							<input type='text' autoComplete='off' required />
-							<label for='email' className='label-name'>
+							<label htmlFor='email' className='label-name'>
 								<span className='content-name'>Email</span>
 							</label>
 						</div>
 						<div className='event'>
 							<div className='event-test'>
 								<input type='text' autoComplete='off' required />
-								<label for='phone' className='label-name'>
+								<label htmlFor='phone' className='label-name'>
 									<span className='content-name'>Phone</span>
 								</label>
 							</div>
 							<select required>
-								<option selected>Event Type</option>
+								<option value="">Choose an Event Type</option>
 								<option></option>
 							</select>
 						</div>
 						<div className='form-containers'>
 							<input type='text' required />
-							<label for='details' className='label-name'>
+							<label htmlFor='details' className='label-name'>
 								<span className='content-names'>Details</span>
 							</label>
 						</div>
