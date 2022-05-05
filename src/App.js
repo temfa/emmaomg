@@ -9,6 +9,7 @@ import Birthday from "./pages/birthday/birthday";
 import Online from "./pages/online/online";
 import Contact from "./pages/contact/contact";
 import Family from "./pages/family/family";
+import Login from "./pages/login/login";
 
 function App() {
 	return (
@@ -24,6 +25,7 @@ function App() {
 				<Route path='online' element={<Online />} />
 				<Route path='contact' element={<Contact />} />
 				<Route path='family' element={<Family />} />
+				<Route path='emma' element={<Login />} />
 			</Routes>
 		</div>
 	);

@@ -17,3 +17,27 @@
 .body-container {
 	padding-left: 15%;
 }
+
+@media screen and (max-width: 1226px) {
+	.head-container {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 1130px) {
+	.head-container {
+		width: 95%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.body-container {
+		padding-left: 0%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.body-container {
+		padding-left: 0%;
+	}
+}

@@ -9,3 +9,15 @@
 	width: 83%;
 	margin: 0px auto;
 }
+
+@media screen and (max-width: 1226px) {
+	.page-container {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 1130px) {
+	.page-container {
+		width: 95%;
+	}
+}

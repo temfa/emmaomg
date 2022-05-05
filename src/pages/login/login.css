@@ -1,0 +1,89 @@
+.login-body {
+	/* background-color: rgb(255, 255, 255); */
+	margin: 50px auto;
+	width: 40%;
+	padding: 20px;
+}
+
+.login-body h2 {
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+
+.login-group {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 50px;
+	margin-bottom: 40px;
+}
+
+.login-group input {
+	width: 100%;
+	box-sizing: border-box;
+	height: 100%;
+	border: none;
+	outline: none;
+	font-size: 20px;
+	background-color: transparent;
+	color: white;
+}
+
+.login-group label {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	pointer-events: none;
+	width: 100%;
+	height: 100%;
+	color: #ffffff;
+	font-size: 18px;
+	border-bottom: 1px solid white;
+}
+
+.login-group label::after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0px;
+	bottom: -1px;
+	transform: translateX(-100%);
+	border-bottom: 3px solid #ffffff;
+	z-index: 1111;
+}
+
+.content-details {
+	position: absolute;
+	bottom: 20px;
+	left: 0px;
+	transition: all 0.3s ease;
+}
+
+.login-group input:focus + .label-name .content-details,
+.login-group input:valid + .label-name .content-details {
+	transform: translateY(-100%);
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.login-group input:focus + .label-name::after,
+.login-group input:valid + .label-name::after {
+	transform: translateX(0%);
+}
+
+.login-body button {
+	background-color: rgba(32, 120, 145, 1);
+	color: white;
+	padding: 15px 60px;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 22px;
+	border: none;
+}

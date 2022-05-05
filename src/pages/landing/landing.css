@@ -10,6 +10,7 @@
 .landing-body {
 	display: flex;
 	align-items: center;
+	margin-bottom: 10px;
 }
 
 .emma-body {
@@ -56,6 +57,7 @@
 	display: flex;
 	width: 100%;
 	position: relative;
+	overflow: hidden;
 }
 .introduction {
 	width: 284px;
@@ -113,6 +115,7 @@
 	position: absolute;
 	margin-left: 0px;
 	left: 0;
+	overflow: hidden;
 }
 
 .landing-design1 div {

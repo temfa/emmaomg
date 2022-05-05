@@ -64,56 +64,25 @@ html {
 		display: none;
 	}
 
-	.about-header-text {
-		width: 80%;
-		padding: 0px 0px 0px 20px;
-	}
 	.about-header {
 		padding: 100px 0px 0px 0px;
-		width: 100%;
+		margin: 0px auto;
+		width: 80%;
 	}
 
 	.about-details {
 		margin: 0px auto;
-		/* display: block; */
+		width: 80%;
+	}
+
+	.about-header-text {
 		width: 100%;
-		margin: auto;
-	}
-}
-
-@media screen and (max-width: 860px) {
-	.about-details {
-		width: 90%;
-	}
-
-	.about-header-text {
-		padding: 0px 0px 0px 50px;
-	}
-}
-
-@media screen and (max-width: 760px) {
-	.about-header-text {
-		padding: 0px 0px 0px 40px;
-	}
-}
-
-@media screen and (max-width: 690px) {
-	.about-header-text {
-		padding: 0px 0px 0px 30px;
-	}
-}
-
-@media screen and (max-width: 650px) {
-	.about-header-text {
-		padding: 0px 0px 0px 20px;
 	}
 }
 
 @media screen and (max-width: 600px) {
 	.about-details {
 		padding: 20px;
-		width: 80%;
-		margin: 0px auto;
 	}
 
 	.about-header-text {
@@ -121,13 +90,24 @@ html {
 	}
 	.about-header {
 		padding: 100px 0px 0px 0px;
-		width: 100%;
+		width: 80%;
+		margin: auto;
 	}
 
 	.about-header h2 {
 		width: 80%;
 		font-size: 40px;
 		overflow: hidden;
-		margin-left: 20px;
+	}
+
+	.about-details p {
+		text-align: left;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.about-header h2 {
+		font-size: 30px;
+		width: 100%;
 	}
 }
