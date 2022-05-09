@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./landing.css";
 import Arrow from "../../assets/Vector(1).png";
 import Image1 from "../../assets/image 1.png";
@@ -12,9 +12,25 @@ import Emma2 from "../../assets/emma2.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import LayoutHome from "../../utils/layoutHome";
+import { db } from "../../utils/firebase-config";
+import { ref, onValue } from "firebase/database";
+
 AOS.init();
 
 const Landing = () => {
+	useEffect(() => {
+		let play = document.getElementById("play");
+		onValue(ref(db), (snapshot) => {
+			const data = snapshot.val();
+			if (data !== null) {
+				Object.values(data).map((item) => {
+					play.innerHTML += `
+						<a href=${item.youtubeLink} target="_blank">Play</a>
+					`;
+				});
+			}
+		});
+	}, []);
 	return (
 		<LayoutHome>
 			<div className='landing-body'>
@@ -60,29 +76,50 @@ const Landing = () => {
 						<h2
 							className='landing-heading'
 							data-aos='fade-right'
-							data-aos-duration='2000'>
-							{" "}
+							data-aos-duration='2000'
+							data-aos-once='true'>
 							<NavLink to='/about'> About Me</NavLink>
 						</h2>
-						<h2 data-aos='fade-left' data-aos-duration='2000'>
+						<h2
+							data-aos='fade-left'
+							data-aos-duration='2000'
+							data-aos-once='true'>
 							<NavLink to='/music'>My Music </NavLink>
 						</h2>
-						<h2 data-aos='fade-right' data-aos-duration='2000'>
+						<h2
+							data-aos='fade-right'
+							data-aos-duration='2000'
+							data-aos-once='true'>
 							<NavLink to='/band'>My Band</NavLink>
 						</h2>
-						<h2 data-aos='fade-left' data-aos-duration='2000'>
+						<h2
+							data-aos='fade-left'
+							data-aos-duration='2000'
+							data-aos-once='true'>
 							<NavLink to='/brand'>Brand Infuencing</NavLink>
 						</h2>
-						<h2 data-aos='fade-right' data-aos-duration='2000'>
+						<h2
+							data-aos='fade-right'
+							data-aos-duration='2000'
+							data-aos-once='true'>
 							<NavLink to='/mc'>MC/Comedian</NavLink>
 						</h2>
-						<h2 data-aos='fade-left' data-aos-duration='2000'>
+						<h2
+							data-aos='fade-left'
+							data-aos-duration='2000'
+							data-aos-once='true'>
 							<NavLink to='/birthday'>Birthday Shoutouts</NavLink>
 						</h2>
-						<h2 data-aos='fade-right' data-aos-duration='2000'>
+						<h2
+							data-aos='fade-right'
+							data-aos-duration='2000'
+							data-aos-once='true'>
 							<NavLink to='/online'>Online Contents</NavLink>
 						</h2>
-						<h2 data-aos='fade-left' data-aos-duration='2000'>
+						<h2
+							data-aos='fade-left'
+							data-aos-duration='2000'
+							data-aos-once='true'>
 							<NavLink to='/family'>My Family</NavLink>
 						</h2>
 						<div className='landing-about-arrow'>
@@ -97,10 +134,13 @@ const Landing = () => {
 				</div>
 				<div className='video-week'>
 					<div>
-						<h2 data-aos='fade-right' data-aos-duration='2000'>
+						<h2
+							data-aos='fade-right'
+							data-aos-duration='2000'
+							data-aos-once='true'>
 							Video of the Week
 						</h2>
-						<button>Play</button>
+						<button id='play'></button>
 					</div>
 				</div>
 			</div>

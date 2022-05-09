@@ -9,7 +9,8 @@ import Birthday from "./pages/birthday/birthday";
 import Online from "./pages/online/online";
 import Contact from "./pages/contact/contact";
 import Family from "./pages/family/family";
-import Login from "./pages/login/login";
+import Emma from "./pages/emma/emma";
+import Emmaadmin from "./pages/emma/emmaadmin";
 
 function App() {
 	return (
@@ -25,7 +26,17 @@ function App() {
 				<Route path='online' element={<Online />} />
 				<Route path='contact' element={<Contact />} />
 				<Route path='family' element={<Family />} />
-				<Route path='emma' element={<Login />} />
+				<Route path='emmaadmin' element={<Emmaadmin />} />
+				<Route
+					path='emma'
+					element={
+						<Emma title='Login' text='Create Account' link='/emmaregister' />
+					}
+				/>
+				<Route
+					path='emmaregister'
+					element={<Emma title='Register' text='Login' link='/emma' />}
+				/>
 			</Routes>
 		</div>
 	);

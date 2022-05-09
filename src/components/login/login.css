@@ -1,6 +1,6 @@
 .login-body {
 	/* background-color: rgb(255, 255, 255); */
-	margin: 50px auto;
+	margin: 50px auto 400px;
 	width: 40%;
 	padding: 20px;
 }
@@ -86,4 +86,25 @@
 	font-weight: 500;
 	line-height: 22px;
 	border: none;
+	cursor: pointer;
+}
+
+.redirect {
+	color: white;
+	font-size: 20px;
+}
+
+.button-div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.button-div a {
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+	cursor: pointer;
+	letter-spacing: 2px;
+	text-transform: uppercase;
 }
