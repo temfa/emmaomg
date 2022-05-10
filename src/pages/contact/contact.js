@@ -4,7 +4,7 @@ import Mail from "../../assets/mail.png";
 import Youtube from "../../assets/Youtube.svg";
 import Twitter from "../../assets/twitter.svg";
 import Facebook from "../../assets/facebook.svg";
-import Instagram from "../../assets/instagram.png";
+import Instagram from "../../assets/instagram.svg";
 import LayoutHome from "../../utils/layoutHome";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
