@@ -19,7 +19,7 @@ const Music = () => {
 						preferred platform (you can also search for EmmaOMG on your
 						preferred platform in case you don't find it below)
 					</p>
-					<img src={Apple} alt='Apple' />
+					<img src={Apple} alt='Apple' className='apple' />
 					<div className='music'>
 						<div>
 							<img src={Boomplay} alt='Music' />

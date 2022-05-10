@@ -253,21 +253,44 @@
 	}
 }
 
+@media screen and (max-width: 850px) {
+	.landing-about {
+		margin-bottom: 100px;
+	}
+}
+
 @media screen and (max-width: 625px) {
 	.landing-body h2 {
 		width: 100%;
 		font-size: 50px;
 	}
+
 	.landing-container {
 		padding: 38px 50px;
 	}
+
+	.video-week div {
+		padding: 250px 0px 50px 10px;
+	}
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 541px) {
 	.landing-container {
 		padding: 38px 20px;
 	}
 
 	.landing-about-img img {
 		width: 100%;
+	}
+
+	.video-week div h2 {
+		font-weight: 700;
+		font-size: 38px;
+	}
+}
+
+@media screen and (max-width: 448px) {
+	.video-week div h2 {
+		font-weight: 700;
+		font-size: 30px;
 	}
 }

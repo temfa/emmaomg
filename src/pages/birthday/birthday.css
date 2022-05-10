@@ -3,10 +3,11 @@
 	display: flex;
 	justify-content: space-between;
 	position: relative;
+	margin-bottom: 700px;
 }
 
 .birthday-header-body {
-	width: 30%;
+	/* width: 30%; */
 	z-index: 900;
 }
 
@@ -17,14 +18,11 @@
 	line-height: 100%;
 	letter-spacing: -0.05em;
 	margin-bottom: 30px;
-}
-
-.birthday-pic {
-	width: 70%;
+	width: 100%;
 }
 
 .birthday-pic img {
-	/* width: 70%; */
+	left: 200px;
 	position: absolute;
 	top: 100px;
 }
@@ -45,4 +43,88 @@
 
 .shoutout-body .shoutout-container:first-child {
 	margin-left: 0px;
+}
+
+.birthday-buttons {
+	display: flex;
+	margin-top: 81px;
+}
+
+.birthday-buttons button {
+	color: white;
+	font-weight: 500;
+	font-size: 20px;
+	background-color: rgba(32, 120, 145, 1);
+	padding: 23px 50px;
+	line-height: 100%;
+	border-radius: 10px;
+	border: none;
+	margin-left: 40px;
+}
+
+.birthday-buttons button:first-child {
+	margin-left: 0px;
+}
+
+@media screen and (max-width: 1071px) {
+	.birthday-pic {
+		display: none;
+	}
+
+	.birthday-header {
+		width: 95%;
+		margin: 0px auto 500px;
+	}
+
+	.birthday-header-body {
+		width: 100%;
+	}
+
+	.shoutout-body {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.birthday-header-body {
+		width: 100%;
+	}
+	.birthday-header {
+		margin: 0px auto 100px;
+	}
+}
+
+@media screen and (max-width: 674px) {
+	.birthday-buttons {
+		flex-direction: column;
+	}
+
+	.birthday-buttons button {
+		margin-left: 0px;
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 660px) {
+	.shoutout-body {
+		flex-direction: column;
+	}
+
+	.shoutout-body .shoutout-container {
+		margin-left: 0px;
+	}
+
+	.birthday-header h2 {
+		font-size: 50px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.birthday-header h2 {
+		font-size: 40px;
+	}
+
+	.birthday-buttons button {
+		width: 100%;
+	}
 }

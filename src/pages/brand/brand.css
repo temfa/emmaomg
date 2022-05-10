@@ -18,7 +18,7 @@
 	width: 100%;
 	position: absolute;
 	top: 100px;
-	left: 0px;
+	left: 100px;
 }
 
 .brand-header h2 {
@@ -35,12 +35,12 @@
 	text-align: justify;
 	font-size: 18px;
 	font-weight: 400;
-	/* width: 620px; */
 }
 
 .brand-design {
 	display: flex;
 	width: 100%;
+	overflow: hidden;
 }
 
 .brand-design img {
@@ -62,4 +62,25 @@
 .brand-header button:hover {
 	color: rgba(32, 120, 145, 1);
 	background-color: white;
+}
+
+@media screen and (max-width: 1071px) {
+	.brand-header {
+		width: 95%;
+		margin: 0px auto 500px;
+	}
+
+	.brand-text {
+		width: 100%;
+	}
+
+	.emma-img {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.brand-header {
+		margin: 0px auto 100px;
+	}
 }

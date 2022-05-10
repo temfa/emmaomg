@@ -1,15 +1,25 @@
 .mc-header {
 	padding: 100px 0px 0px 8%;
 	display: flex;
-	margin-bottom: 400px;
+	margin-bottom: 1000px;
+	position: relative;
+}
+
+.mc-header-text {
+	z-index: 1000;
 }
 
 .mc-img {
 	width: 50%;
+	overflow: hidden;
 }
 
 .mc-img img {
 	width: 100%;
+	position: absolute;
+	top: 100px;
+	left: 250px;
+	overflow: hidden;
 }
 
 .mc-header h2 {
@@ -42,17 +52,24 @@
 	margin-left: 0px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1071px) {
 	.mc-img {
 		display: none;
 	}
 
 	.mc-header {
 		padding: 100px 0px 0px 0px;
+		margin-bottom: 500px;
 	}
 
 	.mc-header-text {
 		width: 100%;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.mc-header {
+		margin-bottom: 100px;
 	}
 }
 

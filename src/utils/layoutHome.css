@@ -3,6 +3,7 @@
 	max-width: 1640px;
 	background-color: rgba(0, 0, 0, 1);
 	padding: 60px 0px;
+	overflow: hidden;
 }
 
 .page-container {

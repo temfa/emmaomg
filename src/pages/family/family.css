@@ -2,6 +2,7 @@
 	padding: 100px 0px 0px 0px;
 	background-color: rgba(0, 0, 0, 1);
 	display: flex;
+	margin-bottom: 500px;
 }
 
 .family-header h2 {
@@ -34,4 +35,53 @@
 
 .family-img-container img:first-child {
 	margin-left: 0px;
+}
+
+@media screen and (max-width: 1071px) {
+	.family-image {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.family-header {
+		width: 95%;
+		margin: 0px auto 500px;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.family-header {
+		margin: 0px auto 100px;
+	}
+}
+
+@media screen and (max-width: 623px) {
+	.family-header-text {
+		width: 100%;
+	}
+
+	.family-img-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.family-img-container img {
+		width: 100%;
+		margin-left: 0px;
+		margin-top: 20px;
+	}
+
+	.family-img-container img:first-child {
+		margin-top: 0px;
+	}
+
+	.family-header h2 {
+		width: 100%;
+	}
+
+	.family-header p {
+		width: 100%;
+	}
 }

@@ -50,11 +50,13 @@ const Contact = () => {
 					<h2>Contact us</h2>
 					<div className='mail-div'>
 						<img src={Mail} alt='mail' />
-						<p>ohemgeeltd@gmail.com</p>
+						<a href='mailto:ohemgeeltd@gmail.com'>ohemgeeltd@gmail.com</a>
 					</div>
 					<div className='mail-div'>
 						<img src={Mail} alt='mail' />
-						<p>theohemgeeband@gmail.com</p>
+						<a href='mailto:theohemgeeband@gmail.com'>
+							theohemgeeband@gmail.com
+						</a>
 					</div>
 					<div className='social-contact'>
 						<div>

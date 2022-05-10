@@ -5,7 +5,7 @@
 		inset -79.1333px 79.1333px 79.1333px rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(158.267px);
 	border-radius: 30px;
-	width: 266px;
+	width: 150px;
 }
 
 .shoutout-container h3 {
@@ -24,4 +24,24 @@
 	color: #fff;
 	width: 180px;
 	margin: auto;
+}
+
+@media screen and (max-width: 1071px) {
+	.shoutout-container {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 660px) {
+	.shoutout-container {
+		width: 80%;
+		margin-top: 20px;
+		margin-right: 0px;
+	}
+}
+
+@media screen and (max-width: 590px) {
+	.shoutout-container {
+		width: 70%;
+	}
 }

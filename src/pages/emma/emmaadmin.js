@@ -14,7 +14,7 @@ const Emmaadmin = () => {
 		let no = document.getElementById("no");
 		faajiCheckbox.addEventListener("click", (e) => {
 			console.log(faajiCheckbox.checked);
-			popup.classList.add("active");
+			popup.classList.add("emma-active");
 			yes.addEventListener("click", () => {
 				if (faajiCheckbox.checked) {
 					label.classList.add("test");
@@ -22,7 +22,7 @@ const Emmaadmin = () => {
 					label.classList.remove("test");
 				}
 
-				popup.classList.remove("active");
+				popup.classList.remove("emma-active");
 			});
 			no.addEventListener("click", () => {
 				if (faajiCheckbox.checked) {
@@ -31,7 +31,7 @@ const Emmaadmin = () => {
 				} else {
 					faajiCheckbox.checked = true;
 				}
-				popup.classList.remove("active");
+				popup.classList.remove("emma-active");
 			});
 			if (faajiCheckbox.checked) {
 				popupMessage.innerText = "Are you sure you want to enable Faaji Friday";

@@ -30,6 +30,7 @@
 	letter-spacing: -0.05em;
 	width: 640px;
 }
+
 .music-header p {
 	color: white;
 	line-height: 213.4%;
@@ -56,4 +57,44 @@
 
 .music div:first-child {
 	margin-left: 0px;
+}
+
+@media screen and (max-width: 1071px) {
+	.music-header {
+		width: 95%;
+		margin: 0px auto 300px;
+	}
+
+	.music-header-text {
+		width: 100%;
+	}
+
+	.music-emma {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.music-header {
+		margin: 0px auto 100px;
+	}
+
+	.music-header-text .apple {
+		width: 100%;
+	}
+
+	.music-header h2 {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.music {
+		flex-direction: column;
+	}
+
+	.music div {
+		width: 100%;
+		margin-left: 0px;
+	}
 }

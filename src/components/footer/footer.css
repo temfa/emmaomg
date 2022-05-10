@@ -9,8 +9,7 @@
 	align-items: center;
 	padding: 48px 100px;
 	box-sizing: border-box;
-	/* background: #000000;
-	background: #2c90ac; */
+	/* background: #000000; */
 	position: absolute;
 	width: 100%;
 	top: -290px;
@@ -127,6 +126,14 @@
 }
 
 @media screen and (max-width: 850px) {
+	.footer-container {
+		position: unset;
+	}
+
+	.footer-header {
+		position: unset;
+	}
+
 	.footer-header {
 		padding: 48px 0px;
 		flex-direction: column;

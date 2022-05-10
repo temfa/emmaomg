@@ -24,31 +24,46 @@ const About = () => {
 							a multi-talented entertainer whose repertoire includes comedy,
 							acting, music (vocals and instrumentals) and content creation.
 						</p>
-						<p data-aos='fade-right' data-aos-duration='2000'>
+						<p
+							data-aos='fade-right'
+							data-aos-duration='2000'
+							data-aos-once='true'>
 							Emmanuel’s romance with entertainment started at the age of 8 when
 							he joined his church choir as an instrumentalist. His dexterity
 							with the guitar, piano and drums was borne out of interest as he
 							is largely self taught.
 						</p>
-						<p data-aos='fade-left' data-aos-duration='2000'>
+						<p
+							data-aos='fade-left'
+							data-aos-duration='2000'
+							data-aos-once='true'>
 							Despite his skills in the other forms of entertainment he often
 							refers to music as his first love as evidenced by his weekly
 							Yoruba gospel praise medleys on Instagram and YouTube and his
 							parodies of hit songs.
 						</p>
-						<p data-aos='fade-right' data-aos-duration='2000'>
+						<p
+							data-aos='fade-right'
+							data-aos-duration='2000'
+							data-aos-once='true'>
 							In 2019, he formed “The Ohemgee Band”, a band comprising seasoned
 							instrumentalists and singers. Their musical expression is mainly
 							praise and worship in a well seasoned traditional contemporary
 							style. They have performed at exclusive and private events in
 							Lagos.
 						</p>
-						<p data-aos='fade-left' data-aos-duration='2000'>
+						<p
+							data-aos='fade-left'
+							data-aos-duration='2000'
+							data-aos-once='true'>
 							Also since 2019, Emmanuel has hosted an annual show with his band
 							titled “Faaji Friday” – a rapidly growing variety and music show
 							that showcases every December.
 						</p>
-						<p data-aos='fade-right' data-aos-duration='2000'>
+						<p
+							data-aos='fade-right'
+							data-aos-duration='2000'
+							data-aos-once='true'>
 							He is also a well sought after influencer and content creator for
 							brands. He particularly specializes in creating viral signature
 							tunes for brands and he has worked with some top brands EmmaOMG is
