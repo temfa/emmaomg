@@ -1,154 +1,151 @@
 .admin {
 	margin: 100px auto 400px;
-	display: flex;
-	justify-content: space-between;
+	/* display: flex;
+	justify-content: space-between; */
 }
 
-.admin label {
-	position: relative;
-	width: 160px;
-	height: 80px;
-	display: inline-block;
-	cursor: pointer;
+.faaji-form {
+	margin-top: 20px;
+	width: 70%;
+	max-width: 700px;
+	margin: auto;
 }
 
-.admin label input {
-	position: relative;
-	z-index: 1;
-	appearance: none;
-}
-
-.admin label span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #fe0000;
-	border-radius: 80px;
-	transition: 0.5s;
-	box-shadow: 0 15px 25px #fe000066;
-}
-
-.admin .test input ~ span {
-	background-color: #05be05;
-	box-shadow: 0 15px 25px #05be0566;
-}
-
-.admin label span i {
-	position: absolute;
-	width: 72px;
-	height: 72px;
-	top: 4px;
-	left: 4px;
-	background-color: #fff;
-	border-radius: 50%;
-	transition: 0.5s;
-}
-
-.admin .test input ~ span i {
-	left: 84px;
-}
-
-.admin label span i::before {
-	content: "";
-	position: absolute;
-	top: 22px;
-	left: 12px;
-	width: 12px;
-	height: 12px;
-	border-radius: 50%;
-	background-color: #fe0000;
-	box-shadow: 35px 0px 0px #fe0000;
-	transition: 0.5s;
-}
-
-.admin .test input ~ span i::before {
-	box-shadow: 35px 0px 0px #05be05;
-	background-color: #05be05;
-}
-
-.admin label span i::after {
-	content: "";
-	position: absolute;
-	bottom: 15px;
-	left: calc(50% - 15px);
-	width: 30px;
-	height: 6px;
-	border-radius: 6px;
-	background-color: #fe0000;
-	transition: 0.5s;
-}
-
-.admin .test input ~ span i::after {
-	background-color: #05be05;
-	bottom: 12px;
-	height: 15px;
-	border-radius: 0px;
-	border-bottom-left-radius: 15px;
-	border-bottom-right-radius: 15px;
-}
-
-.popup {
-	width: 350px;
-	height: 280px;
-	border-radius: 10px;
-	box-sizing: border-box;
-	z-index: 2;
+.faaji-form h2 {
+	color: white;
 	text-align: center;
-	background-color: white;
-	margin: 0px auto;
-	padding: 10px 0px;
-	opacity: 0;
-	top: -200%;
-	transform: translate(-50% -50%) scale(0.5);
-	transition: opacity 2000ms ease-in-out,
-		top 2000ms ease-in-out transform 2000ms ease-in-out;
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 400;
 }
 
-.emma-active {
-	opacity: 1;
-	top: 50%;
-	transform: translate(-50% -50%) scale(1);
-	transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
+.faaji-form .date {
+	border: 1px solid white;
+	box-sizing: border-box;
+	border-radius: 10px;
+	width: 100%;
+	padding: 20px 10px;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 400;
+	opacity: 0.5;
+	outline: none;
+	color: white;
+	background-color: #000000;
+	margin-top: 20px;
 }
 
-.center {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.popup p {
-	color: black;
-}
-
-.popup .popup-buttons {
+.details-group > div > div {
 	display: flex;
-	justify-content: space-between;
-	width: 50%;
-	margin: 10px auto;
+	align-items: center;
 }
 
-.popup #yes {
-	border: none;
-	background-color: #05be05;
-	color: white;
-	padding: 10px 15px;
+.details-group > div input {
+	cursor: not-allowed;
+	border: 1px solid white;
+	box-sizing: border-box;
+	pointer-events: none;
 	border-radius: 10px;
-	cursor: pointer;
-	font-size: 20px;
-	transition: all 300ms ease-in-out;
+	width: 100%;
+	padding: 20px 10px;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 400;
+	opacity: 0.5;
+	outline: none;
+	color: white;
+	background-color: #000000;
+	margin-top: 20px;
 }
 
-.popup #no {
-	border: none;
-	background-color: #fe0000;
-	color: white;
-	padding: 10px 15px;
+.details-group > div > div input {
+	margin-left: 10px;
+}
+
+.details-group > div > div input:first-child {
+	margin-left: 0px;
+}
+
+.details-group > div textarea {
+	cursor: not-allowed;
+	border: 1px solid white;
+	box-sizing: border-box;
+	pointer-events: none;
 	border-radius: 10px;
-	cursor: pointer;
+	width: 100%;
+	padding: 20px 10px;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 400;
+	opacity: 0.5;
+	outline: none;
+	color: white;
+	background-color: #000000;
+	height: 150px;
+	margin-top: 20px;
+}
+
+.details-group i {
+	color: white;
+	margin-top: 20px;
+	margin-left: 10px;
 	font-size: 20px;
-	transition: all 300ms ease-in-out;
+	cursor: pointer;
+}
+
+.details-group .check {
+	display: none;
+}
+
+.details-group .tested input {
+	pointer-events: unset;
+	cursor: text;
+}
+
+.details-group .tested textarea {
+	pointer-events: unset;
+	cursor: text;
+}
+
+.faaji-form button {
+	border: none;
+	padding: 20px 50px;
+	/* width: 20%; */
+	box-sizing: border-box;
+	margin-top: 20px;
+	background-color: #207891;
+	border-radius: 10px;
+	color: white;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1071px) {
+	.faaji-form {
+		width: 100%;
+	}
+
+	.faaji-form input {
+		box-sizing: border-box;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.admin {
+		margin: 100px auto;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.faaji-form button {
+		padding: 20px 20px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.faaji-form button {
+		width: 100%;
+	}
 }

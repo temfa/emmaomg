@@ -7,7 +7,6 @@
 }
 
 .birthday-header-body {
-	/* width: 30%; */
 	z-index: 900;
 }
 
@@ -67,10 +66,6 @@
 }
 
 @media screen and (max-width: 1071px) {
-	.birthday-pic {
-		display: none;
-	}
-
 	.birthday-header {
 		width: 95%;
 		margin: 0px auto 500px;
@@ -82,6 +77,19 @@
 
 	.shoutout-body {
 		width: 100%;
+	}
+
+	.shoutout-details {
+		margin-top: 950px;
+	}
+
+	.birthday-pic img {
+		left: 0;
+		top: 10%;
+		width: 100%;
+		height: 900px;
+		object-fit: cover;
+		object-position: top center;
 	}
 }
 
@@ -110,6 +118,15 @@
 		flex-direction: column;
 	}
 
+	.birthday-pic img {
+		top: 7%;
+		height: 500px;
+	}
+
+	.shoutout-details {
+		margin-top: 500px;
+	}
+
 	.shoutout-body .shoutout-container {
 		margin-left: 0px;
 	}
@@ -126,5 +143,15 @@
 
 	.birthday-buttons button {
 		width: 100%;
+	}
+
+	.shoutout-details {
+		margin-top: 550px;
+	}
+}
+
+@media screen and (max-width: 352px) {
+	.birthday-header h2 {
+		font-size: 35px;
 	}
 }

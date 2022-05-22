@@ -49,7 +49,20 @@
 
 @media screen and (max-width: 1071px) {
 	.online-pic {
-		display: none;
+		width: 100%;
+	}
+
+	.online-pic img {
+		width: 100%;
+		height: 900px;
+		top: 15%;
+		left: 0;
+		object-fit: cover;
+		object-position: top center;
+	}
+
+	.online-details {
+		margin-top: 950px;
 	}
 
 	.online-header {
@@ -87,8 +100,13 @@
 		width: 100%;
 	}
 
-	.online-header h2 {
-		width: 100%;
+	.online-pic img {
+		height: 500px;
+		top: 10%;
+	}
+
+	.online-details {
+		margin-top: 550px;
 	}
 }
 

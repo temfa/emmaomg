@@ -27,7 +27,6 @@
 	font-size: 64px;
 	line-height: 100%;
 	letter-spacing: -0.05em;
-	/* width: 640px; */
 }
 .brand-header p {
 	color: white;
@@ -68,6 +67,7 @@
 	.brand-header {
 		width: 95%;
 		margin: 0px auto 500px;
+		flex-direction: column;
 	}
 
 	.brand-text {
@@ -75,12 +75,58 @@
 	}
 
 	.emma-img {
-		display: none;
+		width: 100%;
+	}
+
+	.emma-img img {
+		width: 100%;
+		height: 700px;
+		object-fit: cover;
+		object-position: top center;
+		top: 15%;
+		left: 0;
+	}
+
+	.brand-details {
+		margin-top: 700px;
 	}
 }
 
 @media screen and (max-width: 850px) {
 	.brand-header {
 		margin: 0px auto 100px;
+	}
+}
+
+@media screen and (max-width: 610px) {
+	.emma-img img {
+		height: 500px;
+		top: 20%;
+	}
+
+	.brand-details {
+		margin-top: 550px;
+	}
+}
+
+@media screen and (max-width: 511px) {
+	.brand-header h2 {
+		font-size: 54px;
+	}
+}
+
+@media screen and (max-width: 431px) {
+	.brand-header h2 {
+		font-size: 44px;
+	}
+
+	.emma-img img {
+		top: 17%;
+	}
+}
+
+@media screen and (max-width: 351px) {
+	.brand-header h2 {
+		font-size: 40px;
 	}
 }

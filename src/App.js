@@ -11,6 +11,8 @@ import Contact from "./pages/contact/contact";
 import Family from "./pages/family/family";
 import Emma from "./pages/emma/emma";
 import Emmaadmin from "./pages/emma/emmaadmin";
+import Faajiadmin from "./pages/faajipage/faajipage";
+import Video from "./pages/video/video";
 
 function App() {
 	return (
@@ -27,6 +29,8 @@ function App() {
 				<Route path='contact' element={<Contact />} />
 				<Route path='family' element={<Family />} />
 				<Route path='emmaadmin' element={<Emmaadmin />} />
+				<Route path='faaji' element={<Faajiadmin />} />
+				<Route path='video' element={<Video />} />
 				<Route
 					path='emma'
 					element={

@@ -23,11 +23,9 @@ const Landing = () => {
 		onValue(ref(db), (snapshot) => {
 			const data = snapshot.val();
 			if (data !== null) {
-				Object.values(data).map((item) => {
-					play.innerHTML += `
-						<a href=${item.youtubeLink} target="_blank">Play</a>
+				play.innerHTML = `
+						<a href=${Object.values(data)[1].youtubeLink} target="_blank">Play</a>
 					`;
-				});
 			}
 		});
 	}, []);

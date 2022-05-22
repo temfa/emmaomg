@@ -11,10 +11,12 @@ const Family = () => {
 			<div className='family-header'>
 				<div className='family-header-text'>
 					<h2>My Family</h2>
-					<p>Subscribe to my family youtube channel </p>
-					<div className='family-img-container'>
-						<img src={Image1} alt='images' />
-						<img src={Image3} alt='images' />
+					<div className='family-details'>
+						<p>Subscribe to my family youtube channel </p>
+						<div className='family-img-container'>
+							<img src={Image1} alt='images' />
+							<img src={Image3} alt='images' />
+						</div>
 					</div>
 				</div>
 				<div className='family-image'>

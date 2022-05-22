@@ -13,17 +13,19 @@ const Mc = () => {
 			<div className='mc-header'>
 				<div className='mc-header-text'>
 					<h2>MC/Comedian</h2>
-					<p>
-						I anchor corporate and social events and I'm also a stand up
-						comedian. See some of my videos below
-					</p>
-					<div className='mc-img-container'>
-						<img src={Image3} alt='images' />
-						<img src={Image1} alt='images' />
-					</div>
-					<div className='mc-img-container'>
-						<img src={Image2} alt='images' />
-						<img src={Image4} alt='images' />
+					<div className='mc-details'>
+						<p>
+							I anchor corporate and social events and I'm also a stand up
+							comedian. See some of my videos below
+						</p>
+						<div className='mc-img-container'>
+							<img src={Image3} alt='images' />
+							<img src={Image1} alt='images' />
+						</div>
+						<div className='mc-img-container'>
+							<img src={Image2} alt='images' />
+							<img src={Image4} alt='images' />
+						</div>
 					</div>
 				</div>
 				<div className='mc-img'>

@@ -9,6 +9,9 @@ import LayoutHome from "../../utils/layoutHome";
 AOS.init();
 
 const Band = () => {
+	window.onbeforeunload = (e) => {
+		window.scrollTo(0, 0);
+	};
 	return (
 		<LayoutHome>
 			<div className='band-header'>
@@ -32,10 +35,24 @@ const Band = () => {
 					/>
 					<div>
 						<div>
-							<img src={Rectangle1} alt='Rectangle' className='band-img' />
+							<img
+								src={Rectangle1}
+								alt='Rectangle'
+								className='band-img'
+								data-aos='fade-right'
+								data-aos-duration='2000'
+								data-aos-once='true'
+							/>
 						</div>
 						<div>
-							<img src={Rectangle2} alt='Rectangle' className='band-img' />
+							<img
+								src={Rectangle2}
+								alt='Rectangle'
+								className='band-img'
+								data-aos='fade-left'
+								data-aos-duration='2000'
+								data-aos-once='true'
+							/>
 						</div>
 					</div>
 				</div>

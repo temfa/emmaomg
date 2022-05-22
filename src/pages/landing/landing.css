@@ -222,12 +222,16 @@
 	font-family: "Montserrat", sans-serif;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1071px) {
 	.landing-body {
 		flex-direction: column;
 	}
 
 	.emma-body {
+		width: 100%;
+	}
+
+	.introduction {
 		display: none;
 	}
 

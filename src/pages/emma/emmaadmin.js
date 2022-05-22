@@ -1,90 +1,239 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./emmaadmin.css";
-import LayoutHome from "../../utils/layoutHome";
+import Faaji from "../../components/faaji/faaji";
+import { useNavigate } from "react-router-dom";
+import LayoutAdmin from "../../utils/layoutAdmin";
 import { db } from "../../utils/firebase-config";
-import { set, ref } from "firebase/database";
+import { ref, set } from "firebase/database";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Emmaadmin = () => {
-	window.addEventListener("DOMContentLoaded", () => {
-		let faajiCheckbox = document.getElementById("faaji-checkbox");
-		let popupMessage = document.getElementById("popup-message");
-		let popup = document.getElementById("popup");
-		let label = document.getElementById("label");
-		let yes = document.getElementById("yes");
-		let no = document.getElementById("no");
-		faajiCheckbox.addEventListener("click", (e) => {
-			console.log(faajiCheckbox.checked);
-			popup.classList.add("emma-active");
-			yes.addEventListener("click", () => {
-				if (faajiCheckbox.checked) {
-					label.classList.add("test");
-				} else {
-					label.classList.remove("test");
-				}
+	const [regular, setRegular] = useState("Regular");
+	const [regularPrice, setRegularPrice] = useState("5000");
+	const [regularNoSeat, setRegularNoSeat] = useState("200");
+	const [regularDescription, setRegularDescription] = useState(
+		"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis nisi, nam soluta consequatur tempora officia libero atque dignissimos reiciendis velit ullam voluptatem sunt quo doloribus, minus eaque, vitae blanditiis accusantium."
+	);
+	const [vip, setVip] = useState("VIP");
+	const [vipPrice, setVipPrice] = useState("25000");
+	const [vipNoSeat, setVipNoSeat] = useState("200");
+	const [vipDescription, setVipDescription] = useState(
+		"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis nisi, nam soluta consequatur tempora officia libero atque dignissimos reiciendis velit ullam voluptatem sunt quo doloribus, minus eaque, vitae blanditiis accusantium."
+	);
+	const [seat, setSeat] = useState("Seat at the Silver Table");
+	const [seatPrice, setSeatPrice] = useState("50000");
+	const [seatNoSeat, setSeatNoSeat] = useState("200");
+	const [seatDescription, setSeatDescription] = useState(
+		"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis nisi, nam soluta consequatur tempora officia libero atque dignissimos reiciendis velit ullam voluptatem sunt quo doloribus, minus eaque, vitae blanditiis accusantium."
+	);
 
-				popup.classList.remove("emma-active");
-			});
-			no.addEventListener("click", () => {
-				if (faajiCheckbox.checked) {
-					faajiCheckbox.checked = false;
-					console.log(faajiCheckbox.checked);
-				} else {
-					faajiCheckbox.checked = true;
-				}
-				popup.classList.remove("emma-active");
-			});
-			if (faajiCheckbox.checked) {
-				popupMessage.innerText = "Are you sure you want to enable Faaji Friday";
-			} else {
-				popupMessage.innerText =
-					"Are you sure you want to disable Faaji Friday";
-			}
-		});
+	let navigate = useNavigate();
+	useEffect(() => {
+		let authToken = sessionStorage.getItem("Auth Token");
+
+		if (!authToken) {
+			navigate("/emma");
+		}
 	});
 	const writeToDatabase = () => {
-		let link = document.getElementById("link");
-		set(ref(db, "youtubeLink"), {
-			youtubeLink: link.value,
+		let date = document.getElementById("date");
+		let regularDetails = {
+			ticketName: regular,
+			ticketPrice: regularPrice,
+			ticketNoSeat: regularNoSeat,
+			ticketDescription: regularDescription,
+		};
+		let vipDetails = {
+			ticketName: vip,
+			ticketPrice: vipPrice,
+			ticketNoSeat: vipNoSeat,
+			ticketDescription: vipDescription,
+		};
+		let seatDetails = {
+			ticketName: seat,
+			ticketPrice: seatPrice,
+			ticketNoSeat: seatNoSeat,
+			ticketDescription: seatDescription,
+		};
+		set(ref(db, "faajiDetails"), {
+			date: date.value,
 		});
-		link.value = "";
+		set(ref(db, "faajiTickets"), {
+			regular: regularDetails,
+			vip: vipDetails,
+			seat: seatDetails,
+		});
+		date.value = "";
+		window.scrollTo(0, 0);
+		toast.success("Updated Successfully!!!!");
 	};
-	const uploadLink = (event) => {
+	const uploadForm = (event) => {
 		event.preventDefault();
 		writeToDatabase();
 	};
+
+	const edit = (e) => {
+		e.target.style.display = "none";
+		e.target.nextSibling.style.display = "block";
+		e.target.parentElement.parentElement.classList.add("tested");
+		e.target.parentElement.children[0].value = "";
+		e.target.parentElement.children[1].value = "";
+		e.target.parentElement.parentElement.children[1].value = "";
+		e.target.parentElement.parentElement.children[2].value = "";
+	};
+	const remove = (e) => {
+		e.target.parentElement.parentElement.style.display = "none";
+	};
+
+	const finishedEdit = (e) => {
+		e.target.parentElement.parentElement.classList.remove("tested");
+		e.target.style.display = "none";
+		e.target.previousSibling.style.display = "block";
+	};
 	return (
-		<LayoutHome>
+		<LayoutAdmin>
+			<ToastContainer />
 			<div className='admin'>
-				<div className='faaji-friday'>
-					<h4>Enable Faaji Friday</h4>
-					<label id='label'>
-						<input type='checkbox' id='faaji-checkbox' />
-						<span>
-							<i></i>
-						</span>
-					</label>
-					<div className='popup center' id='popup'>
-						<p id='popup-message'></p>
-						<div className='popup-buttons'>
-							<button id='yes'>Yes</button>
-							<button id='no'>No</button>
-						</div>
-					</div>
-				</div>
-				<div className='video-of-the-week'>
-					<h2>Video Of the Week</h2>
-					<form onSubmit={uploadLink}>
+				<Faaji />
+				<div className='faaji-form'>
+					<h2>Upload Faaji Details</h2>
+					<form onSubmit={uploadForm}>
 						<input
-							type='text'
-							placeholder='Youtube Link...'
+							type='date'
+							placeholder='Date'
+							className='date'
 							required
-							id='link'
+							id='date'
 						/>
-						<button type='submit'>Upload</button>
+						<div className='details-group'>
+							<div>
+								<div>
+									<input
+										type='text'
+										value={regular}
+										onChange={(e) => {
+											setRegular(e.target.value);
+										}}
+										placeholder='Ticket Type'
+									/>
+									<input
+										type='text'
+										value={regularPrice}
+										onChange={(e) => {
+											setRegularPrice(e.target.value);
+										}}
+										placeholder='Ticket Price'
+									/>
+									<i className='fas fa-edit' onClick={edit}></i>
+									<i className='fas fa-check check' onClick={finishedEdit}></i>
+									<i className='fas fa-trash' onClick={remove}></i>
+								</div>
+								<input
+									type='text'
+									value={regularNoSeat}
+									onChange={(e) => {
+										setRegularNoSeat(e.target.value);
+									}}
+									placeholder='No of Seat Available'
+								/>
+								<textarea
+									name=''
+									id=''
+									placeholder='Enter Desciption'
+									value={regularDescription}
+									onChange={(e) => {
+										setRegularDescription(e.target.value);
+									}}></textarea>
+							</div>
+						</div>
+						<div className='details-group'>
+							<div>
+								<div>
+									<input
+										type='text'
+										value={vip}
+										onChange={(e) => {
+											setVip(e.target.value);
+										}}
+										placeholder='Ticket Type'
+									/>
+									<input
+										type='text'
+										value={vipPrice}
+										onChange={(e) => {
+											setVipPrice(e.target.value);
+										}}
+										placeholder='Ticket Price'
+									/>
+									<i className='fas fa-edit' onClick={edit}></i>
+									<i className='fas fa-check check' onClick={finishedEdit}></i>
+									<i className='fas fa-trash' onClick={remove}></i>
+								</div>
+								<input
+									type='text'
+									value={vipNoSeat}
+									onChange={(e) => {
+										setVipNoSeat(e.target.value);
+									}}
+									placeholder='No of Seat Available'
+								/>
+								<textarea
+									name=''
+									id=''
+									placeholder='Enter Desciption'
+									value={vipDescription}
+									onChange={(e) => {
+										setVipDescription(e.target.value);
+									}}></textarea>
+							</div>
+						</div>
+						<div className='details-group'>
+							<div>
+								<div>
+									<input
+										type='text'
+										value={seat}
+										onChange={(e) => {
+											setSeat(e.target.value);
+										}}
+										placeholder='Ticket Type'
+									/>
+									<input
+										type='text'
+										value={seatPrice}
+										onChange={(e) => {
+											setSeatPrice(e.target.value);
+										}}
+										placeholder='Ticket Price'
+									/>
+									<i className='fas fa-edit' onClick={edit}></i>
+									<i className='fas fa-check check' onClick={finishedEdit}></i>
+									<i className='fas fa-trash' onClick={remove}></i>
+								</div>
+								<input
+									type='text'
+									value={seatNoSeat}
+									onChange={(e) => {
+										setSeatNoSeat(e.target.value);
+									}}
+									placeholder='No of Seat Available'
+								/>
+								<textarea
+									name=''
+									id=''
+									placeholder='Enter Desciption'
+									value={seatDescription}
+									onChange={(e) => {
+										setSeatDescription(e.target.value);
+									}}></textarea>
+							</div>
+						</div>
+						<button type='submit'>Submit</button>
 					</form>
 				</div>
 			</div>
-		</LayoutHome>
+		</LayoutAdmin>
 	);
 };
 

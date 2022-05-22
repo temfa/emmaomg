@@ -13,14 +13,16 @@ const Online = () => {
 			<div className='online-header'>
 				<div className='online-header-text'>
 					<h2>Online Contents</h2>
-					<p>Sit back, relax and enjoy content from my comedy channel</p>
-					<div className='online-img-container'>
-						<img src={Image1} alt='images' />
-						<img src={Image3} alt='images' />
-					</div>
-					<div className='online-img-container'>
-						<img src={Image4} alt='images' />
-						<img src={Image2} alt='images' />
+					<div className='online-details'>
+						<p>Sit back, relax and enjoy content from my comedy channel</p>
+						<div className='online-img-container'>
+							<img src={Image1} alt='images' />
+							<img src={Image3} alt='images' />
+						</div>
+						<div className='online-img-container'>
+							<img src={Image4} alt='images' />
+							<img src={Image2} alt='images' />
+						</div>
 					</div>
 				</div>
 				<div className='online-pic'>

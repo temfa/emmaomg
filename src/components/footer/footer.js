@@ -1,7 +1,7 @@
 import React from "react";
 import "./footer.css";
 import Logo from "../../assets/logo.png";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Image1 from "../../assets/image 1.png";
 import BlackTransparecy from "../../assets/black-transparency.png";
 import GrayTransparecy from "../../assets/gray-transparency.png";
@@ -17,27 +17,27 @@ const Footer = () => {
 				<div className='about-footer'>
 					<div>
 						<p className='footer-heading'>
-							<NavLink to='/about'> About Me</NavLink>
+							<Link to='/about'> About Me</Link>
 						</p>
 						<p>
-							<NavLink to='/music'>My Music </NavLink>
+							<Link to='/music'>My Music </Link>
 						</p>
 						<p>
-							<NavLink to='/band'>My Band</NavLink>
+							<Link to='/band'>My Band</Link>
 						</p>
 						<p>
-							<NavLink to='/brand'>Brand Infuencing</NavLink>
+							<Link to='/brand'>Brand Infuencing</Link>
 						</p>
 					</div>
 					<div>
 						<p>
-							<NavLink to='/mc'>MC/Comedian</NavLink>
+							<Link to='/mc'>MC/Comedian</Link>
 						</p>
 						<p>
-							<NavLink to='/birthday'>Birthday Shoutouts</NavLink>
+							<Link to='/birthday'>Birthday Shoutouts</Link>
 						</p>
 						<p>
-							<NavLink to='/online'>Online Contents</NavLink>
+							<Link to='/online'>Online Contents</Link>
 						</p>
 					</div>
 				</div>

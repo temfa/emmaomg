@@ -11,16 +11,18 @@ const Brand = () => {
 			<div className='brand-header'>
 				<div className='brand-text'>
 					<h2>Brand Influencing</h2>
-					<p>
-						I create contents and also help to influence for brands. Request for
-						my rates card and also view previous projects, below are some of the
-						brands I've worked with so far.
-					</p>
-					<div className='brand-design'>
-						<img src={Brand1} alt='Brand 1' />
-						<img src={Brand2} alt='Brand 2' />
+					<div className='brand-details'>
+						<p>
+							I create contents and also help to influence for brands. Request
+							for my rates card and also view previous projects, below are some
+							of the brands I've worked with so far.
+						</p>
+						<div className='brand-design'>
+							<img src={Brand1} alt='Brand 1' />
+							<img src={Brand2} alt='Brand 2' />
+						</div>
+						<button>Recent Projects</button>
 					</div>
-					<button>Recent Projects</button>
 				</div>
 				<div className='emma-img'>
 					<img src={Emma} alt='Emma' />

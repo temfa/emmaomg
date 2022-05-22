@@ -70,13 +70,27 @@
 	}
 
 	.music-emma {
-		display: none;
+		width: 100%;
+	}
+
+	.music-emma img {
+		left: 0;
+		width: 100%;
+		top: 12%;
+		height: 700px;
+		object-fit: cover;
+		object-position: top center;
+	}
+
+	.music-details {
+		margin-top: 700px;
 	}
 }
 
 @media screen and (max-width: 850px) {
 	.music-header {
-		margin: 0px auto 100px;
+		margin: 0px auto;
+		flex-direction: column;
 	}
 
 	.music-header-text .apple {
@@ -88,7 +102,18 @@
 	}
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 610px) {
+	.music-details {
+		margin-top: 500px;
+	}
+
+	.music-emma img {
+		top: 20%;
+		height: 500px;
+	}
+}
+
+@media screen and (max-width: 500px) {
 	.music {
 		flex-direction: column;
 	}
@@ -96,5 +121,13 @@
 	.music div {
 		width: 100%;
 		margin-left: 0px;
+	}
+
+	.music-emma img {
+		height: 450px;
+	}
+
+	.music-details {
+		margin-top: 550px;
 	}
 }

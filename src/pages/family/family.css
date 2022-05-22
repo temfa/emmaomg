@@ -3,6 +3,7 @@
 	background-color: rgba(0, 0, 0, 1);
 	display: flex;
 	margin-bottom: 500px;
+	position: relative;
 }
 
 .family-header h2 {
@@ -39,7 +40,18 @@
 
 @media screen and (max-width: 1071px) {
 	.family-image {
-		display: none;
+		width: 100%;
+	}
+
+	.family-image img {
+		top: 20%;
+		left: 0;
+		width: 100%;
+		position: absolute;
+	}
+
+	.family-details {
+		margin-top: 700px;
 	}
 }
 
@@ -47,6 +59,7 @@
 	.family-header {
 		width: 95%;
 		margin: 0px auto 500px;
+		flex-direction: column;
 	}
 }
 
@@ -54,9 +67,27 @@
 	.family-header {
 		margin: 0px auto 100px;
 	}
+
+	.family-details {
+		margin-top: 600px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.family-image img {
+		top: 25%;
+	}
+
+	.family-details {
+		margin-top: 550px;
+	}
 }
 
 @media screen and (max-width: 623px) {
+	.family-image img {
+		top: 15%;
+	}
+
 	.family-header-text {
 		width: 100%;
 	}
@@ -83,5 +114,29 @@
 
 	.family-header p {
 		width: 100%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.family-details {
+		margin-top: 500px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.family-details {
+		margin-top: 400px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.family-image img {
+		top: 20%;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.family-details {
+		margin-top: 300px;
 	}
 }

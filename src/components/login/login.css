@@ -1,5 +1,4 @@
 .login-body {
-	/* background-color: rgb(255, 255, 255); */
 	margin: 50px auto 400px;
 	width: 40%;
 	padding: 20px;
@@ -68,7 +67,7 @@
 .login-group input:focus + .label-name .content-details,
 .login-group input:valid + .label-name .content-details {
 	transform: translateY(-100%);
-	font-size: 14px;
+	font-size: 13px;
 	color: rgba(255, 255, 255, 0.7);
 }
 
@@ -107,4 +106,40 @@
 	cursor: pointer;
 	letter-spacing: 2px;
 	text-transform: uppercase;
+}
+
+@media screen and (max-width: 1071px) {
+	.login-body {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.login-body {
+		width: 70%;
+		margin: 50px auto 100px;
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.login-body {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.login-body {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 430px) {
+	.button-div {
+		flex-direction: column;
+	}
+
+	.login-body button {
+		width: 100%;
+		margin-bottom: 20px;
+	}
 }

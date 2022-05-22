@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./header.css";
 import Logo from "../../assets/logo.png";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Dropdown from "../dropdown/dropdown";
+import { db } from "../../utils/firebase-config";
+import { ref, onValue } from "firebase/database";
 
 const Headertest = () => {
 	const [click, setClick] = useState(false);
@@ -26,85 +28,87 @@ const Headertest = () => {
 			setDropdown(false);
 		}
 	};
+	useEffect(() => {
+		let faaji = document.getElementById("faaji");
+		onValue(ref(db), (snapshot) => {
+			const data = snapshot.val();
+			if (data.faajiFriday.faajiFriday === false) {
+				faaji.style.display = "none";
+			} else if (data.faajiFriday.faajiFriday === true) {
+				faaji.style.display = "flex";
+			}
+		});
+	}, []);
 
 	return (
 		<>
 			<nav className='navbar'>
-				<NavLink to='/' className='navbar-logo' onClick={closeMobileMenu}>
+				<Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
 					<img src={Logo} alt='Logo' />
-				</NavLink>
+				</Link>
 				<div className='menu-icon' onClick={handleClick}>
 					<i className={click ? "fas fa-times" : "fas fa-bars"} />
 				</div>
 				<div className='header-container'>
 					<ul className={click ? "nav-menu active" : "nav-menu"}>
 						<li className='nav-item'>
-							<NavLink to='/' className='nav-links' onClick={closeMobileMenu}>
+							<Link to='/' className='nav-links' onClick={closeMobileMenu}>
 								Home
-							</NavLink>
+							</Link>
 						</li>
 						<li className='nav-item'>
-							<NavLink
-								to='/about'
-								className='nav-links'
-								onClick={closeMobileMenu}>
+							<Link to='/about' className='nav-links' onClick={closeMobileMenu}>
 								About
-							</NavLink>
+							</Link>
 						</li>
 						<li className='nav-item'>
-							<NavLink
-								to='/music'
-								className='nav-links'
-								onClick={closeMobileMenu}>
+							<Link to='/music' className='nav-links' onClick={closeMobileMenu}>
 								Music
-							</NavLink>
+							</Link>
 						</li>
 						<li className='nav-item'>
-							<NavLink
+							<Link
 								to='/birthday'
 								className='nav-links'
 								onClick={closeMobileMenu}>
 								Shoutout
-							</NavLink>
+							</Link>
 						</li>
 						<li
 							className='nav-item nav-items'
 							onMouseEnter={onMouseEnter}
 							onMouseLeave={onMouseLeave}>
-							<NavLink to='#' className='nav-links'>
+							<Link to='#' className='nav-links'>
 								More <i className='fas fa-caret-down' />
-							</NavLink>
+							</Link>
 							{dropdown && <Dropdown />}
 						</li>
 						<li className='nav-item'>
-							<NavLink
+							<Link
 								to='/contact'
 								className='nav-links'
 								onClick={closeMobileMenu}>
 								Contact
-							</NavLink>
+							</Link>
 						</li>
-						{/* <li>
-						<NavLink
-							to='/sign-up'
-							className='nav-links-mobile'
-							onClick={closeMobileMenu}>
-							Sign Up
-						</NavLink>
-					</li> */}
+						<li className='nav-item' id='faaji'>
+							<Link to='/faaji' className='nav-links' onClick={closeMobileMenu}>
+								Faaji Friday
+							</Link>
+						</li>
 						<div className='header-buttons '>
 							<button className='nav-links-mobile'>
-								<NavLink to='/contact' onClick={closeMobileMenu}>
+								<Link to='/contact' onClick={closeMobileMenu}>
 									Make a Booking
-								</NavLink>
+								</Link>
 							</button>
 						</div>
 					</ul>
 					<div className='header-button '>
 						<button className='nav-links'>
-							<NavLink to='/contact' onClick={closeMobileMenu}>
+							<Link to='/contact' onClick={closeMobileMenu}>
 								Make a Booking
-							</NavLink>
+							</Link>
 						</button>
 					</div>
 				</div>
