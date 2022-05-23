@@ -25,14 +25,17 @@ const Ticket = () => {
 			description: "Seat Lorem Ipsum",
 		},
 	];
-	let newTicketData = window.localStorage.getItem("Tickets");
-	let latestTicketData = JSON.parse(newTicketData);
+
 	const [newTicket, setNewTicket] = useState(false);
 	const [ticketDetails, setTicketDetails] = useState({
 		title: "",
 		amount: "",
 		description: "",
 	});
+
+	let newTicketData = window.localStorage.getItem("Tickets");
+	let latestTicketData = JSON.parse(newTicketData) ? JSON.parse(newTicketData) : ticketData;
+
 	useEffect(() => {
 		localStorage.setItem("Tickets", JSON.stringify(ticketData));
 	}, []);
