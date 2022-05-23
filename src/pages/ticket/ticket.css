@@ -13,7 +13,7 @@
 	width: 100%;
 }
 
-.ticket-img button {
+.ticket-img label {
 	position: absolute;
 	bottom: 30px;
 	background-color: white;
@@ -25,6 +25,10 @@
 	font-weight: 400;
 	right: 20px;
 	cursor: pointer;
+}
+
+.ticket-img label input {
+	display: none;
 }
 
 .ticket-details {
