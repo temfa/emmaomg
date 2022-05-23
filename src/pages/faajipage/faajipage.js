@@ -32,7 +32,7 @@ const Faajiadmin = () => {
 				const item = Object.values(data.faajiTickets);
 				item.map((e) => {
 					faajiadminSelect.innerHTML += `
-						<option  value=${e.ticketPrice} onClick="test()" >
+						<option  value=${e.ticketPrice} onClick={${() => test()}} >
 							${e.ticketName} - #${e.ticketPrice}
 						</option>	
 					`;
