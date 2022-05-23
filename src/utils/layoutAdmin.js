@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../components/footer/footer";
 import Header from "../components/header/header";
 import "./layoutHome.css";
 
@@ -10,7 +9,6 @@ const LayoutAdmin = ({ children }) => {
 				<Header />
 			</div>
 			<div className='page-container'>{children}</div>
-			<Footer />
 		</div>
 	);
 };

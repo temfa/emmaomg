@@ -13,6 +13,7 @@ import Emma from "./pages/emma/emma";
 import Emmaadmin from "./pages/emma/emmaadmin";
 import Faajiadmin from "./pages/faajipage/faajipage";
 import Video from "./pages/video/video";
+import Ticket from "./pages/ticket/ticket";
 
 function App() {
 	return (
@@ -31,6 +32,7 @@ function App() {
 				<Route path='emmaadmin' element={<Emmaadmin />} />
 				<Route path='faaji' element={<Faajiadmin />} />
 				<Route path='video' element={<Video />} />
+				<Route path='ticket' element={<Ticket />} />
 				<Route
 					path='emma'
 					element={

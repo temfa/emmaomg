@@ -40,6 +40,14 @@ const Header = () => {
 							</Link>
 						</li>
 						<li className='nav-item'>
+							<Link
+								to='/ticket'
+								className='nav-links'
+								onClick={closeMobileMenu}>
+								Ticket Details
+							</Link>
+						</li>
+						<li className='nav-item'>
 							<Link to='/video' className='nav-links' onClick={closeMobileMenu}>
 								Video
 							</Link>
