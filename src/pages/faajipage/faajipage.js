@@ -72,6 +72,17 @@ const Faajiadmin = () => {
 			}
 		});
 	};
+	const handleTicketOptionClick = (e) => {
+		ticketOptions.map((ticket) => {
+			if (e.target.value === ticket.amount) {
+				setTicektDetail(ticket);
+				setFaajiAdmin(true);
+				setCounts(1);
+				setTicketPrice(ticket.amount);
+			}
+		})
+		
+	}
 	return (
 		<div className='container-faaji'>
 			<div className='faajiadmin-body'>
@@ -90,20 +101,12 @@ const Faajiadmin = () => {
 							OhEmGee Band.
 						</p>
 						<div className='faajiadmin-select'>
-							<select name='' id='faajiadmin-select'>
+							<select name='' id='faajiadmin-select' onChange={handleTicketOptionClick}>
 								<option value='' defaultValue='Choose Ticket Type'>
 									Choose Ticket Type
 								</option>
 								{ticketOptions.map((ticket) => (
-									<option
-										key={ticket.title}
-										value={ticket.amount}
-										onClick={(e) => {
-											setTicektDetail(ticket);
-											setFaajiAdmin(true);
-											setCounts(1);
-											setTicketPrice(ticket.amount);
-										}}>
+									<option key={ticket.title} value={ticket.amount}>
 										{ticket.title} - #{ticket.amount}
 									</option>
 								))}
