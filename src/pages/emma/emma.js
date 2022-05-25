@@ -57,20 +57,6 @@ const Emma = (props) => {
 		}
 	};
 
-	// const handleLogout = () => {
-	// 	App.auth().signOut();
-	// };
-
-	// useEffect(() => {
-	// 	const auth = getAuth().onAuthStateChanged((users) => {
-	// 		if (users) {
-	// 			clearInputs();
-	// 			setUser(users);
-	// 		} else {
-	// 			setUser("");
-	// 		}
-	// 	});
-	// }, []);
 	return (
 		<>
 			<ToastContainer />

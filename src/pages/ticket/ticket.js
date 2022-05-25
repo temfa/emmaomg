@@ -1,13 +1,21 @@
 import React, { useEffect, useState } from "react";
 import LayoutAdmin from "../../utils/layoutAdmin";
 import "./ticket.css";
-import Emma from "../../assets/image 14.png";
-import { db } from "../../utils/firebase-config";
+import { db, storage } from "../../utils/firebase-config";
 import { ref, set } from "firebase/database";
+import {
+	ref as imgref,
+	uploadBytes,
+	listAll,
+	getDownloadURL,
+} from "firebase/storage";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { v4 } from "uuid";
+import { useNavigate } from "react-router-dom";
 
 const Ticket = () => {
+	let navigate = useNavigate();
 	let ticketData = [
 		{
 			title: "Regular",
@@ -27,6 +35,9 @@ const Ticket = () => {
 	];
 
 	const [newTicket, setNewTicket] = useState(false);
+	const [newImage, setNewImage] = useState(false);
+	const [uploadImage, setUploadImage] = useState("");
+	const [imageList, setImageList] = useState("");
 	const [ticketDetails, setTicketDetails] = useState({
 		title: "",
 		amount: "",
@@ -34,10 +45,17 @@ const Ticket = () => {
 	});
 
 	let newTicketData = window.localStorage.getItem("Tickets");
-	let latestTicketData = JSON.parse(newTicketData) ? JSON.parse(newTicketData) : ticketData;
-
+	let latestTicketData = JSON.parse(newTicketData)
+		? JSON.parse(newTicketData)
+		: ticketData;
+	const imageListRef = imgref(storage, "images/");
 	useEffect(() => {
 		localStorage.setItem("Tickets", JSON.stringify(ticketData));
+		listAll(imageListRef).then((response) => {
+			getDownloadURL(response.items[response.items.length - 1]).then((url) => {
+				setImageList(url);
+			});
+		});
 	}, []);
 	const saveNewTicket = (e) => {
 		e.preventDefault();
@@ -69,11 +87,46 @@ const Ticket = () => {
 			<ToastContainer />
 			<div className='ticket-container'>
 				<div className='ticket-img'>
-					<img src={Emma} alt='emma' />
-					<label>
-						<input type='file' name='' id='' />
+					<img src={imageList} alt='emma' />
+					<label
+						onClick={() => {
+							setNewImage(true);
+						}}>
+						<input
+							type='file'
+							name=''
+							id=''
+							onChange={(e) => {
+								setUploadImage(e.target.files[0]);
+							}}
+						/>
 						Change Image
 					</label>
+					{newImage && (
+						<>
+							<input
+								type='text'
+								value={uploadImage.name}
+								onChange={(e) => {
+									setUploadImage(e.target.value);
+								}}
+							/>
+							<button
+								onClick={() => {
+									const imageRef = imgref(
+										storage,
+										`images/${uploadImage.name + v4()}`
+									);
+									uploadBytes(imageRef, uploadImage).then(() => {
+										window.scrollTo(0, 0);
+										toast.success("Uploaded Successfully!!!!");
+										navigate("/ticket");
+									});
+								}}>
+								Save Image
+							</button>
+						</>
+					)}
 				</div>
 				<div className='ticket-details'>
 					<h2>Upload Faaji Details</h2>

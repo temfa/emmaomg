@@ -6,98 +6,48 @@ import Arrowdown from "../../assets/Vector 7.png";
 import Headertest from "../../components/header/headertest";
 import { PaystackButton } from "react-paystack";
 import { useNavigate } from "react-router-dom";
-import { db } from "../../utils/firebase-config";
 import { ref, onValue } from "firebase/database";
+import { db, storage } from "../../utils/firebase-config";
+import { ref as imgref, listAll, getDownloadURL } from "firebase/storage";
 
 const Faajiadmin = () => {
-	const [numbers, setNumbers] = useState(1);
+	const [counts, setCounts] = useState(1);
 	const [email, setEmail] = useState("");
+	const [faajiAdmin, setFaajiAdmin] = useState(false);
+	const [ticketDetail, setTicektDetail] = useState({});
+	const [ticketPrice, setTicketPrice] = useState(0);
+	const [ticketOptions, setTicketOptions] = useState([]);
+	const [imageList, setImageList] = useState("");
 
+	const addNumbers = () => {
+		setCounts(counts + 1);
+		let latestPrice = ticketDetail.amount * (counts + 1);
+		setTicketPrice(latestPrice);
+	};
+
+	const removeNumbers = () => {
+		if (counts === 1) {
+			setCounts(counts);
+			setTicketPrice(ticketDetail.amount);
+		} else {
+			setCounts(counts - 1);
+			let latestPrice = ticketPrice - ticketDetail.amount;
+			setTicketPrice(latestPrice);
+		}
+	};
+	const imageListRef = imgref(storage, "images/");
 	useEffect(() => {
-		let numberTicket = document.getElementById("number-of-tickets");
-		let addNumbers = document.getElementById("addNumbers");
-		let numberPeople = document.getElementById("number-of-people");
-		let price = document.getElementById("price");
-		let removeNumbers = document.getElementById("removeNumbers");
-		let regular = document.getElementById("regular");
-		let faajiadminDetails = document.getElementById("faajiadmin-details");
-		let faajiadminSelect = document.getElementById("faajiadmin-select");
-		let count = 1;
-		let vip = document.getElementById("vip");
-		let seat = document.getElementById("seat");
-
-		onValue(ref(db), (snapshot) => {
-			const data = snapshot.val();
-			if (data !== null) {
-				const item = Object.values(data.faajiTickets);
-				item.map((e) => {
-					faajiadminSelect.innerHTML += `
-						<option  value=${e.ticketPrice} onClick={${() => test()}} >
-							${e.ticketName} - #${e.ticketPrice}
-						</option>	
-					`;
-				});
-			}
+		getTicketOptions();
+		listAll(imageListRef).then((response) => {
+			getDownloadURL(response.items[response.items.length - 1]).then((url) => {
+				setImageList(url);
+			});
 		});
-		const test = (e) => {
-			console.log("e.target");
-		};
-
-		addNumbers.addEventListener("click", () => {
-			count += 1;
-			setNumbers(count);
-			let newPrice = localStorage.getItem("currentprice");
-			let latestPrice = newPrice * count;
-			price.innerText = `#${latestPrice}`;
-			numberTicket.value = setNumbers + 1;
-			numberPeople.innerText = `Admits ${count} person(s)`;
-			localStorage.setItem("price", latestPrice);
-		});
-
-		removeNumbers.addEventListener("click", () => {
-			let newPrice = localStorage.getItem("currentprice");
-			let newsestprice = price.textContent.slice(1);
-			if (count === 1) {
-				count = 1;
-				setNumbers(count);
-				price.innerText = `#${newPrice}`;
-			} else {
-				count -= 1;
-				setNumbers(count);
-				let latestPrice = newsestprice - newPrice;
-				price.innerText = `#${latestPrice}`;
-				numberTicket.value = setNumbers;
-				numberPeople.innerText = `Admits ${count} person(s)`;
-			}
-		});
-
-		// regular.addEventListener("click", (e) => {
-		// 	faajiadminDetails.style.display = "block";
-		// 	price.innerText += e.target.value;
-		// 	numberPeople.innerText += `Admits 1 person(s)`;
-		// 	localStorage.setItem("price", e.target.value);
-		// 	localStorage.setItem("currentprice", e.target.value);
-		// });
-		// vip.addEventListener("click", (e) => {
-		// 	faajiadminDetails.style.display = "block";
-		// 	price.innerText += e.target.value;
-		// 	numberPeople.innerText += `Admits 1 person(s)`;
-		// 	localStorage.setItem("price", e.target.value);
-		// 	localStorage.setItem("currentprice", e.target.value);
-		// });
-		// seat.addEventListener("click", (e) => {
-		// 	faajiadminDetails.style.display = "block";
-		// 	price.innerText += e.target.value;
-		// 	numberPeople.innerText += `Admits 1 person(s)`;
-		// 	localStorage.setItem("price", e.target.value);
-		// 	localStorage.setItem("currentprice", e.target.value);
-		// });
 	}, []);
 	const publicKey = "pk_test_7fb90bd8aa7b5f58930828f02a247d2a950ad4d2";
 
-	let price = localStorage.getItem("price");
 	let navigate = useNavigate();
-	const amount = price * 100;
+	const amount = ticketPrice * 100;
 	const componentProps = {
 		email,
 
@@ -114,13 +64,21 @@ const Faajiadmin = () => {
 
 		onClose: () => alert("Wait! Don't leave :("),
 	};
+	const getTicketOptions = () => {
+		onValue(ref(db), (snapshot) => {
+			const data = snapshot.val();
+			if (data) {
+				setTicketOptions(Object.values(data.faajiTickets)[0]);
+			}
+		});
+	};
 	return (
 		<div className='container-faaji'>
 			<div className='faajiadmin-body'>
 				<Headertest />
 				<div className='faajiadmin-container'>
 					<div className='faajiadmin-img'>
-						<img src={Emma} alt='Emma' />
+						<img src={imageList} alt='Emma' />
 					</div>
 					<div className='faajiadmin-text'>
 						<h2>Faaji Friday Tickets</h2>
@@ -133,45 +91,62 @@ const Faajiadmin = () => {
 						</p>
 						<div className='faajiadmin-select'>
 							<select name='' id='faajiadmin-select'>
-								<option value='' selected>
+								<option value='' defaultValue='Choose Ticket Type'>
 									Choose Ticket Type
 								</option>
+								{ticketOptions.map((ticket) => (
+									<option
+										key={ticket.title}
+										value={ticket.amount}
+										onClick={(e) => {
+											setTicektDetail(ticket);
+											setFaajiAdmin(true);
+											setCounts(1);
+											setTicketPrice(ticket.amount);
+										}}>
+										{ticket.title} - #{ticket.amount}
+									</option>
+								))}
 							</select>
-							<input type='number' value={numbers} id='number-of-tickets' />
+							<input
+								type='number'
+								value={counts}
+								onChange={(e) => {
+									setCounts(Number(e.target.value));
+									setTicketPrice(Number(e.target.value) * ticketDetail.amount);
+								}}
+							/>
 							<img
 								src={Arrowup}
 								alt='arrow'
 								className='arrowup'
-								id='addNumbers'
+								onClick={addNumbers}
 							/>
 							<img
 								src={Arrowdown}
 								alt='arrow'
 								className='arrowdown'
-								id='removeNumbers'
+								onClick={removeNumbers}
 							/>
 						</div>
-						<div className='faajiadmin-details' id='faajiadmin-details'>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-								cumque tenetur accusantium deserunt ullam veritatis minima
-								delectus ipsum. Nesciunt doloremque dolores non voluptatibus
-								facere quaerat earum explicabo unde aperiam fugiat.
-							</p>
-							<div id='price-tag'>
-								<h2 id='price'>#</h2>
-								<span id='number-of-people'></span>
+						{faajiAdmin && (
+							<div className='faajiadmin-details' id='faajiadmin-details'>
+								<p>{ticketDetail.description}</p>
+								<div id='price-tag'>
+									<h2 id='price'>#{ticketPrice}</h2>
+									<span id='number-of-people'>Admits {counts} person(s)</span>
+								</div>
+								<div className='form-group'>
+									<input
+										type='text'
+										id='email'
+										placeholder='Enter Email'
+										onChange={(e) => setEmail(e.target.value)}
+									/>
+								</div>
+								<PaystackButton {...componentProps} />
 							</div>
-							<div className='form-group'>
-								<input
-									type='text'
-									id='email'
-									placeholder='Enter Email'
-									onChange={(e) => setEmail(e.target.value)}
-								/>
-							</div>
-							<PaystackButton {...componentProps} />
-						</div>
+						)}
 					</div>
 				</div>
 			</div>

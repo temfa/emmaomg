@@ -53,7 +53,9 @@ const Header = () => {
 							</Link>
 						</li>
 						<div className='header-buttons '>
-							<button className='nav-links-mobile'>Logout</button>
+							<button className='nav-links-mobile' onClick={handleLogout}>
+								Logout
+							</button>
 						</div>
 					</ul>
 					<div className='header-button '>
