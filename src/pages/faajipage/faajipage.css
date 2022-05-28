@@ -141,6 +141,13 @@
 	border: none;
 	cursor: pointer;
 }
+
+.popup p {
+	color: white;
+	font-size: 20px;
+	line-height: 100%;
+	/* text-align: center; */
+}
 @media screen and (max-width: 1071px) {
 	.faajiadmin-container {
 		width: 100%;

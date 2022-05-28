@@ -46,7 +46,11 @@
 	width: 100%;
 }
 
-.brand-header button {
+.brand-button {
+	margin-top: 30px;
+}
+
+.brand-button a {
 	border: none;
 	background-color: rgba(32, 120, 145, 1);
 	color: white;
@@ -56,9 +60,15 @@
 	cursor: pointer;
 	transition: 0.5s all ease-out;
 	margin-top: 50px;
+	margin-left: 15px;
+	text-decoration: none;
 }
 
-.brand-header button:hover {
+.brand-button a:first-child {
+	margin-left: 0px;
+}
+
+.brand-button a:hover {
 	color: rgba(32, 120, 145, 1);
 	background-color: white;
 }
@@ -112,6 +122,19 @@
 @media screen and (max-width: 511px) {
 	.brand-header h2 {
 		font-size: 54px;
+	}
+}
+
+@media screen and (max-width: 495px) {
+	.brand-button {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.brand-button a {
+		margin-left: 0px;
+		display: inline;
+		text-align: center;
 	}
 }
 

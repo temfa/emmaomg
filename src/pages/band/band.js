@@ -6,6 +6,7 @@ import Rectangle2 from "../../assets/Rectangle 33.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import LayoutHome from "../../utils/layoutHome";
+import { NavLink } from "react-router-dom";
 AOS.init();
 
 const Band = () => {
@@ -20,10 +21,10 @@ const Band = () => {
 					<p>
 						I lead an amazing band called "The OhEmGee Band". We host an annual
 						show called "Faaji Friday " every December by God's grace. See
-						videos and pictures from some of the previous editions below We also
-						play at social events, see some videos below.
+						videos and pictures from some of the previous editions below.
 					</p>
-					<button>Make a booking</button>
+					<p>We also play at social events, see some videos below.</p>
+					<NavLink to='/contact'>Make a Booking</NavLink>
 				</div>
 				<div className='band-emma'>
 					<img

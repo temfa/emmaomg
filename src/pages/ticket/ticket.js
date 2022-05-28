@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import LayoutAdmin from "../../utils/layoutAdmin";
 import "./ticket.css";
 import { db, storage } from "../../utils/firebase-config";
-import { ref, set } from "firebase/database";
+import { ref, set, onValue } from "firebase/database";
 import {
 	ref as imgref,
 	uploadBytes,
 	listAll,
 	getDownloadURL,
+	deleteObject,
 } from "firebase/storage";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -16,24 +17,8 @@ import { useNavigate } from "react-router-dom";
 
 const Ticket = () => {
 	let navigate = useNavigate();
-	let ticketData = [
-		{
-			title: "Regular",
-			amount: "5000",
-			description: "Regular Lorem Ipsum",
-		},
-		{
-			title: "VIP",
-			amount: "25000",
-			description: "VIP Lorem Ipsum",
-		},
-		{
-			title: "Seat Table",
-			amount: "50000",
-			description: "Seat Lorem Ipsum",
-		},
-	];
 
+	const [ticketData, setTicketData] = useState([]);
 	const [newTicket, setNewTicket] = useState(false);
 	const [newImage, setNewImage] = useState(false);
 	const [uploadImage, setUploadImage] = useState("");
@@ -42,21 +27,27 @@ const Ticket = () => {
 		title: "",
 		amount: "",
 		description: "",
+		id: 0,
 	});
-
-	let newTicketData = window.localStorage.getItem("Tickets");
-	let latestTicketData = JSON.parse(newTicketData)
-		? JSON.parse(newTicketData)
-		: ticketData;
-	const imageListRef = imgref(storage, "images/");
-	useEffect(() => {
-		localStorage.setItem("Tickets", JSON.stringify(ticketData));
+	const displayImage = () => {
 		listAll(imageListRef).then((response) => {
 			getDownloadURL(response.items[response.items.length - 1]).then((url) => {
 				setImageList(url);
 			});
 		});
+	};
+	const imageListRef = imgref(storage, "images/");
+
+	useEffect(() => {
+		onValue(ref(db), (snapshot) => {
+			const data = snapshot.val();
+			if (data) {
+				setTicketData(Object.values(data.faajiTickets)[0]);
+			}
+		});
+		displayImage();
 	}, []);
+
 	const saveNewTicket = (e) => {
 		e.preventDefault();
 		ticketData[ticketData.length] = ticketDetails;
@@ -73,7 +64,7 @@ const Ticket = () => {
 		e.preventDefault();
 
 		set(ref(db, "faajiTickets"), {
-			latestTicketData,
+			ticketData,
 		});
 		set(ref(db, "faajiDetails"), {
 			date: date.value,
@@ -82,6 +73,13 @@ const Ticket = () => {
 		window.scrollTo(0, 0);
 		toast.success("Updated Successfully!!!!");
 	};
+	const handleInputChange = (e, id, key) => {
+		let tempTicketData = ticketData.map((el) =>
+			id === el.id ? { ...el, [key]: e.target.value } : el
+		);
+		setTicketData(tempTicketData);
+	};
+
 	return (
 		<LayoutAdmin>
 			<ToastContainer />
@@ -113,14 +111,28 @@ const Ticket = () => {
 							/>
 							<button
 								onClick={() => {
-									const imageRef = imgref(
-										storage,
-										`images/${uploadImage.name + v4()}`
-									);
-									uploadBytes(imageRef, uploadImage).then(() => {
-										window.scrollTo(0, 0);
-										toast.success("Uploaded Successfully!!!!");
-										navigate("/ticket");
+									listAll(imageListRef).then((response) => {
+										response.items.forEach((item) => {
+											getDownloadURL(item).then((url) => {
+												const desertRef = imgref(storage, url);
+												deleteObject(desertRef)
+													.then(() => {
+														const imageRef = imgref(
+															storage,
+															`images/${uploadImage.name + v4()}`
+														);
+														uploadBytes(imageRef, uploadImage).then(() => {
+															window.scrollTo(0, 0);
+															toast.success("Uploaded Successfully!!!!");
+															displayImage();
+															setNewImage(false);
+														});
+													})
+													.catch((error) => {
+														console.log(error);
+													});
+											});
+										});
 									});
 								}}>
 								Save Image
@@ -144,7 +156,7 @@ const Ticket = () => {
 									</button>
 								</div>
 							</div>
-							{latestTicketData.map((ticket, index) => (
+							{ticketData.map((ticket, index) => (
 								<div className='ticket-group ticket-groups' key={index}>
 									<div className='ticket-cont1'>
 										<input
@@ -153,12 +165,16 @@ const Ticket = () => {
 											className='ticket-title'
 											name='ticketTitle1'
 											value={ticket.title}
+											onChange={(e) => handleInputChange(e, ticket.id, "title")}
 										/>
 										<input
 											type='text'
 											placeholder='Amount'
 											className='ticket-amount'
 											value={ticket.amount}
+											onChange={(e) =>
+												handleInputChange(e, ticket.id, "amount")
+											}
 										/>
 									</div>
 									<input
@@ -166,6 +182,9 @@ const Ticket = () => {
 										placeholder='Description'
 										className='ticket-description'
 										value={ticket.description}
+										onChange={(e) =>
+											handleInputChange(e, ticket.id, "description")
+										}
 									/>
 								</div>
 							))}
@@ -183,6 +202,7 @@ const Ticket = () => {
 													setTicketDetails({
 														...ticketDetails,
 														title: e.target.value,
+														id: ticketData.length + 1,
 													})
 												}
 											/>
@@ -212,10 +232,14 @@ const Ticket = () => {
 											}
 										/>
 									</div>
-									<button onClick={saveNewTicket}>Save New Ticket</button>
+									<button id='save-ticket' onClick={saveNewTicket}>
+										Save New Ticket
+									</button>
 								</>
 							)}
-							<button type='submit'>Submit Tickets</button>
+							<button id='submit-ticket' type='submit'>
+								Submit Tickets
+							</button>
 						</form>
 					</div>
 				</div>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./faajipage.css";
-import Emma from "../../assets/image 14.png";
 import Arrowup from "../../assets/Vector 8.png";
 import Arrowdown from "../../assets/Vector 7.png";
 import Headertest from "../../components/header/headertest";
@@ -43,7 +42,7 @@ const Faajiadmin = () => {
 				setImageList(url);
 			});
 		});
-	}, []);
+	});
 	const publicKey = "pk_test_7fb90bd8aa7b5f58930828f02a247d2a950ad4d2";
 
 	let navigate = useNavigate();
@@ -58,11 +57,10 @@ const Faajiadmin = () => {
 		text: "Pay With Paystack",
 
 		onSuccess: () => {
-			alert("Yout Ticket has been sent to your Email");
-			navigate("/");
+			window.scrollTo(0, 0);
+			let popup = document.getElementById("popup");
+			popup.classList.add("emma-active");
 		},
-
-		onClose: () => alert("Wait! Don't leave :("),
 	};
 	const getTicketOptions = () => {
 		onValue(ref(db), (snapshot) => {
@@ -80,9 +78,8 @@ const Faajiadmin = () => {
 				setCounts(1);
 				setTicketPrice(ticket.amount);
 			}
-		})
-		
-	}
+		});
+	};
 	return (
 		<div className='container-faaji'>
 			<div className='faajiadmin-body'>
@@ -101,7 +98,10 @@ const Faajiadmin = () => {
 							OhEmGee Band.
 						</p>
 						<div className='faajiadmin-select'>
-							<select name='' id='faajiadmin-select' onChange={handleTicketOptionClick}>
+							<select
+								name=''
+								id='faajiadmin-select'
+								onChange={handleTicketOptionClick}>
 								<option value='' defaultValue='Choose Ticket Type'>
 									Choose Ticket Type
 								</option>
@@ -148,6 +148,17 @@ const Faajiadmin = () => {
 									/>
 								</div>
 								<PaystackButton {...componentProps} />
+								<div className='popup center' id='popup'>
+									<h2 id='popup-message'>Payment Successful!!!!!!</h2>
+									<p>Check your mail for your Tickets</p>
+									<button
+										id='yes'
+										onClick={() => {
+											navigate("/");
+										}}>
+										Close
+									</button>
+								</div>
 							</div>
 						)}
 					</div>

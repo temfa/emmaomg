@@ -121,7 +121,9 @@ const Landing = () => {
 							<NavLink to='/family'>My Family</NavLink>
 						</h2>
 						<div className='landing-about-arrow'>
-							<img src={Arrow} alt='Arrow' />
+							<a href='#video-week'>
+								<img src={Arrow} alt='Arrow' />
+							</a>
 						</div>
 					</div>
 				</div>
@@ -130,7 +132,7 @@ const Landing = () => {
 					<img src={Brand2} alt='Brand 2' />
 					<div></div>
 				</div>
-				<div className='video-week'>
+				<div className='video-week' id='video-week'>
 					<div>
 						<h2
 							data-aos='fade-right'

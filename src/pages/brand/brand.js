@@ -21,7 +21,10 @@ const Brand = () => {
 							<img src={Brand1} alt='Brand 1' />
 							<img src={Brand2} alt='Brand 2' />
 						</div>
-						<button>Recent Projects</button>
+						<div className='brand-button'>
+							<a>Recent Projects</a>
+							<a href='mailto:ohemgeeltd@gmail.com'>Request for Rates Card</a>
+						</div>
 					</div>
 				</div>
 				<div className='emma-img'>

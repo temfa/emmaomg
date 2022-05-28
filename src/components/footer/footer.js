@@ -39,13 +39,16 @@ const Footer = () => {
 						<p>
 							<Link to='/online'>Online Contents</Link>
 						</p>
+						<p>
+							<Link to='/family'>My Family</Link>
+						</p>
 					</div>
 				</div>
-				<div className='subscribe'>
+				{/* <div className='subscribe'>
 					<h2>Book your Birthday Shoutouts</h2>
 					<input type='text' />
 					<button>Subscribe</button>
-				</div>
+				</div> */}
 			</div>
 			<div className='landing-designs'>
 				<img src={Image1} alt='image1' />

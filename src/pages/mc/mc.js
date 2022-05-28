@@ -6,6 +6,7 @@ import Image3 from "../../assets/SWA_4190 1.png";
 import Image4 from "../../assets/DSC_0158 1.png";
 import Emma6 from "../../assets/emma6.png";
 import LayoutHome from "../../utils/layoutHome";
+import { NavLink } from "react-router-dom";
 
 const Mc = () => {
 	return (
@@ -18,6 +19,7 @@ const Mc = () => {
 							I anchor corporate and social events and I'm also a stand up
 							comedian. See some of my videos below
 						</p>
+						<NavLink to='/contact'>Make a Booking</NavLink>
 						<div className='mc-img-container'>
 							<img src={Image3} alt='images' />
 							<img src={Image1} alt='images' />

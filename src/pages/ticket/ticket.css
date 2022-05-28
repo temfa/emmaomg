@@ -15,7 +15,7 @@
 
 .ticket-img label {
 	position: absolute;
-	bottom: 30px;
+	bottom: 20%;
 	background-color: white;
 	border: none;
 	border-radius: 10px;
@@ -27,8 +27,35 @@
 	cursor: pointer;
 }
 
-.ticket-img label input {
+.ticket-img label input[type="file"] {
 	display: none;
+}
+
+.ticket-img input[type="text"] {
+	font-size: 16px;
+	font-weight: 400;
+	color: white;
+	background: transparent;
+	padding: 10px;
+	border: 0.5px solid white;
+	border-radius: 10px;
+	box-sizing: border-box;
+	outline: none;
+	margin-top: 10px;
+}
+
+.ticket-img button {
+	border: 1px solid #207891;
+	border-radius: 10px;
+	color: rgba(32, 120, 145, 1);
+	font-size: 16px;
+	background: none;
+	cursor: pointer;
+	box-sizing: border-box;
+	outline: none;
+	margin-top: 20px;
+	padding: 10px 0px;
+	width: 20%;
 }
 
 .ticket-details {
@@ -103,4 +130,68 @@
 .ticket-cont1 .ticket-amount {
 	width: 42%;
 	margin-left: 10px;
+}
+
+#submit-ticket {
+	width: 45%;
+	border: 1px solid #207891;
+	border-radius: 10px;
+	color: rgba(32, 120, 145, 1);
+	font-size: 16px;
+	background: none;
+	cursor: pointer;
+	box-sizing: border-box;
+	outline: none;
+	margin-top: 20px;
+	padding: 15px 0px;
+}
+
+#save-ticket {
+	width: 45%;
+	margin-right: 20px;
+	border: 1px solid #207891;
+	border-radius: 10px;
+	color: rgba(32, 120, 145, 1);
+	font-size: 16px;
+	background: none;
+	cursor: pointer;
+	box-sizing: border-box;
+	outline: none;
+	margin-top: 20px;
+	padding: 15px 0px;
+}
+@media screen and (max-width: 950px) {
+	.ticket-container {
+		flex-direction: column;
+	}
+
+	.ticket-details {
+		width: 100%;
+		margin-left: 0px;
+	}
+
+	.ticket-details h2 {
+		width: 100%;
+		margin-top: 20px;
+		font-size: 35px;
+	}
+}
+
+@media screen and (max-width: 490px) {
+	.ticket-img button {
+		/* display: block; */
+		width: 30%;
+	}
+}
+
+@media screen and (max-width: 457px) {
+	.ticket-img input[type="text"] {
+		width: 100%;
+	}
+	.ticket-img button {
+		width: 50%;
+	}
+	.ticket-img label {
+		bottom: 25%;
+	}
 }
