@@ -58,6 +58,7 @@ const Faajiadmin = () => {
 
 		onSuccess: () => {
 			window.scrollTo(0, 0);
+			console.log(email);
 			let popup = document.getElementById("popup");
 			popup.classList.add("emma-active");
 		},

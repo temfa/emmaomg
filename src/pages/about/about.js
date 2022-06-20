@@ -1,7 +1,7 @@
 import React from "react";
 import "./about.css";
 import Twitter from "../../assets/twitter.png";
-import Whatsapp from "../../assets/whatsapp.png";
+// import Whatsapp from "../../assets/whatsapp.png";
 import Facebook from "../../assets/facebook.png";
 import Instagram from "../../assets/instagram.png";
 import Emma3 from "../../assets/emma3.png";
@@ -71,10 +71,25 @@ const About = () => {
 							daughter.
 						</p>
 						<div className='socials'>
-							<img src={Whatsapp} alt='Social Icons' />
-							<img src={Facebook} alt='Social Icons' />
-							<img src={Instagram} alt='Social Icons' />
-							<img src={Twitter} alt='Social Icons' />
+							{/* <img src={Whatsapp} alt='Social Icons' /> */}
+							<a
+								href='https://web.facebook.com/EmmaOhMaGod?_rdc=1&_rdr'
+								target='_blank'
+								rel='noreferrer'>
+								<img src={Facebook} alt='Social Icons' />
+							</a>
+							<a
+								href='https://www.instagram.com/accounts/login/?next=/emmaohmagod/'
+								target='_blank'
+								rel='noreferrer'>
+								<img src={Instagram} alt='Social Icons' />
+							</a>
+							<a
+								href='https://twitter.com/emmaohmagod'
+								target='_blank'
+								rel='noreferrer'>
+								<img src={Twitter} alt='Social Icons' />
+							</a>
 						</div>
 					</div>
 				</div>

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import "./contact.css";
 import Mail from "../../assets/mail.png";
 import Youtube from "../../assets/Youtube.svg";
@@ -6,45 +6,45 @@ import Twitter from "../../assets/twitter.svg";
 import Facebook from "../../assets/facebook.svg";
 import Instagram from "../../assets/instagram.svg";
 import LayoutHome from "../../utils/layoutHome";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import emailjs from "@emailjs/browser";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
+// import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-	const form = useRef();
+	// const [name, setName] = useState("");
+	// const [mail, setMail] = useState("");
+	// const [phone, setPhone] = useState("");
+	// const [event, setEvent] = useState("");
+	// const [message, setMessage] = useState("");
+	// const form = useRef();
 
-	const sendEmail = (e) => {
-		e.preventDefault();
-		let name = document.getElementById("name");
-		let mail = document.getElementById("mail");
-		let phone = document.getElementById("phone");
-		let event = document.getElementById("event");
-		let message = document.getElementById("message");
+	// const sendEmail = (e) => {
+	// 	e.preventDefault();
 
-		emailjs
-			.sendForm(
-				"service_yrziodf",
-				"template_x0rk8yo",
-				form.current,
-				"user_FaGRmNGxIu6XlKUy68tnB"
-			)
-			.then(
-				() => {
-					toast.success("Message Sent Successfully");
-					name.value = "";
-					mail.value = "";
-					phone.value = "";
-					event.value = "";
-					message.value = "";
-				},
-				(error) => {
-					toast.error(error.text);
-				}
-			);
-	};
+	// 	emailjs
+	// 		.sendForm(
+	// 			"service_yrziodf",
+	// 			"template_x0rk8yo",
+	// 			form.current,
+	// 			"user_FaGRmNGxIu6XlKUy68tnB"
+	// 		)
+	// 		.then(
+	// 			() => {
+	// 				toast.success("Message Sent Successfully");
+	// 				setName("");
+	// 				setMail("");
+	// 				setPhone("");
+	// 				setEvent("");
+	// 				setMessage("");
+	// 			},
+	// 			(error) => {
+	// 				toast.error(error.text);
+	// 			}
+	// 		);
+	// };
 	return (
 		<LayoutHome>
-			<ToastContainer />
+			{/* <ToastContainer /> */}
 			<div className='contact-header'>
 				<div>
 					<h2>Contact us</h2>
@@ -59,29 +59,43 @@ const Contact = () => {
 						</a>
 					</div>
 					<div className='social-contact'>
-						<div>
+						<a
+							href='https://www.youtube.com/channel/UCj_IY06T93dst_kvD7UmKcw'
+							target='_blank'
+							rel='noreferrer'>
 							<img src={Youtube} alt='mail' />
-						</div>
-						<div>
+						</a>
+						<a
+							href='https://www.instagram.com/accounts/login/?next=/emmaohmagod/'
+							target='_blank'
+							rel='noreferrer'>
 							<img src={Instagram} alt='mail' />
-						</div>
-						<div>
+						</a>
+						<a
+							href='https://web.facebook.com/EmmaOhMaGod?_rdc=1&_rdr'
+							target='_blank'
+							rel='noreferrer'>
 							<img src={Facebook} alt='mail' />
-						</div>
-						<div>
+						</a>
+						<a
+							href='https://twitter.com/emmaohmagod'
+							target='_blank'
+							rel='noreferrer'>
 							<img src={Twitter} alt='mail' />
-						</div>
+						</a>
 					</div>
 				</div>
-				<div className='contact-form'>
+				{/* <div className='contact-form'>
 					<form ref={form} onSubmit={sendEmail}>
 						<div className='form-container'>
 							<input
 								type='text'
 								autoComplete='off'
 								name='name'
-								id='name'
 								required
+								onChange={(e) => {
+									setName(e.target.value);
+								}}
 							/>
 							<label htmlFor='name' className='label-name'>
 								<span className='content-name'>Name</span>
@@ -92,7 +106,9 @@ const Contact = () => {
 								type='text'
 								autoComplete='off'
 								name='mail'
-								id='mail'
+								onChange={(e) => {
+									setMail(e.target.value);
+								}}
 								required
 							/>
 							<label htmlFor='email' className='label-name'>
@@ -105,27 +121,42 @@ const Contact = () => {
 									type='text'
 									autoComplete='off'
 									name='phone'
-									id='phone'
+									onChange={(e) => {
+										setPhone(e.target.value);
+									}}
 									required
 								/>
 								<label htmlFor='phone' className='label-name'>
 									<span className='content-name'>Phone</span>
 								</label>
 							</div>
-							<select required id='event'>
+							<select
+								required
+								onChange={(e) => {
+									setEvent(e.target.value);
+								}}>
 								<option value=''>Choose an Event Type</option>
-								<option>1</option>
+								<option value='Birthday-shoutout'>Birthday Shoutout</option>
+								<option value='Brand-Influencing'>Brand Influencing</option>
+								<option value='MC/Comedian'>MC/Comedian</option>
 							</select>
 						</div>
 						<div className='form-containers'>
-							<input type='text' required name='message' id='message' />
+							<input
+								type='text'
+								required
+								name='message'
+								onChange={(e) => {
+									setMessage(e.target.value);
+								}}
+							/>
 							<label htmlFor='details' className='label-name'>
 								<span className='content-names'>Details</span>
 							</label>
 						</div>
 						<button type='submit'>Send Request</button>
 					</form>
-				</div>
+				</div> */}
 			</div>
 		</LayoutHome>
 	);

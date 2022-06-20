@@ -273,7 +273,7 @@
 
 @media screen and (max-width: 1024px) {
 	.contact-header {
-		padding: 100px 0px 0px 0%;
+		padding: 100px 0px 300px 0%;
 		flex-direction: column;
 		width: 90%;
 		margin: 0px auto;
@@ -286,6 +286,12 @@
 	.form-container {
 		width: 100%;
 	}
+	.contact-header {
+		padding: 100px 0px 300px 0%;
+		flex-direction: column;
+		width: 90%;
+		margin: 0px auto;
+	}
 
 	.form-containers {
 		width: 100%;
@@ -297,6 +303,12 @@
 
 	.event select {
 		width: 60%;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.contact-header {
+		padding: 100px 0px 0px 0%;
 	}
 }
 

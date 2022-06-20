@@ -30,6 +30,7 @@
 .about-footer {
 	display: flex;
 	justify-content: space-between;
+	width: 30%;
 }
 
 .footer-header h2 {

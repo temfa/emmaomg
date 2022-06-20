@@ -56,7 +56,9 @@ const Birthday = () => {
 					</div>
 					<div className='birthday-buttons'>
 						<NavLink to='/contact'>Make a Booking</NavLink>
-						<a href='mailto:ohemgeeltd@gmail.com'>Request for Rates Card</a>
+						<a href='mailto:ohemgeeltd@gmail.com?subject=Request For Rates Card&body=Hi Emma, I want to request for your Rates Card'>
+							Request for Rates Card
+						</a>
 					</div>
 				</div>
 				<div className='birthday-pic'>
