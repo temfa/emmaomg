@@ -1,297 +1,297 @@
 .container-faaji {
-	width: 100%;
-	max-width: 1640px;
-	background-color: rgba(0, 0, 0, 1);
-	padding: 60px 0px;
-	overflow: hidden;
+  width: 100%;
+  max-width: 1640px;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 60px 0px;
+  overflow: hidden;
 }
 
 .faajiadmin-body {
-	width: 93%;
-	margin: 0px auto;
+  width: 93%;
+  margin: 0px auto;
 }
 .faajiadmin-container {
-	width: 90.5%;
-	margin: 83px auto;
-	display: flex;
-	align-items: center;
+  width: 90.5%;
+  margin: 83px auto;
+  display: flex;
+  align-items: center;
 }
 
 .faajiadmin-img {
-	width: 100%;
-	position: relative;
-	height: 100%;
-	margin-right: 100px;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  margin-right: 100px;
 }
 
 .faajiadmin-img img {
-	width: 100%;
+  width: 100%;
 }
 
 .faajiadmin-text h2 {
-	color: rgba(225, 225, 225, 1);
-	font-size: 48px;
-	font-weight: 400;
-	line-height: 100%;
-	margin-bottom: 30px;
+  color: rgba(225, 225, 225, 1);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 100%;
+  margin-bottom: 30px;
 }
 
 .faajiadmin-text p {
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 200%;
-	color: white;
-	width: 545px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: white;
+  width: 545px;
 }
 
 .faajiadmin-select {
-	position: relative;
+  position: relative;
 }
 
 .faajiadmin-select select {
-	appearance: none;
-	width: 266px;
-	border: 1px solid white;
-	background-color: rgba(0, 0, 0, 1);
-	border-radius: 10px;
-	padding: 20px 82px 20px 30px;
-	color: white;
-	opacity: 50%;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 20px;
-	background-image: url(../../assets/Vector\ 6.png);
-	background-repeat: no-repeat;
-	background-position: 90% 50%;
-	cursor: pointer;
+  appearance: none;
+  width: 266px;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 10px;
+  padding: 20px 82px 20px 30px;
+  color: white;
+  opacity: 50%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  background-image: url(../../assets/Vector\ 6.png);
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+  cursor: pointer;
 }
 
 .faajiadmin-select input[type="number"] {
-	width: 83px;
-	appearance: none;
-	border: 1px solid white;
-	background-color: rgba(0, 0, 0, 1);
-	border-radius: 10px;
-	margin-left: 20px;
-	padding: 20px;
-	color: white;
-	outline: none;
-	-moz-appearance: textfield;
+  width: 83px;
+  appearance: none;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 10px;
+  margin-left: 20px;
+  padding: 20px;
+  color: white;
+  outline: none;
+  -moz-appearance: textfield;
 }
 
 .faajiadmin-select .arrowup {
-	position: absolute;
-	top: 30%;
-	left: 70%;
-	cursor: pointer;
+  position: absolute;
+  top: 30%;
+  left: 70%;
+  cursor: pointer;
 }
 
 .faajiadmin-select .arrowdown {
-	position: absolute;
-	top: 60%;
-	left: 70%;
-	cursor: pointer;
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  cursor: pointer;
 }
 
 #price-tag {
-	display: flex;
-	align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
 .faajiadmin-details h2 {
-	color: white;
-	font-size: 48px;
-	font-weight: 400;
-	line-height: 100%;
-	margin: 0px;
+  color: white;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 100%;
+  margin: 0px;
 }
 
 .faajiadmin-details span {
-	opacity: 0.5;
-	font-style: italic;
-	font-size: 24px;
-	margin-left: 10px;
-	color: white;
+  opacity: 0.5;
+  font-style: italic;
+  font-size: 24px;
+  margin-left: 10px;
+  color: white;
 }
 
 .form-group input {
-	width: 100%;
-	border: 1px solid white;
-	background-color: rgba(0, 0, 0, 1);
-	border-radius: 10px;
-	padding: 20px 82px 20px 30px;
-	color: white;
-	opacity: 50%;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 20px;
-	margin-top: 20px;
-	box-sizing: border-box;
-	outline: none;
+  width: 100%;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 10px;
+  padding: 20px 82px 20px 30px;
+  color: white;
+  opacity: 50%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  outline: none;
 }
 
 .faajiadmin-details button {
-	color: white;
-	background-color: rgba(32, 120, 145, 1);
-	border-radius: 10px;
-	padding: 20px 35px;
-	font-size: 16px;
-	font-weight: 400;
-	margin-top: 50px;
-	border: none;
-	cursor: pointer;
+  color: white;
+  background-color: rgba(32, 120, 145, 1);
+  border-radius: 10px;
+  padding: 20px 35px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 50px;
+  border: none;
+  cursor: pointer;
 }
 
 .popup p {
-	color: white;
-	font-size: 20px;
-	line-height: 100%;
-	/* text-align: center; */
+  color: white;
+  font-size: 20px;
+  line-height: 100%;
+  /* text-align: center; */
 }
 @media screen and (max-width: 1071px) {
-	.faajiadmin-container {
-		width: 100%;
-	}
+  .faajiadmin-container {
+    width: 100%;
+  }
 
-	.faajiadmin-img {
-		width: 50%;
-		margin-right: 0px;
-	}
+  .faajiadmin-img {
+    width: 50%;
+    margin-right: 0px;
+  }
 }
 
 @media screen and (max-width: 990px) {
-	.faajiadmin-container {
-		flex-direction: column;
-	}
+  .faajiadmin-container {
+    flex-direction: column;
+  }
 
-	.faajiadmin-img {
-		width: 100%;
-	}
+  .faajiadmin-img {
+    width: 100%;
+  }
 
-	.faajiadmin-text {
-		width: 100%;
-		margin-left: 0px;
-	}
+  .faajiadmin-text {
+    width: 100%;
+    margin-left: 0px;
+  }
 
-	.faajiadmin-text h2 {
-		text-align: center;
-	}
+  .faajiadmin-text h2 {
+    text-align: center;
+  }
 
-	.faajiadmin-text p {
-		width: 100%;
-	}
+  .faajiadmin-text p {
+    width: 100%;
+  }
 
-	.faajiadmin-select .arrowup {
-		left: 45%;
-	}
+  .faajiadmin-select .arrowup {
+    left: 45%;
+  }
 
-	.faajiadmin-select .arrowdown {
-		left: 45%;
-	}
+  .faajiadmin-select .arrowdown {
+    left: 45%;
+  }
 }
 
 @media screen and (max-width: 870px) {
-	.faajiadmin-select .arrowup {
-		left: 47%;
-	}
+  .faajiadmin-select .arrowup {
+    left: 47%;
+  }
 
-	.faajiadmin-select .arrowdown {
-		left: 47%;
-	}
+  .faajiadmin-select .arrowdown {
+    left: 47%;
+  }
 }
 
 @media screen and (max-width: 845px) {
-	.faajiadmin-select .arrowup {
-		left: 50%;
-	}
+  .faajiadmin-select .arrowup {
+    left: 50%;
+  }
 
-	.faajiadmin-select .arrowdown {
-		left: 50%;
-	}
+  .faajiadmin-select .arrowdown {
+    left: 50%;
+  }
 }
 
 @media screen and (max-width: 800px) {
-	.faajiadmin-select .arrowup {
-		left: 53%;
-	}
+  .faajiadmin-select .arrowup {
+    left: 53%;
+  }
 
-	.faajiadmin-select .arrowdown {
-		left: 53%;
-	}
+  .faajiadmin-select .arrowdown {
+    left: 53%;
+  }
 }
 
 @media screen and (max-width: 750px) {
-	.faajiadmin-select .arrowup {
-		left: 55%;
-	}
+  .faajiadmin-select .arrowup {
+    left: 55%;
+  }
 
-	.faajiadmin-select .arrowdown {
-		left: 55%;
-	}
+  .faajiadmin-select .arrowdown {
+    left: 55%;
+  }
 }
 
 @media screen and (max-width: 700px) {
-	.faajiadmin-select .arrowup {
-		left: 58%;
-	}
+  .faajiadmin-select .arrowup {
+    left: 58%;
+  }
 
-	.faajiadmin-select .arrowdown {
-		left: 58%;
-	}
+  .faajiadmin-select .arrowdown {
+    left: 58%;
+  }
 }
 
 @media screen and (max-width: 650px) {
-	.faajiadmin-select .arrowup {
-		left: 63%;
-	}
+  .faajiadmin-select .arrowup {
+    left: 63%;
+  }
 
-	.faajiadmin-select .arrowdown {
-		left: 63%;
-	}
+  .faajiadmin-select .arrowdown {
+    left: 63%;
+  }
 }
 
 @media screen and (max-width: 630px) {
-	.faajiadmin-select {
-		display: flex;
-		justify-content: space-between;
-	}
+  .faajiadmin-select {
+    display: flex;
+    justify-content: space-between;
+  }
 
-	.faajiadmin-select select {
-		width: 70%;
-	}
+  .faajiadmin-select select {
+    width: 70%;
+  }
 
-	.faajiadmin-select .arrowup {
-		left: 95%;
-	}
+  .faajiadmin-select .arrowup {
+    left: 95%;
+  }
 
-	.faajiadmin-select .arrowdown {
-		left: 95%;
-	}
+  .faajiadmin-select .arrowdown {
+    left: 95%;
+  }
 }
 
 @media screen and (max-width: 400px) {
-	.faajiadmin-select {
-		flex-direction: column;
-	}
+  .faajiadmin-select {
+    flex-direction: column;
+  }
 
-	.faajiadmin-select select {
-		width: 100%;
-	}
+  .faajiadmin-select select {
+    width: 100%;
+  }
 
-	.faajiadmin-select input[type="number"] {
-		width: 100%;
-		margin-left: 0px;
-		box-sizing: border-box;
-		margin-top: 20px;
-	}
+  .faajiadmin-select input[type="number"] {
+    width: 100%;
+    margin-left: 0px;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
 
-	.faajiadmin-select .arrowup {
-		top: 65%;
-		left: 85%;
-	}
+  .faajiadmin-select .arrowup {
+    top: 65%;
+    left: 85%;
+  }
 
-	.faajiadmin-select .arrowdown {
-		top: 85%;
-		left: 85%;
-	}
+  .faajiadmin-select .arrowdown {
+    top: 85%;
+    left: 85%;
+  }
 }
