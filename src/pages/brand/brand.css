@@ -73,6 +73,22 @@
 	background-color: white;
 }
 
+.recent-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+}
+
+.recent-container iframe {
+	width: 80%;
+	border-radius: 20px;
+}
+
+.last iframe {
+	width: 90%;
+}
+
 @media screen and (max-width: 1071px) {
 	.brand-header {
 		width: 95%;
@@ -122,6 +138,16 @@
 @media screen and (max-width: 511px) {
 	.brand-header h2 {
 		font-size: 54px;
+	}
+
+	.recent-container {
+		flex-direction: column;
+	}
+
+	.recent-container iframe {
+		width: 100%;
+		margin-top: 20px;
+		height: 200px;
 	}
 }
 

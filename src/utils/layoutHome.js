@@ -15,6 +15,8 @@ const LayoutHome = ({ children }) => {
 				pageContainer.style.width = "83%";
 			} else if (data.faajiFriday.faajiFriday === true) {
 				pageContainer.style.width = "90%";
+			} else {
+				pageContainer.style.width = "83%";
 			}
 		});
 	}, []);

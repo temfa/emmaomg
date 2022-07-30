@@ -1,15 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import LayoutAdmin from "../../utils/layoutAdmin";
 import "./video.css";
-import Emma from "../../assets/image 15.png";
 import { db } from "../../utils/firebase-config";
-import { set, ref } from "firebase/database";
+import { set, ref, onValue } from "firebase/database";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 
 const Video = () => {
 	let navigate = useNavigate();
+	const [videoLink, updatedVideoLink] = useState("");
 	useEffect(() => {
 		let authToken = sessionStorage.getItem("Auth Token");
 
@@ -17,12 +17,18 @@ const Video = () => {
 			navigate("/emma");
 		}
 	});
-	const writeToDatabase = () => {
-		let link = document.getElementById("link");
-		set(ref(db, "youtubeLink"), {
-			youtubeLink: link.value,
+	useEffect(() => {
+		onValue(ref(db), (snapshot) => {
+			const data = snapshot.val();
+			if (data !== null) {
+				updatedVideoLink(data.youtubeLink.youtubeLink);
+			}
 		});
-		link.value = "";
+	}, []);
+	const writeToDatabase = () => {
+		set(ref(db, "youtubeLink"), {
+			youtubeLink: videoLink,
+		});
 		window.scrollTo(0, 0);
 		toast.success("Updated Successfully!!!!");
 	};
@@ -34,24 +40,18 @@ const Video = () => {
 		<LayoutAdmin>
 			<ToastContainer />
 			<div className='video-container'>
-				<div className='video-img'>
-					<img src={Emma} alt='Emma' />
-				</div>
 				<div className='video-text'>
-					<h2>Faaji Friday Videos</h2>
-					<p>
-						Faaji Friday is the signature event of EmmaOMG and the OhEmGee Band.
-						It's an evening of unwinding with family and friends to serenading
-						sounds, laughter, songs of praise, and party vibes. Audience can
-						expect elevated performances from EmmaOMG and the OhEmGee Band.
-					</p>
+					<h2>Video of the Week</h2>
 					<div className='input-link'>
 						<form onSubmit={uploadLink}>
 							<input
 								type='text'
 								placeholder='Youtube Link...'
 								required
-								id='link'
+								value={videoLink}
+								onChange={(e) => {
+									updatedVideoLink(e.target.value);
+								}}
 							/>
 							<button type='submit'>Change</button>
 						</form>

@@ -26,6 +26,25 @@
 	margin: auto;
 }
 
+.shoutout-container a p {
+	font-size: 20px;
+	background-color: #207891;
+	color: white;
+	padding: 10px 0px;
+	width: 100%;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+.shoutout-container .acapella {
+	display: none;
+}
+
+.shoutout-container a {
+	text-decoration: none;
+}
+
 @media screen and (max-width: 1071px) {
 	.shoutout-container {
 		width: 90%;

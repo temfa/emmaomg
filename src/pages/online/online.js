@@ -1,27 +1,80 @@
-import React from "react";
+import React, { useState } from "react";
 import "./online.css";
-import Image1 from "../../assets/unsplash_9vDdkxSCAD4.png";
-import Image2 from "../../assets/unsplash_iTc58VLTtEw.png";
-import Image3 from "../../assets/unsplash_nLUb9GThIcg.png";
-import Image4 from "../../assets/unsplash_wN3q1ANmXJQ.png";
 import Layout from "../../utils/layout";
 import Emma from "../../assets/emma7.png";
+import Loader from "../../components/loader/loader";
 
 const Online = () => {
+	const [loader, setLoader] = useState(true);
+	const hideLoader = () => {
+		setLoader(false);
+	};
 	return (
 		<Layout>
 			<div className='online-header'>
 				<div className='online-header-text'>
-					<h2>Online Contents</h2>
+					<h2>OhEmGee Comedy</h2>
 					<div className='online-details'>
 						<p>Sit back, relax and enjoy content from my comedy channel</p>
 						<div className='online-img-container'>
-							<img src={Image1} alt='images' />
-							<img src={Image3} alt='images' />
+							<div className='online-iframe'>
+								{loader ? <Loader /> : null}
+								<div
+									onClick={() => {
+										window.location.href = "https://youtu.be/lDMm5_i-XYI";
+									}}></div>
+								<iframe
+									src='https://www.youtube.com/embed/lDMm5_i-XYI'
+									title='The False Prophet | EMMAOMG | BAE_U | MS PEPO | OHEMGEE COMEDY'
+									frameborder='0'
+									onLoad={() => {
+										hideLoader();
+									}}></iframe>
+							</div>
+							<div className='online-iframe'>
+								{loader ? <Loader /> : null}
+								<div
+									onClick={() => {
+										window.location.href = "https://youtu.be/Sd_Ct-9xFW4";
+									}}></div>
+								<iframe
+									src='https://www.youtube.com/embed/Sd_Ct-9xFW4'
+									title='When I told my daughter to take life seriously | EmmaOMG | OHEMGEE COMEDY'
+									frameborder='0'
+									onLoad={() => {
+										hideLoader();
+									}}></iframe>
+							</div>
 						</div>
 						<div className='online-img-container'>
-							<img src={Image4} alt='images' />
-							<img src={Image2} alt='images' />
+							<div className='online-iframe'>
+								{loader ? <Loader /> : null}
+								<div
+									onClick={() => {
+										window.location.href = "https://youtu.be/s0cQgHCpyNw";
+									}}></div>
+								<iframe
+									src='https://www.youtube.com/embed/s0cQgHCpyNw'
+									title='Carry Me Dey Go My Husband House | EMMAOMG | VANDORA | OHEMGEE COMEDY'
+									frameborder='0'
+									onLoad={() => {
+										hideLoader();
+									}}></iframe>
+							</div>
+							<div className='online-iframe'>
+								{loader ? <Loader /> : null}
+								<div
+									onClick={() => {
+										window.location.href = "https://youtu.be/NtN84qze25M";
+									}}></div>
+								<iframe
+									src='https://www.youtube.com/embed/NtN84qze25M'
+									title="When children's questions make parents nervous | EmmaOMG | YetundeVlogs | OHEMGEE COMEDY"
+									frameborder='0'
+									onLoad={() => {
+										hideLoader();
+									}}></iframe>
+							</div>
 						</div>
 					</div>
 				</div>

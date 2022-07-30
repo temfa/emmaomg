@@ -10,6 +10,9 @@ const Shoutout = (props) => {
 			data-aos-once='true'>
 			<h3>{props.title}</h3>
 			<p>{props.text}</p>
+			<a href={props.sampleLink} target='_blank' className={props.acapella}>
+				<p>Sample</p>
+			</a>
 		</div>
 	);
 };

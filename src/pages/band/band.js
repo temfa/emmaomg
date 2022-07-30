@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./band.css";
 import Emma5 from "../../assets/emma5.png";
-import Rectangle1 from "../../assets/Rectangle 32.png";
-import Rectangle2 from "../../assets/Rectangle 33.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import LayoutHome from "../../utils/layoutHome";
 import { NavLink } from "react-router-dom";
+import Iframe from "../../components/iframe/iframe";
+import Loader from "../../components/loader/loader";
 AOS.init();
 
 const Band = () => {
 	window.onbeforeunload = (e) => {
 		window.scrollTo(0, 0);
+	};
+	const [loader, setLoader] = useState(true);
+	const hideLoader = () => {
+		setLoader(false);
 	};
 	return (
 		<LayoutHome>
@@ -27,34 +31,46 @@ const Band = () => {
 					<NavLink to='/contact'>Make a Booking</NavLink>
 				</div>
 				<div className='band-emma'>
-					<img
-						src={Emma5}
-						alt='emma'
-						className='first-emma'
-						data-aos='fade-top'
-						data-aos-duration='2000'
-					/>
-					<div>
-						<div>
-							<img
-								src={Rectangle1}
-								alt='Rectangle'
-								className='band-img'
-								data-aos='fade-right'
-								data-aos-duration='2000'
-								data-aos-once='true'
-							/>
-						</div>
-						<div>
-							<img
-								src={Rectangle2}
-								alt='Rectangle'
-								className='band-img'
-								data-aos='fade-left'
-								data-aos-duration='2000'
-								data-aos-once='true'
-							/>
-						</div>
+					<div className='band-iframe'>
+						{loader ? <Loader /> : null}
+						<Iframe
+							link='https://youtu.be/S68xXO2A8os'
+							iframe='https://www.youtube.com/embed/S68xXO2A8os'
+							title="The Celebrant's Entrance | EmmaOMG & The OhEmGee Band"
+							action={hideLoader}
+						/>
+					</div>
+					<div className='band-iframe'>
+						{loader ? <Loader /> : null}
+						<Iframe
+							link='https://youtu.be/nmJqZFWpEIk'
+							title='A little Wedding AfterParty | The OhEmGee Band'
+							iframe='https://www.youtube.com/embed/nmJqZFWpEIk'
+							action={hideLoader}
+						/>
+						{loader ? <Loader /> : null}
+						<Iframe
+							link='https://youtu.be/Xy9RqIBCSoU'
+							title='Live Performance at The CoolFm Easter Praise Jam | EmmaOMG | The OhEmGee Band'
+							iframe='https://www.youtube.com/embed/Xy9RqIBCSoU'
+							action={hideLoader}
+						/>
+					</div>
+					<div className='band-iframe'>
+						{loader ? <Loader /> : null}
+						<Iframe
+							link='https://youtu.be/gm_EY2R5Kg8'
+							title='Groovy worship with EmmaOMG and The OhEmGee Band'
+							iframe='https://www.youtube.com/embed/gm_EY2R5Kg8'
+							action={hideLoader}
+						/>
+						{loader ? <Loader /> : null}
+						<Iframe
+							link='https://youtu.be/yMAAYc897fw'
+							title='Meet The OhEmGee Band Members | EmmaOMG'
+							iframe='https://www.youtube.com/embed/yMAAYc897fw'
+							action={hideLoader}
+						/>
 					</div>
 				</div>
 			</div>

@@ -36,6 +36,8 @@ const Headertest = () => {
 				faaji.style.display = "none";
 			} else if (data.faajiFriday.faajiFriday === true) {
 				faaji.style.display = "flex";
+			} else {
+				faaji.style.display = "none";
 			}
 		});
 	}, []);

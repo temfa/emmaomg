@@ -18,7 +18,7 @@ const Dropdown = () => {
 				Mc/Comedian
 			</NavLink>
 			<NavLink to='/online' activeclassname='is-active'>
-				Online Content
+				OhEmGee Comedy
 			</NavLink>
 			<NavLink to='/family' activeclassname='is-active'>
 				My Family

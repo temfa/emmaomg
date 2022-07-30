@@ -4,8 +4,8 @@ import Arrow from "../../assets/Vector(1).png";
 import Image1 from "../../assets/image 1.png";
 import Image2 from "../../assets/image 2.png";
 import Image3 from "../../assets/image 3.png";
-import Brand1 from "../../assets/image 4.png";
-import Brand2 from "../../assets/image 5.png";
+// import Brand1 from "../../assets/image 4.png";
+// import Brand2 from "../../assets/image 5.png";
 import { NavLink } from "react-router-dom";
 import Emma from "../../assets/emma1.png";
 import Emma2 from "../../assets/emma2.png";
@@ -24,7 +24,7 @@ const Landing = () => {
 			const data = snapshot.val();
 			if (data !== null) {
 				play.innerHTML = `
-						<a href=${Object.values(data)[1].youtubeLink} target="_blank">Play</a>
+						<a href=${data.youtubeLink.youtubeLink} target="_blank">Play</a>
 					`;
 			}
 		});
@@ -127,11 +127,11 @@ const Landing = () => {
 						</div>
 					</div>
 				</div>
-				<div className='landing-design'>
+				{/* <div className='landing-design'>
 					<img src={Brand1} alt='Brand 1' />
 					<img src={Brand2} alt='Brand 2' />
 					<div></div>
-				</div>
+				</div> */}
 				<div className='video-week' id='video-week'>
 					<div>
 						<h2

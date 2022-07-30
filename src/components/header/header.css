@@ -91,6 +91,9 @@
 
 .fa-bars {
 	color: #fff;
+	font-size: 1.8rem;
+	font-weight: 800 !important;
+	cursor: pointer;
 }
 
 .header-buttons {
@@ -102,6 +105,10 @@
 }
 
 .menu-icon {
+	display: none;
+}
+
+#faaji {
 	display: none;
 }
 
@@ -157,8 +164,6 @@
 		position: absolute;
 		right: 0;
 		transform: translate(-100%, 60%);
-		font-size: 1.8rem;
-		cursor: pointer;
 	}
 
 	.fa-times {
