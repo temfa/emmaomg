@@ -1,146 +1,160 @@
 .band-header {
-	padding: 100px 0px 342px 8%;
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 342px;
+  padding: 100px 0px 342px 8%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 342px;
 }
 
 .band-header-text {
-	width: 55%;
+  width: 55%;
+}
+
+.band-action {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .band-emma {
-	width: 40%;
+  width: 40%;
 }
 
 .band-header h2 {
-	color: white;
-	font-weight: 600;
-	font-size: 64px;
-	line-height: 100%;
-	letter-spacing: -0.05em;
+  color: white;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 100%;
+  letter-spacing: -0.05em;
 }
 
 .band-header p {
-	color: white;
-	line-height: 213.4%;
-	text-align: justify;
-	font-size: 18px;
-	font-weight: 400;
-	margin-top: 0px;
-	margin-bottom: 0px;
+  color: white;
+  line-height: 213.4%;
+  text-align: justify;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .band-emma .first-emma {
-	width: 100%;
-	border-radius: 20px;
+  width: 100%;
+  border-radius: 20px;
 }
 
 .band-emma > div {
-	display: flex;
-	margin-top: 20px;
+  display: flex;
+  margin-top: 20px;
 }
 
 .band-emma > div div {
-	margin-left: 30px;
+  margin-left: 30px;
 }
 
 .band-iframe {
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .band-iframe iframe {
-	width: 100%;
-	border-radius: 20px;
+  width: 100%;
+  border-radius: 20px;
 }
 
 .band-emma .band-img {
-	width: 100%;
+  width: 100%;
 }
 
 .band-emma > div div:first-child {
-	margin-left: 0px;
+  margin-left: 0px;
 }
 
 .band-header a {
-	border: none;
-	background-color: rgba(32, 120, 145, 1);
-	color: white;
-	font-size: 16px;
-	padding: 15px 40px;
-	border-radius: 10px;
-	text-decoration: none;
-	cursor: pointer;
-	transition: 0.5s all ease-out;
-	margin-top: 10px;
-	display: inline-block;
+  border: none;
+  background-color: rgba(32, 120, 145, 1);
+  color: white;
+  font-size: 16px;
+  padding: 15px 0px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s all ease-out;
+  margin-top: 10px;
+  width: 30%;
+  text-align: center;
+  display: inline-block;
 }
 
 .band-header button:hover {
-	color: rgba(32, 120, 145, 1);
-	background-color: white;
+  color: rgba(32, 120, 145, 1);
+  background-color: white;
 }
 
 @media screen and (max-width: 1024px) {
-	.band-header {
-		flex-direction: column;
-		width: 100%;
-		padding: 100px 0px 300px 0px;
-		width: 90%;
-		margin: 0px auto;
-	}
+  .band-header {
+    flex-direction: column;
+    width: 100%;
+    padding: 100px 0px 300px 0px;
+    width: 90%;
+    margin: 0px auto;
+  }
 
-	.band-header-text {
-		width: 100%;
-	}
+  .band-header-text {
+    width: 100%;
+  }
 
-	.band-emma {
-		margin-top: 20px;
-		width: 100%;
-	}
+  .band-emma {
+    margin-top: 20px;
+    width: 100%;
+  }
 
-	.band-emma > div {
-		justify-content: space-between;
-	}
+  .band-emma > div {
+    justify-content: space-between;
+  }
 
-	.band-emma > div div {
-		margin-left: 0px;
-	}
+  .band-emma > div div {
+    margin-left: 0px;
+  }
 
-	.band-iframe {
-		width: 45%;
-	}
+  .band-iframe {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .band-action {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 500px) {
-	.band-container {
-		padding: 38px 50px;
-	}
+  .band-container {
+    padding: 38px 50px;
+  }
 
-	.band-header h2 {
-		font-size: 50px;
-	}
+  .band-header h2 {
+    font-size: 50px;
+  }
 
-	.band-header p {
-		text-align: left;
-	}
+  .band-header p {
+    text-align: left;
+  }
 
-	.band-header {
-		padding: 100px 0px 0px 0px;
-		width: 80%;
-		margin: 0px auto;
-	}
+  .band-header {
+    padding: 100px 0px 0px 0px;
+    width: 80%;
+    margin: 0px auto;
+  }
 
-	.band-iframe iframe {
-		width: 100%;
-		/* height: 100%; */
-		margin-top: 20px;
-	}
+  .band-iframe iframe {
+    width: 100%;
+    /* height: 100%; */
+    margin-top: 20px;
+  }
 
-	.band-iframe {
-		flex-direction: column;
-		width: 100%;
-	}
+  .band-iframe {
+    flex-direction: column;
+    width: 100%;
+  }
 }

@@ -1,32 +1,40 @@
 .dropdown-menu {
-	width: 250px;
-	background-color: white;
-	border-radius: 10px;
-	position: absolute;
-	top: 50px;
-	left: 0px;
-	z-index: 999;
+  width: 250px;
+  background-color: transparent;
+  /* border-radius: 10px; */
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  z-index: 999;
 }
 .dropdown-menu a {
-	display: block;
-	text-decoration: none;
-	padding: 19px 40px;
-	color: rgba(43, 43, 43, 1);
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 20px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  text-decoration: none;
+  padding: 19px 40px;
+  color: rgba(43, 43, 43, 1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.dropdown-menu a:first-child {
+  border-radius: 10px 10px 0px 0px;
+}
+.dropdown-menu a:last-child {
+  border-radius: 0px 0px 10px 10px;
 }
 
 .dropdown-menu a:hover {
-	background-color: rgba(32, 120, 145, 1);
-	border-radius: 4px;
-	transition: all 0.2s ease-out;
-	color: white;
+  background-color: rgba(32, 120, 145, 1);
+  /* border-radius: 10px; */
+  transition: all 0.2s ease-out;
+  color: white;
 }
 
 @media screen and (max-width: 1071px) {
-	.dropdown-menu {
-		width: 100%;
-	}
+  .dropdown-menu {
+    width: 100%;
+  }
 }
