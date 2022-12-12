@@ -21,7 +21,7 @@ const Band = () => {
     <LayoutHome>
       <div className="band-header">
         <div className="band-header-text">
-          <h2>My Band</h2>
+          <h2>The OhEmGee Band</h2>
           <p>
             I lead an amazing band called "The OhEmGee Band". We host an annual show called "Faaji Friday " every December by God's grace. See videos and pictures from some of the
             previous editions below.
@@ -30,7 +30,7 @@ const Band = () => {
           <div className="band-action">
             <NavLink to="/contact">Make a Booking</NavLink>
             <NavLink to="/band-members">Meet the Band Members</NavLink>
-            <NavLink to="/contact">Listen to our Songs</NavLink>
+            <NavLink to="/listen">Listen to our Songs</NavLink>
           </div>
         </div>
         <div className="band-emma">

@@ -122,9 +122,13 @@
   }
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 682px) {
   .band-action {
     flex-direction: column;
+  }
+
+  .band-header a {
+    width: 100%;
   }
 }
 

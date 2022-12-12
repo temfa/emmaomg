@@ -22,7 +22,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="about" element={<About />} />
-        <Route path="music" element={<Music />} />
+        <Route path="music" element={<Music text="self" />} />
+        <Route path="listen" element={<Music text="band" />} />
         <Route path="theohEmGeeband" element={<Band />} />
         <Route path="brand" element={<Brand />} />
         <Route path="mc" element={<Mc />} />

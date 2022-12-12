@@ -73,3 +73,95 @@
   text-align: center;
   z-index: 20;
 }
+
+@media screen and (max-width: 1071px) {
+  .band-members-img {
+    width: 100%;
+  }
+
+  .band-members-img img {
+    left: 0;
+    top: 300px;
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top left;
+  }
+
+  .band-members-header {
+    padding: 100px 0px 0px 20px;
+    margin: 0px auto 500px;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .band-members-details {
+    margin: 750px auto 0px;
+    width: 80%;
+  }
+
+  .band-members-text {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .band-members-header {
+    margin: 0px auto 100px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .about-details {
+    padding: 20px;
+    margin: 500px auto 0px;
+  }
+
+  .band-members-details {
+    width: 100%;
+  }
+  .band-members-header {
+    padding: 100px 0px 0px 0px;
+    width: 95%;
+  }
+
+  .band-members-header h2 {
+    width: 80%;
+    font-size: 40px;
+    overflow: hidden;
+    padding-left: 20px;
+  }
+
+  .band-members-details p {
+    text-align: left;
+  }
+
+  .band-members-img img {
+    left: 0;
+    top: 200px;
+    width: 100%;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 448px) {
+  .band-members-header h2 {
+    font-size: 30px;
+    width: 100%;
+  }
+
+  .band-members-details {
+    padding: 20px;
+    margin: 529px auto 0px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .button-actions {
+    flex-direction: column;
+  }
+
+  .button-actions button {
+    width: 100%;
+  }
+}
