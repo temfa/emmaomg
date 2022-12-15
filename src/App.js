@@ -18,7 +18,7 @@ import BandMembers from "./pages/band-members/band-members";
 import ReactGA from "react-ga";
 
 function App() {
-  const trackingID = "UA - 233387877 - 1";
+  const trackingID = "UA-233387877-1";
   ReactGA.initialize(trackingID);
   return (
     <div className="App">
