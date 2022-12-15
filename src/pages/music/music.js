@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./music.css";
 import Apple from "../../assets/apple.png";
 import Audiomack from "../../assets/audiomack.png";
@@ -12,14 +12,18 @@ import Deezer from "../../assets/deezer.png";
 import Shazam from "../../assets/shazam.png";
 import KKBOX from "../../assets/kkbox.png";
 import Emma4 from "../../assets/emma4.png";
-import Band from "../../assets/band.JPG";
+import Band from "../../assets/Bands.JPG";
 import Layout from "../../utils/layout";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ReactGA from "react-ga";
 
 AOS.init();
 
 const Music = ({ text }) => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
   return (
     <Layout>
       <div className="music-header">

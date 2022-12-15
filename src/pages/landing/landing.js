@@ -14,11 +14,12 @@ import "aos/dist/aos.css";
 import LayoutHome from "../../utils/layoutHome";
 import { db } from "../../utils/firebase-config";
 import { ref, onValue } from "firebase/database";
+import ReactGA from "react-ga";
 
 AOS.init();
-
 const Landing = () => {
   useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
     let play = document.getElementById("play");
     onValue(ref(db), (snapshot) => {
       const data = snapshot.val();

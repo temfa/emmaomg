@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./contact.css";
 import Mail from "../../assets/mail.png";
 import Youtube from "../../assets/Youtube.svg";
@@ -9,83 +9,73 @@ import LayoutHome from "../../utils/layoutHome";
 // import { ToastContainer, toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 // import emailjs from "@emailjs/browser";
+import ReactGA from "react-ga";
 
 const Contact = () => {
-	// const [name, setName] = useState("");
-	// const [mail, setMail] = useState("");
-	// const [phone, setPhone] = useState("");
-	// const [event, setEvent] = useState("");
-	// const [message, setMessage] = useState("");
-	// const form = useRef();
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+  // const [name, setName] = useState("");
+  // const [mail, setMail] = useState("");
+  // const [phone, setPhone] = useState("");
+  // const [event, setEvent] = useState("");
+  // const [message, setMessage] = useState("");
+  // const form = useRef();
 
-	// const sendEmail = (e) => {
-	// 	e.preventDefault();
+  // const sendEmail = (e) => {
+  // 	e.preventDefault();
 
-	// 	emailjs
-	// 		.sendForm(
-	// 			"service_yrziodf",
-	// 			"template_x0rk8yo",
-	// 			form.current,
-	// 			"user_FaGRmNGxIu6XlKUy68tnB"
-	// 		)
-	// 		.then(
-	// 			() => {
-	// 				toast.success("Message Sent Successfully");
-	// 				setName("");
-	// 				setMail("");
-	// 				setPhone("");
-	// 				setEvent("");
-	// 				setMessage("");
-	// 			},
-	// 			(error) => {
-	// 				toast.error(error.text);
-	// 			}
-	// 		);
-	// };
-	return (
-		<LayoutHome>
-			{/* <ToastContainer /> */}
-			<div className='contact-header'>
-				<div>
-					<h2>Contact us</h2>
-					<div className='mail-div'>
-						<img src={Mail} alt='mail' />
-						<a href='mailto:ohemgeeltd@gmail.com'>ohemgeeltd@gmail.com</a>
-					</div>
-					<div className='mail-div'>
-						<img src={Mail} alt='mail' />
-						<a href='mailto:theohemgeeband@gmail.com'>
-							theohemgeeband@gmail.com
-						</a>
-					</div>
-					<div className='social-contact'>
-						<a
-							href='https://www.youtube.com/channel/UCj_IY06T93dst_kvD7UmKcw'
-							target='_blank'
-							rel='noreferrer'>
-							<img src={Youtube} alt='mail' />
-						</a>
-						<a
-							href='https://www.instagram.com/accounts/login/?next=/emmaohmagod/'
-							target='_blank'
-							rel='noreferrer'>
-							<img src={Instagram} alt='mail' />
-						</a>
-						<a
-							href='https://web.facebook.com/EmmaOhMaGod?_rdc=1&_rdr'
-							target='_blank'
-							rel='noreferrer'>
-							<img src={Facebook} alt='mail' />
-						</a>
-						<a
-							href='https://twitter.com/emmaohmagod'
-							target='_blank'
-							rel='noreferrer'>
-							<img src={Twitter} alt='mail' />
-						</a>
-					</div>
-				</div>
-				{/* <div className='contact-form'>
+  // 	emailjs
+  // 		.sendForm(
+  // 			"service_yrziodf",
+  // 			"template_x0rk8yo",
+  // 			form.current,
+  // 			"user_FaGRmNGxIu6XlKUy68tnB"
+  // 		)
+  // 		.then(
+  // 			() => {
+  // 				toast.success("Message Sent Successfully");
+  // 				setName("");
+  // 				setMail("");
+  // 				setPhone("");
+  // 				setEvent("");
+  // 				setMessage("");
+  // 			},
+  // 			(error) => {
+  // 				toast.error(error.text);
+  // 			}
+  // 		);
+  // };
+  return (
+    <LayoutHome>
+      {/* <ToastContainer /> */}
+      <div className="contact-header">
+        <div>
+          <h2>Contact us</h2>
+          <div className="mail-div">
+            <img src={Mail} alt="mail" />
+            <a href="mailto:ohemgeeltd@gmail.com">ohemgeeltd@gmail.com</a>
+          </div>
+          <div className="mail-div">
+            <img src={Mail} alt="mail" />
+            <a href="mailto:theohemgeeband@gmail.com">theohemgeeband@gmail.com</a>
+          </div>
+          <div className="social-contact">
+            <a href="https://www.youtube.com/channel/UCj_IY06T93dst_kvD7UmKcw" target="_blank" rel="noreferrer">
+              <img src={Youtube} alt="mail" />
+            </a>
+            <a href="https://www.instagram.com/accounts/login/?next=/emmaohmagod/" target="_blank" rel="noreferrer">
+              <img src={Instagram} alt="mail" />
+            </a>
+            <a href="https://web.facebook.com/EmmaOhMaGod?_rdc=1&_rdr" target="_blank" rel="noreferrer">
+              <img src={Facebook} alt="mail" />
+            </a>
+            <a href="https://twitter.com/emmaohmagod" target="_blank" rel="noreferrer">
+              <img src={Twitter} alt="mail" />
+            </a>
+          </div>
+        </div>
+        {/* <div className='contact-form'>
 					<form ref={form} onSubmit={sendEmail}>
 						<div className='form-container'>
 							<input
@@ -157,9 +147,9 @@ const Contact = () => {
 						<button type='submit'>Send Request</button>
 					</form>
 				</div> */}
-			</div>
-		</LayoutHome>
-	);
+      </div>
+    </LayoutHome>
+  );
 };
 
 export default Contact;

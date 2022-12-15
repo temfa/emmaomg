@@ -15,8 +15,11 @@ import Faajiadmin from "./pages/faajipage/faajipage";
 import Video from "./pages/video/video";
 import Ticket from "./pages/ticket/ticket";
 import BandMembers from "./pages/band-members/band-members";
+import ReactGA from "react-ga";
 
 function App() {
+  const trackingID = "UA - 233387877 - 1";
+  ReactGA.initialize(trackingID);
   return (
     <div className="App">
       <Routes>
@@ -34,7 +37,7 @@ function App() {
         <Route path="emmaadmin" element={<Emmaadmin />} />
         <Route path="faaji" element={<Faajiadmin />} />
         <Route path="video" element={<Video />} />
-        <Route path="ticket" element={<Ticket />} />
+        // <Route path="ticket" element={<Ticket />} />
         <Route path="band-members" element={<BandMembers />} />
         <Route path="emma" element={<Emma title="Login" text="Create Account" link="/emmaregister" />} />
         <Route path="emmaregister" element={<Emma title="Register" text="Login" link="/emma" />} />

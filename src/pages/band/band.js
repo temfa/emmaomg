@@ -7,12 +7,17 @@ import LayoutHome from "../../utils/layoutHome";
 import { NavLink } from "react-router-dom";
 import Iframe from "../../components/iframe/iframe";
 import Loader from "../../components/loader/loader";
+import ReactGA from "react-ga";
+import { useEffect } from "react";
 AOS.init();
 
 const Band = () => {
   window.onbeforeunload = (e) => {
     window.scrollTo(0, 0);
   };
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
   const [loader, setLoader] = useState(true);
   const hideLoader = () => {
     setLoader(false);
