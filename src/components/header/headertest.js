@@ -14,7 +14,7 @@ const Headertest = () => {
   const closeMobileMenu = () => setClick(false);
 
   const onMouseEnter = () => {
-    if (window.innerWidth > 1600) {
+    if (window.innerWidth > 2000) {
       setDropdown(false);
     } else {
       setDropdown(true);
@@ -22,7 +22,7 @@ const Headertest = () => {
   };
 
   const onMouseLeave = () => {
-    if (window.innerWidth > 1600) {
+    if (window.innerWidth > 2000) {
       setDropdown(false);
     } else {
       setDropdown(false);
@@ -69,30 +69,18 @@ const Headertest = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="/birthday"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
+              <Link to="/birthday" className="nav-links" onClick={closeMobileMenu}>
                 Shoutout
               </Link>
             </li>
-            <li
-              className="nav-item nav-items"
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
-            >
+            <li className="nav-item nav-items" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
               <Link to="#" className="nav-links">
                 More <i className="fas fa-caret-down" />
               </Link>
               {dropdown && <Dropdown />}
             </li>
             <li className="nav-item">
-              <Link
-                to="/contact"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
+              <Link to="/contact" className="nav-links" onClick={closeMobileMenu}>
                 Contact
               </Link>
             </li>

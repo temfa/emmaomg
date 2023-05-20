@@ -6,13 +6,19 @@ import Akinfolarin from "../../assets/akinfolarin.png";
 import Awopeju from "../../assets/awopeju.png";
 import Badewa from "../../assets/badewa.png";
 import Faji from "../../assets/faji.png";
-import Ndubueze from "../../assets/ndubueze.png";
+// import Ndubueze from "../../assets/ndubueze.png";
 import Olateju from "../../assets/olateju.png";
 import Oredolapo from "../../assets/oredolapo.png";
 import Osinaya from "../../assets/osinaya.png";
 import Oyetunji from "../../assets/oyetunji.png";
-import Akeju from "../../assets/akeju.png";
-import Akinpelu from "../../assets/akinpelu.png";
+import Akeju from "../../assets/Akeju_seun.png";
+import Aramide from "../../assets/Aramide_Oduba.png";
+import Glory from "../../assets/Glory_Ojo.png";
+import Joshua from "../../assets/Joshua.png";
+import Edward from "../../assets/Okougbo_Edward.png";
+import Ologunagba from "../../assets/Ologunagba.png";
+import Oluwagbemiga from "../../assets/Oluwagbemiga.png";
+// import Akinpelu from "../../assets/akinpelu.png";
 
 const BandMembers = () => {
   const [count, setCount] = useState(0);
@@ -64,13 +70,13 @@ const BandMembers = () => {
       name: "Faji Oladapo Daniel",
     },
 
-    {
-      bio1: `Ndubueze Adaeze was born on the 29th of May, 1997 in Aba, Abia state, she relocated alongside her family to Lagos in 2002 and has forever been in love with music and languages.`,
-      bio2: "Ada joined the Ohemgee band as a soprano singer and has since alternated between mid range and high pitch soprano.",
-      bio3: `“Omo Igbo ton ko yoruba” as she's referred to by the Ohemgee band fans, has developed a soft spot for the Yoruba culture and music.Ada is a strong Christian who believes that faith, love and Joy should be our watchword as believers. `,
-      img: Ndubueze,
-      name: "Ndubueze Adaeze",
-    },
+    // {
+    //   bio1: `Ndubueze Adaeze was born on the 29th of May, 1997 in Aba, Abia state, she relocated alongside her family to Lagos in 2002 and has forever been in love with music and languages.`,
+    //   bio2: "Ada joined the Ohemgee band as a soprano singer and has since alternated between mid range and high pitch soprano.",
+    //   bio3: `“Omo Igbo ton ko yoruba” as she's referred to by the Ohemgee band fans, has developed a soft spot for the Yoruba culture and music.Ada is a strong Christian who believes that faith, love and Joy should be our watchword as believers. `,
+    //   img: Ndubueze,
+    //   name: "Ndubueze Adaeze",
+    // },
     {
       bio1: `Ayomiotiitan Olateju was Born in Lagos state, Nigeria.`,
       bio2: "He's a Graduate of Sociology from the phenomenal Lagos state university,Ojo, Lagos. He is the official Bassist of The Ohemgeeband.",
@@ -100,19 +106,55 @@ const BandMembers = () => {
       img: Oyetunji,
       name: "Oyetunji Emmanuel",
     },
-    // {
-    //   bio1: `Adegoke Badewa Emmanuel is an accomplished drummer with over 12 years of experience popularly known as PlayfulPappi, He was brought up in Osun State, Nigeria.`,
-    //   bio2: "He has been a music lover since age 7 when He started playing the drum set. His unending passion for music has made him progressed to the level of music production.",
-    //   bio3: `He's the official drummer of the ohemgeeband till date `,
-    //   img: Akeju,
-    //   name: "Adegoke Badewa Emmanuel",
-    // },
     {
-      bio1: `Susan Anike Akinpelu, known as ANIIKE (pronounced aneekeh) is a singer-songwriter born in Lagos, Nigeria.`,
-      bio2: "She started out her music career at the young age of 10 in the church choir and then grew more into the music scene by contributing her vocals and other music skills to songs and performances with top music artists and bands before venturing into her long term dream of being a songwriter and artist. ",
-      bio3: `On days when she's not fueling her passion as a musician she works in the creative media industry and in project/event management, she is the sonorous voice that belts the ALTO part with the Ohemgee Band.`,
-      img: Akinpelu,
-      name: "Susan Anike Akinpelu",
+      bio1: `Akeju Ganiu Oluwaseun, a native of ogun state Abeokuta North, plays for the ohmgeeband as a percussionist (bata player)`,
+      bio2: "He's a graduate of Tai solarin University of education where he studied primary science social studies (2009-2013) Bsc (ed)",
+      bio3: `His passion  for music started at a very young age , the love and passion made him choose music professionally.`,
+      img: Akeju,
+      name: "Akeju Oluwaseun",
+    },
+    {
+      bio1: `Aramide Oduba was born and raised in Lagos, Nigeria. She’s an industrial engineering graduate and a project management specialist.`,
+      bio2: "Besides her professional life, she’s a lover of music with years of experience. She’s been in the choir all her life and has basic idea of a couple musical instruments.",
+      bio3: `She’s currently one of the band’s backing vocalists.`,
+      img: Aramide,
+      name: "Aramide Oduba",
+    },
+    {
+      bio1: `Gloria Ojo also known as Glorifaya is a christian, an indigene of Ekiti State, Nigeria. She's currently based in the outskirts of Lagos state, Nigeria.She's a musician, a graphics designer and a content creator. Motivated by her love for learning and succeeding and being impactful in every areas of her life.`,
+      bio2: "She's a singer, a songwriter, a performing and recording artiste, a professional backing vocalist for the ohemgeeband, with which she has been privileged to work alongside some A list artists in Nigeria.",
+      bio3: `And over the years, she has developed personal skills in acting, presenting, and enjoys writing and reading too.`,
+      img: Glory,
+      name: "Gloria Ojo",
+    },
+    {
+      bio1: `Edward Okougbo is a prolific singer/songwriter, Business Development Executive, and an all-round creative based in Lagos, Nigeria.`,
+      bio2: "He honed his skills whilst at the University of Port Harcourt and has since gone on to work with several brands and heavyweights in the music industry.",
+      bio3: `He has an EP to his credit, and several jingles for various national brands. He currently functions as the manager of the OHEMGEE Band and as a Business Development Representative.`,
+      img: Edward,
+      name: "Okougbo Edward",
+    },
+    {
+      bio1: `Adeyemi ologunagba is a versatile musician who started his career in music from a very tender age and majors in Percussion.He hails from Ondo state.`,
+      bio2: " He's also a professional Interior and exterior designer.",
+      bio3: `He is currently the Omele player for the ohemgee band.`,
+      img: Ologunagba,
+      name: "Adeyemi Ologunagba",
+    },
+
+    {
+      bio1: `Oyetunji Joshua was born in the late 90s in Lagos State, Nigeria. had his education and also discovered his talent in the choir from a tender age, he plays the percussion instruments effortlessly.`,
+      bio2: "He is also a professional footballer ",
+      bio3: `He's the Woodblock (Agogo) player for the ohemgeeband.`,
+      img: Joshua,
+      name: "Oyetunji Joshua",
+    },
+    {
+      bio1: `Ogunkoya Oluwagbemiga Afeez, was born in Lagos State, Nigeria in the late 90s, had his primary and secondary education in Lagos state, he's a lover of music.`,
+      bio2: "He started his  drumming career at the age of 10 in the church choir.",
+      bio3: `He is so gifted that he plays all the percussion instruments.`,
+      img: Oluwagbemiga,
+      name: "Ogunkoya Oluwagbemiga",
     },
   ];
   return (

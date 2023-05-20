@@ -1,44 +1,43 @@
 .container {
-	width: 100%;
-	max-width: 1640px;
-	background-color: rgba(0, 0, 0, 1);
-	padding: 60px 0px;
-	overflow: hidden;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 60px 0px;
+  overflow: hidden;
 }
 
 .head-container {
-	width: 83%;
-	margin: 0px auto;
+  width: 83%;
+  margin: 0px auto;
 }
 
 .pages-container {
-	width: 100%;
+  width: 100%;
 }
 
 .body-container {
-	padding-left: 15%;
+  padding-left: 15%;
 }
 
 @media screen and (max-width: 1226px) {
-	.head-container {
-		width: 90%;
-	}
+  .head-container {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 1130px) {
-	.head-container {
-		width: 95%;
-	}
+  .head-container {
+    width: 95%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-	.body-container {
-		padding-left: 0%;
-	}
+  .body-container {
+    padding-left: 0%;
+  }
 }
 
 @media screen and (max-width: 500px) {
-	.body-container {
-		padding-left: 0%;
-	}
+  .body-container {
+    padding-left: 0%;
+  }
 }

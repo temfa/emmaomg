@@ -1,24 +1,23 @@
 .container {
-	width: 100%;
-	max-width: 1640px;
-	background-color: rgba(0, 0, 0, 1);
-	padding: 60px 0px;
-	overflow: hidden;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 60px 0px;
+  overflow: hidden;
 }
 
 .page-container {
-	width: 83%;
-	margin: 0px auto;
+  width: 83%;
+  margin: 0px auto;
 }
 
 @media screen and (max-width: 1226px) {
-	.page-container {
-		width: 90%;
-	}
+  .page-container {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 1130px) {
-	.page-container {
-		width: 95%;
-	}
+  .page-container {
+    width: 95%;
+  }
 }
