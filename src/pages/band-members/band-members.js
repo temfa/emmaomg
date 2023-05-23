@@ -22,7 +22,6 @@ import Oluwagbemiga from "../../assets/Oluwagbemiga.png";
 
 const BandMembers = () => {
   const [count, setCount] = useState(0);
-  console.log(count);
   const nextAction = () => {
     setCount(count + 1);
   };
